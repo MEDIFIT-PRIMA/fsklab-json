@@ -1,0 +1,55 @@
+{
+  "$id": "https://foodrisklabs.bfr.bund.de/fsk-lab-schema.json",
+  "definitions": {
+    "versionedPackage": {
+      "type": "object",
+      "properties": {
+        "package": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "package",
+        "version"
+      ]
+    },
+    "packagesInfo": {
+      "type": "object",
+      "properties": {
+        "modelId": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "python",
+            "r"
+          ]
+        },
+        "languageVersion": {
+          "type": "string"
+        },
+        "packageList": {
+          "type": "array",
+          "items": {
+            "$ref": "#definitions/versionedPackage"
+          }
+        }
+      },
+      "required": [
+        "language",
+        "packageList",
+        "modelId"
+      ]
+    },
+    "combinedPackages": {
+      "type": "array",
+      "items": {
+        "$ref": "#definitions/packagesInfo"
+      }
+    }
+  }
+}
