@@ -1,10 +1,1585 @@
 {
-  "$id": "https://foodrisklabs.bfr.bund.de/fsk-lab-schema.json",
+  "id": "https://foodrisklabs.bfr.bund.de/fsk-lab-schema.json",
   "definitions": {
-    "model": {
+    "study": {
+      "type": "object",
+      "properties": {
+        "identifier": {
+          "type": "string",
+          "description": "A user defined identifier for the study"
+        },
+        "protocolComponentsName": {
+          "type": "string",
+          "description": "The components used when carrying out this protocol"
+        },
+        "designType": {
+          "type": "string",
+          "description": "The type of study design being employed"
+        },
+        "assayMeasurementType": {
+          "type": "string",
+          "description": "The measurement being observed in this assay"
+        },
+        "protocolComponentsType": {
+          "type": "string",
+          "description": "Description"
+        },
+        "description": {
+          "type": "string",
+          "description": "A brief description of the study aims"
+        },
+        "assayTechnologyPlatform": {
+          "type": "string",
+          "description": "The technology platform used"
+        },
+        "assayTechnologyType": {
+          "type": "string",
+          "description": "The technology being employed to observe this measurement"
+        },
+        "protocolType": {
+          "type": "string",
+          "description": "The type of the protocol, preferably coming from an Ontology, e.g. Extraction Protocol"
+        },
+        "title": {
+          "type": "string",
+          "description": "A title for the Study"
+        },
+        "protocolDescription": {
+          "type": "string",
+          "description": "A description of the Protocol"
+        },
+        "protocolParametersName": {
+          "type": "string",
+          "description": "The parameters used when executing this protocol"
+        },
+        "protocolName": {
+          "type": "string",
+          "description": "The name of the protocol, e.g.Extraction Protocol"
+        },
+        "protocolVersion": {
+          "type": "string",
+          "description": "The version of the protocol used, where applicable"
+        },
+        "protocolURI": {
+          "type": "string",
+          "description": "A URI to link out to a publication, web page, etc. describing the protocol."
+        },
+        "accreditationProcedureForTheAssayTechnology": {
+          "type": "string",
+          "description": "Accreditation procedure for the analytical method used"
+        }
+      },
       "required": [
-        "modelType"
-      ],
+        "title"
+      ]
+    },
+    "toxicologicalModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/modelDataBackground"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/genericModelModelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/toxicologicalModelScope"
+        }
+      }
+    },
+    "genericModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/genericModelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^GenericModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/genericModelGeneralInformation",
+              "required": [
+                "name",
+                "identifier",
+                "creationDate",
+                "rights",
+                "reference"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "software": {
+                  "type": "string",
+                  "description": "The program or software language in which the model has been implemented"
+                },
+                "languageWrittenIn": {
+                  "type": "string",
+                  "description": "Software language used to write the model, e.g. R or MatLab"
+                },
+                "modelCategory": {
+                  "$ref": "#/definitions/modelCategory"
+                }
+              }
+            }
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/genericModelModelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/genericModelScope"
+        }
+      }
+    },
+    "dataModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/genericModelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^DataModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/generalInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference"
+          ]
+        },
+        "modelMath": {
+          "type": "object",
+          "properties": {
+            "parameter": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/parameter"
+              }
+            }
+          },
+          "required": [
+            "parameter"
+          ]
+        },
+        "scope": {
+          "$ref": "#/definitions/genericModelScope"
+        }
+      }
+    },
+    "qraModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/genericModelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^QraModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/genericModelModelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/genericModelScope",
+          "required": [
+            "product",
+            "hazard",
+            "populationGroup"
+          ]
+        }
+      }
+    },
+    "genericModelScope": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/scope"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "populationGroup": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/populationGroup"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "reference": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "format": "date",
+          "type": "string",
+          "description": "Temporal information on the publication date"
+        },
+        "website": {
+          "type": "string",
+          "description": "A link to the publication website (different from DOI)"
+        },
+        "issue": {
+          "type": "string",
+          "description": "Data on the details of the journal in which the model or the data has been described"
+        },
+        "publicationType": {
+          "type": "string",
+          "description": "The type of publication, e.g. Report, Journal article, Book, Online database, ...",
+          "enum": [
+            "ABST",
+            "ADVS",
+            "AGGR",
+            "ANCIENT",
+            "ART",
+            "BILL",
+            "BLOG",
+            "BOOK",
+            "CASE",
+            "CHAP",
+            "CHART",
+            "CLSWK",
+            "COMP",
+            "CONF",
+            "CPAPER",
+            "CTLG",
+            "DATA",
+            "DBASE",
+            "DICT",
+            "EBOOK",
+            "ECHAP",
+            "EDBOOK",
+            "EJOUR",
+            "ELECT",
+            "ENCYC",
+            "EQUA",
+            "FIGURE",
+            "GEN",
+            "GOVDOC",
+            "GRANT",
+            "HEAR",
+            "ICOMM",
+            "INPR",
+            "JOUR",
+            "JFULL",
+            "LEGAL",
+            "MANSCPT",
+            "MAP",
+            "MGZN",
+            "MPCT",
+            "MULTI",
+            "MUSIC",
+            "NEW",
+            "PAMP",
+            "PAT",
+            "PCOMM",
+            "RPRT",
+            "SER",
+            "SLIDE",
+            "SOUND",
+            "STAND",
+            "STAT",
+            "THES",
+            "UNPB",
+            "VIDEO"
+          ]
+        },
+        "abstract": {
+          "type": "string",
+          "description": "Abstract of the publication in which the model or the data has been described"
+        },
+        "isReferenceDescription": {
+          "type": "boolean",
+          "description": "Indicates whether this specific publication serves as the reference description for the model. There has to be at least one reference where this field is set to 'True'"
+        },
+        "pmid": {
+          "type": "string",
+          "description": "The PubMed ID related to this publication"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the publication in which the model or the data has been described"
+        },
+        "volume": {
+          "type": "string",
+          "description": "Data on the details of the journal in which the model or the data has been described"
+        },
+        "journal": {
+          "type": "string",
+          "description": "Data on the details of the journal in which the model or the data has been described"
+        },
+        "authorList": {
+          "type": "string",
+          "description": "Name and surname of the authors who contributed to this publication"
+        },
+        "comment": {
+          "type": "string",
+          "description": "Further comments related to the reference description, e.g. which section in there describes the specific model or which figure in there can be reproduced with the visualization script"
+        },
+        "doi": {
+          "type": "string",
+          "description": "The DOI related to this publication"
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of this publication, e.g. Published, Submitted, etc."
+        }
+      },
+      "required": [
+        "isReferenceDescription",
+        "doi",
+        "title"
+      ]
+    },
+    "modelEquation": {
+      "type": "object",
+      "properties": {
+        "reference": {
+          "type": "array",
+          "items": {
+            "description": "Information on the source, where the equation has been extracted from",
+            "$ref": "#/definitions/reference"
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "A name given to the model equation"
+        },
+        "modelEquation": {
+          "type": "string",
+          "description": "The pointer to the file that holds the software code (e.g. R-script)"
+        },
+        "modelHypothesis": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Description of the hypothesis of the model"
+          }
+        },
+        "modelEquationClass": {
+          "type": "string",
+          "description": "Information on that helps to categorize model equations"
+        }
+      },
+      "required": [
+        "name",
+        "modelEquation"
+      ]
+    },
+    "riskModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/genericModelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^RiskModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/genericModelModelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/genericModelScope",
+          "required": [
+            "product",
+            "hazard",
+            "populationGroup"
+          ]
+        }
+      }
+    },
+    "hazard": {
+      "type": "object",
+      "properties": {
+        "maximumResidueLimit": {
+          "type": "string",
+          "description": "International regulations and permissible maximum residue levels in food and drinking water"
+        },
+        "sourceOfContamination": {
+          "type": "string",
+          "description": "Origin of the contamination, source"
+        },
+        "indSum": {
+          "type": "string",
+          "description": "Define if the parameter reported is an individual residue/analyte, a summed residue definition or part of a sum a summed residue definition"
+        },
+        "acceptableOperatorsExposureLevel": {
+          "type": "string",
+          "description": "Maximum amount of active substance to which the operator may be exposed without any adverse health effects. The AOEL is expressed as milligrams of the chemical per kilogram body weight of the operator"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the hazard for which the model or data applies"
+        },
+        "type": {
+          "type": "string",
+          "description": "General classification of the hazard for which the model or data applies"
+        },
+        "adverseEffect": {
+          "type": "string",
+          "description": "Adverse effect induced by hazard about morbidity, mortality, and etcetera"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of the hazard for which the model or data applies"
+        },
+        "noObservedAdverseAffectLevel": {
+          "type": "string",
+          "description": "Level of exposure of an organism, found by experiment or observation, at which there is no biologically or statistically significant increase in the frequency or severity of any adverse effects in the exposed population when compared to its appropriate control"
+        },
+        "acuteReferenceDose": {
+          "type": "string",
+          "description": "An estimate (with uncertainty spanning perhaps an order of magnitude) of a daily oral exposure for an acute duration (24 hours or less) to the human population (including sensitive subgroups) that is likely to be without an appreciable risk of deleterious effects during a lifetime"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the hazard (agent, contaminant, chemical) for which the data or model applies"
+        },
+        "lowestObservedAdverseAffectLevel": {
+          "type": "string",
+          "description": "Lowest concentration or amount of a substance found by experiment or observation that causes an adverse alteration of morphology, function, capacity, growth, development, or lifespan of a target organism distinguished from normal organisms of the same species under defined conditions of exposure"
+        },
+        "benchmarkDose": {
+          "type": "string",
+          "description": "A dose or concentration that produces a predetermined change in response rate of an adverse effect (called the benchmark response or BMR) compared to background"
+        },
+        "acceptableDailyIntake": {
+          "type": "string",
+          "description": "Measure of amount of a specific substance in food or in drinking water tahta can be ingested (orally) on a daily basis over a lifetime without an appreciable health risk"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "string",
+          "description": "Scope of the parameter, e.g. if it refers to an animal, a batch of animals, a batch of products, a carcass, a carcass skin etc"
+        },
+        "maxValue": {
+          "type": "string",
+          "description": "Numerical value of the maximum limit of the parameter that determines the range of applicability for which the model applies"
+        },
+        "dataType": {
+          "type": "string",
+          "description": "Information on the data format of the parameter, e.g. if it the input parameter is a file location or a date or a number. This is important for software tools interpreting the metadata and generate user interfaces for parameter input.",
+          "enum": [
+            "INTEGER",
+            "DOUBLE",
+            "NUMBER",
+            "DATE",
+            "FILE",
+            "BOOLEAN",
+            "VECTOROFNUMBERS",
+            "VECTOROFSTRINGS",
+            "MATRIXOFNUMBERS",
+            "MATRIXOFSTRINGS",
+            "OBJECT",
+            "STRING"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "description": "General description of the parameter"
+        },
+        "source": {
+          "type": "string",
+          "description": "Information on the type of knowledge used to define the parameter value"
+        },
+        "classification": {
+          "type": "string",
+          "description": "General classification of the parameter (e.g. Input, Constant, Output...)",
+          "enum": [
+            "CONSTANT",
+            "INPUT",
+            "OUTPUT"
+          ]
+        },
+        "distribution": {
+          "type": "string",
+          "description": "Distribution describing the parameter variabilty. If no distribution selected this means the value provided in \"Parameter value\" is a point estimate. In case a distribution is selected the value provided in \"Parameter value\" is a string that the model code can parse in order to sample from the named distribution"
+        },
+        "error": {
+          "type": "string",
+          "description": "Error of the parameter value"
+        },
+        "variabilitySubject": {
+          "type": "string",
+          "description": "Information 'per what' the variability is described. It can be variability between broiler in a flock,  variability between all meat packages sold, variability between days, etc."
+        },
+        "reference": {
+          "description": "Information on the source, where the value of the parameter has been extracted from - if available. The format should use that used in other \"Reference\" metadata. Preferably DOI.",
+          "$ref": "#/definitions/reference"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of the parameter"
+        },
+        "minValue": {
+          "type": "string",
+          "description": "Numerical value of the minimum limit of the parameter that determines the range of applicability for which the model applies"
+        },
+        "unitCategory": {
+          "type": "string",
+          "description": "Empty"
+        },
+        "name": {
+          "type": "string",
+          "description": "A name given to the parameter"
+        },
+        "id": {
+          "type": "string",
+          "description": "An unambiguous ID given to each of the parameters - preferably autogenerated by a software tool and compatible with SBML ID requirements, only letters from A to Z, numbers and '_'"
+        },
+        "value": {
+          "type": "string",
+          "description": "A default value for the parameter. This is mandatory (needs to be provided) for all parameters of type 'Input'"
+        }
+      },
+      "required": [
+        "id",
+        "classification",
+        "name",
+        "unit",
+        "dataType"
+      ]
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "zipCode": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "givenName": {
+          "type": "string"
+        },
+        "timeZone": {
+          "type": "string"
+        },
+        "telephone": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "streetAddress": {
+          "type": "string"
+        },
+        "familyName": {
+          "type": "string"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "email": {
+          "format": "email",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "spatialInformation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/product"
+          }
+        },
+        "generalComment": {
+          "type": "string"
+        },
+        "hazard": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/hazard"
+          }
+        },
+        "temporalInformation": {
+          "type": "string"
+        }
+      }
+    },
+    "genericModelDataBackground": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/modelDataBackground"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dietaryAssessmentMethod": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/dietaryAssessmentMethod"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "otherModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/modelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^OtherModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/genericModelModelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/genericModelScope"
+        }
+      }
+    },
+    "toxicologicalModelScope": {
+      "type": "object",
+      "properties": {
+        "spatialInformation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "populationGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/populationGroup"
+          }
+        },
+        "generalComment": {
+          "type": "string"
+        },
+        "hazard": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/hazard"
+          }
+        },
+        "temporalInformation": {
+          "type": "string"
+        }
+      }
+    },
+    "modelCategory": {
+      "type": "object",
+      "properties": {
+        "modelClassComment": {
+          "type": "string",
+          "description": "Empty"
+        },
+        "basicProcess": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Defines the impact of the process on the hazard (so far only valid for process models and predictive models)"
+          }
+        },
+        "modelClass": {
+          "type": "string",
+          "description": "Type of model according to RAKIP classification"
+        },
+        "modelSubClass": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Sub-cassification of the model given the Model Class"
+          }
+        }
+      },
+      "required": [
+        "modelClass"
+      ]
+    },
+    "predictiveModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/modelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^PredictiveModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation"
+        },
+        "modelMath": {
+          "$ref": "#/definitions/modelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/scope",
+          "required": [
+            "product",
+            "hazard"
+          ]
+        }
+      }
+    },
+    "product": {
+      "type": "object",
+      "properties": {
+        "expiryDate": {
+          "format": "date",
+          "type": "string",
+          "description": "Date of expiry of food/product"
+        },
+        "treatment": {
+          "type": "array",
+          "description": "Used to characterise a product/matrix based on the treatment or processes applied to the product or any indexed ingredient",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of the product, matrix or environment for which the model or data applies"
+        },
+        "productionDate": {
+          "format": "date",
+          "type": "string",
+          "description": "Date of production of food/product"
+        },
+        "method": {
+          "type": "array",
+          "description": "Type of production for the product/ matrix",
+          "items": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "The product, matrix or environment (e.g food product, lab media, soil etc.) for which the model or data applies"
+        },
+        "originCountry": {
+          "type": "string",
+          "description": "Country of origin of the food/product (ISO 3166-1-alpha-2 country code)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the product, matrix or environment for which the model or data applies"
+        },
+        "packaging": {
+          "type": "array",
+          "description": "Describe container or wrapper that holds the product/matrix. Common type of packaging (paper or plastic bags, boxes, tinplate or aluminium cans, plastic trays, plastic bottles, glass bottles or jars)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fisheriesArea": {
+          "type": "string",
+          "description": "Fisheries or aquaculture area specifying the origin of the sample (FAO Fisheries areas)"
+        },
+        "originArea": {
+          "type": "string",
+          "description": "Area of origin of the food/product (Nomenclature of territorial units for statistics – NUTS – coding system valid only for EEA and Switzerland)"
+        }
+      },
+      "required": [
+        "name",
+        "unit"
+      ]
+    },
+    "modelDataBackground": {
+      "type": "object",
+      "properties": {
+        "study": {
+          "$ref": "#/definitions/study"
+        },
+        "laboratory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/laboratory"
+          }
+        },
+        "assay": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/assay"
+          }
+        },
+        "studySample": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/studySample"
+          }
+        }
+      },
+      "required": [
+        "study"
+      ]
+    },
+    "healthModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/modelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^HealthModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/genericModelModelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/toxicologicalModelScope",
+          "required": [
+            "hazard",
+            "populationGroup"
+          ]
+        }
+      }
+    },
+    "dietaryAssessmentMethod": {
+      "type": "object",
+      "properties": {
+        "numberOfFoodItems": {
+          "type": "array",
+          "description": "Number of food items",
+          "items": {
+            "type": "string"
+          }
+        },
+        "numberOfNonConsecutiveOneDay": {
+          "type": "string",
+          "description": "Number of non-consecutive one-day recorded"
+        },
+        "softwareTool": {
+          "type": "string",
+          "description": "Name of the software used to collect the data"
+        },
+        "foodDescriptors": {
+          "type": "array",
+          "description": "Description using FoodEx2 facet",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recordTypes": {
+          "type": "array",
+          "description": "Consumption occasion, mean of consumption, quantified and described as eaten, recipes for self-made",
+          "items": {
+            "type": "string"
+          }
+        },
+        "collectionTool": {
+          "type": "string",
+          "description": "Food diaries, interview, 24-hour recall interview, food propensy questionnaire, portion size measurement aids, eating outside questionnaire"
+        }
+      },
+      "required": [
+        "collectionTool",
+        "numberOfNonConsecutiveOneDay",
+        "numberOfFoodItems",
+        "recordTypes",
+        "foodDescriptors"
+      ]
+    },
+    "genericModelGeneralInformation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/generalInformation"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "software": {
+              "type": "string",
+              "description": "The program or software language in which the model has been implemented"
+            },
+            "languageWrittenIn": {
+              "type": "string",
+              "description": "Software language used to write the model, e.g. R or MatLab"
+            },
+            "modelCategory": {
+              "$ref": "#/definitions/modelCategory"
+            }
+          }
+        }
+      ]
+    },
+    "qualityMeasures": {
+      "type": "object",
+      "properties": {
+        "rsquared": {
+          "type": "number",
+          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+        },
+        "sse": {
+          "type": "number",
+          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+        },
+        "rmse": {
+          "type": "number",
+          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+        },
+        "aic": {
+          "type": "number",
+          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+        },
+        "sensitivityAnalysis": {
+          "type": "string",
+          "description": "Description of the results of an sensitivity analysis, i.e. how independence assumptions are met or how variables will affect the output of model"
+        },
+        "bic": {
+          "type": "number",
+          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+        },
+        "mse": {
+          "type": "number",
+          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+        }
+      }
+    },
+    "processModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/modelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^ProcessModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/modelMath"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "spatialInformation": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "product": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/product"
+              }
+            },
+            "generalComment": {
+              "type": "string"
+            },
+            "hazard": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/hazard"
+              }
+            },
+            "temporalInformation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "product",
+            "hazard"
+          ]
+        }
+      }
+    },
+    "generalInformation": {
+      "type": "object",
+      "properties": {
+        "identifier": {
+          "type": "string"
+        },
+        "creator": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/contact"
+          }
+        },
+        "author": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/contact"
+          }
+        },
+        "format": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "availability": {
+          "type": "string"
+        },
+        "creationDate": {
+          "format": "date",
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "type": "string"
+        },
+        "objective": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/reference"
+          }
+        },
+        "modificationDate": {
+          "type": "array",
+          "items": {
+            "format": "date",
+            "type": "string"
+          }
+        },
+        "rights": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "studySample": {
+      "type": "object",
+      "properties": {
+        "sampleName": {
+          "type": "string",
+          "description": "An unambiguous ID given to the samples used in the assay"
+        },
+        "samplingWeight": {
+          "type": "string",
+          "description": "Description of the method employed to compute sampling weight (nonresponse-adjusted weight)"
+        },
+        "protocolOfSampleCollection": {
+          "type": "string",
+          "description": "Additional protocol for sample and sample collection. Corresponds to the Protocol REF in ISA"
+        },
+        "samplingStrategy": {
+          "type": "string",
+          "description": "Sampling strategy (ref. EUROSTAT - Typology of sampling strategy, version of July 2009)"
+        },
+        "samplingSize": {
+          "type": "string",
+          "description": "Number of units, full participants, partial participants, eligibles, not eligible, unresolved (eligibility status not resolved)…"
+        },
+        "lotSizeUnit": {
+          "type": "string",
+          "description": "Unit in which the lot size is expressed"
+        },
+        "samplingPoint": {
+          "type": "string",
+          "description": "Point in the food chain where the sample was taken. (Doc. ESTAT/F5/ES/155 “Data dictionary of activities of the establishments”)"
+        },
+        "samplingMethod": {
+          "type": "string",
+          "description": "Sampling method used to take the sample"
+        },
+        "typeOfSamplingProgram": {
+          "type": "string",
+          "description": "Indicate the type of programm for which the samples have been collected"
+        },
+        "samplingPlan": {
+          "type": "string",
+          "description": "Description of data collection technique (stratified or complex sampling (several stages))"
+        }
+      },
+      "required": [
+        "sampleName",
+        "protocolOfSampleCollection",
+        "samplingPlan",
+        "samplingWeight",
+        "samplingSize"
+      ]
+    },
+    "genericModelModelMath": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/modelMath"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "exposure": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/exposure"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "doseResponseModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/modelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^DoseResponseModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "modelName",
+            "identifier",
+            "creator",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/genericModelModelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/toxicologicalModelScope",
+          "required": [
+            "hazard",
+            "populationGroup"
+          ]
+        }
+      }
+    },
+    "consumptionModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/genericModelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^ConsumptionModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/modelMath"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "spatialInformation": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "product": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/product"
+              }
+            },
+            "populationGroup": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/populationGroup"
+              }
+            },
+            "generalComment": {
+              "type": "string"
+            },
+            "temporalInformation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "product",
+            "populationGroup"
+          ]
+        }
+      }
+    },
+    "populationGroup": {
+      "type": "object",
+      "properties": {
+        "populationRiskFactor": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Population risk factor that may influence the outcomes of the study, confounder should be included"
+          }
+        },
+        "country": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Country on which the population group of the model or data applies"
+          }
+        },
+        "populationSpan": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Temporal information on the exposure duration"
+          }
+        },
+        "populationGender": {
+          "type": "string",
+          "description": "Description of the percentage of gender"
+        },
+        "populationDescription": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Description of the population for which the model applies (demographic and socio-economic characteristics for example). Background information that are needed in the data analysis phase, size of household, education level, employment status, professional category, ethnicity, etc."
+          }
+        },
+        "populationAge": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Description of the range of age or group of age"
+          }
+        },
+        "patternConsumption": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Description of the consumption of different food items, frequency, portion size"
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the population for which the model or data applies"
+        },
+        "season": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Distribution of surveyed people according to the season (influence consumption pattern)"
+          }
+        },
+        "region": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Spatial information (area) on which the population group of the model or data applies"
+          }
+        },
+        "targetPopulation": {
+          "type": "string",
+          "description": "Population of individual that we are interested in describing and making statistical inferences about"
+        },
+        "bmi": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Description of the range of BMI or class of BMI or BMI mean"
+          }
+        },
+        "specialDietGroups": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Description of sub-population with special diets (vegetarians, diabetics, group following special ethnic diets)"
+          }
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "exposure": {
+      "type": "object",
+      "properties": {
+        "treatment": {
+          "type": "array",
+          "description": "Description of the mathematical method to replace left-censored data (recommandation of WHO (2013), distribution or others)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "type": {
+          "type": "string",
+          "description": "Description of the type of exposure"
+        },
+        "scenario": {
+          "type": "array",
+          "description": "Description of the different scenarii used in exposure assessment",
+          "items": {
+            "type": "string"
+          }
+        },
+        "uncertaintyEstimation": {
+          "type": "string",
+          "description": "Analysis to estimate uncertainty"
+        },
+        "contamination": {
+          "type": "array",
+          "description": "Description of the range of of the level of contamination after left censored data treatment",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "laboratory": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Laboratory code (National laboratory code if available) or Laboratory name"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country where the laboratory is placed. (ISO 3166-1-alpha-2)"
+        },
+        "accreditation": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "The laboratory accreditation to ISO/IEC 17025"
+          }
+        }
+      },
+      "required": [
+        "accreditation"
+      ]
+    },
+    "assay": {
+      "type": "object",
+      "properties": {
+        "contaminationRange": {
+          "type": "string",
+          "description": "Range of result of the analytical measure reported in the unit specified by the variable 'Hazard unit' before censored data treatment"
+        },
+        "uncertaintyValue": {
+          "type": "string",
+          "description": "Indicate the expanded uncertainty (usually 95% confidence interval) value associated with the measurement expressed in the unit reported in the field 'Hazard unit'"
+        },
+        "fatPercentage": {
+          "type": "string",
+          "description": "Percentage of fat in the original sample"
+        },
+        "name": {
+          "type": "string",
+          "description": "A name given to the assay"
+        },
+        "description": {
+          "type": "string",
+          "description": "General description of the assay. Corresponds to the Protocol REF in ISA"
+        },
+        "moisturePercentage": {
+          "type": "string",
+          "description": "Percentage of moisture in the original sample"
+        },
+        "leftCensoredData": {
+          "type": "string",
+          "description": "Percentage of measures equal to LOQ and/or LOD"
+        },
+        "detectionLimit": {
+          "type": "string",
+          "description": "Limit of detection reported in the unit specified by the variable 'Hazard unit'"
+        },
+        "quantificationLimit": {
+          "type": "string",
+          "description": "Limit of quantification reported in the unit specified by the variable 'Hazard unit'"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "modelMath": {
+      "type": "object",
+      "properties": {
+        "fittingProcedure": {
+          "type": "string"
+        },
+        "qualityMeasures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/qualityMeasures"
+          }
+        },
+        "modelEquation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/modelEquation"
+          }
+        },
+        "event": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parameter": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/parameter"
+          }
+        }
+      },
+      "required": [
+        "parameter"
+      ]
+    },
+    "exposureModel": {
+      "type": "object",
+      "properties": {
+        "dataBackground": {
+          "$ref": "#/definitions/genericModelDataBackground"
+        },
+        "modelType": {
+          "pattern": "^ExposureModel$",
+          "type": "string"
+        },
+        "generalInformation": {
+          "$ref": "#/definitions/genericModelGeneralInformation",
+          "required": [
+            "name",
+            "identifier",
+            "creationDate",
+            "rights",
+            "reference",
+            "languageWrittenIn"
+          ]
+        },
+        "modelMath": {
+          "$ref": "#/definitions/genericModelModelMath"
+        },
+        "scope": {
+          "$ref": "#/definitions/genericModelScope",
+          "required": [
+            "product",
+            "hazard",
+            "populationGroup"
+          ]
+        }
+      }
+    }
+  },
+  "properties": {
+    "model": {
       "allOf": [
         {
           "if": {
@@ -151,1601 +1726,28 @@
           }
         }
       ],
+      "required": [
+        "modelType"
+      ],
       "properties": {
         "modelType": {
           "type": "string",
           "enum": [
             "GenericModel",
+            "ProcessModel",
+            "RiskModel",
+            "QraModel",
             "DataModel",
-            "PredictiveModel",
-            "OtherModel",
             "ExposureModel",
             "ToxicologicalModel",
-            "DoseResponseModel",
-            "ProcessModel",
-            "ConsumptionModel",
             "HealthModel",
-            "RiskModel",
-            "QraModel"
+            "DoseResponseModel",
+            "PredictiveModel",
+            "OtherModel",
+            "ConsumptionModel"
           ]
         }
       }
-    },
-    "genericModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^GenericModel$"
-        },
-        "generalInformation": {
-          "allOf": [
-            {
-              "$ref": "#/definitions/genericModelGeneralInformation",
-              "required": [
-                "name",
-                "identifier",
-                "creationDate",
-                "rights",
-                "reference"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "software": {
-                  "type": "string",
-                  "description": "The program or software language in which the model has been implemented"
-                },
-                "languageWrittenIn": {
-                  "type": "string",
-                  "description": "Software language used to write the model, e.g. R or MatLab"
-                },
-                "modelCategory": {
-                  "$ref": "#/definitions/modelCategory"
-                }
-              }
-            }
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/genericModelScope"
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/genericModelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/genericModelModelMath"
-        }
-      }
-    },
-    "dataModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^DataModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/generalInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/genericModelScope"
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/genericModelDataBackground"
-        },
-        "modelMath": {
-          "type": "object",
-          "properties": {
-            "parameter": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/parameter"
-              }
-            }
-          },
-          "required": [
-            "parameter"
-          ]
-        }
-      }
-    },
-    "predictiveModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^PredictiveModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/scope",
-          "required": [
-            "product",
-            "hazard"
-          ]
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/modelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/modelMath"
-        }
-      }
-    },
-    "otherModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^OtherModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/genericModelScope"
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/modelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/genericModelModelMath"
-        }
-      }
-    },
-    "exposureModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^ExposureModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/genericModelScope",
-          "required": [
-            "product",
-            "hazard",
-            "populationGroup"
-          ]
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/genericModelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/genericModelModelMath"
-        }
-      }
-    },
-    "toxicologicalModel": {
-      "type": "object",
-      "properties": {
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/toxicologicalModelScope"
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/modelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/genericModelModelMath"
-        }
-      }
-    },
-    "doseResponseModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^DoseResponseModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "modelName",
-            "identifier",
-            "creator",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/toxicologicalModelScope",
-          "required": [
-            "hazard",
-            "populationGroup"
-          ]
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/modelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/genericModelModelMath"
-        }
-      }
-    },
-    "processModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^ProcessModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/PredictiveModelGeneralInformation"
-        },
-        "scope": {
-          "type": "object",
-          "properties": {
-            "product": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/product"
-              }
-            },
-            "hazard": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/hazard"
-              }
-            },
-            "generalComment": {
-              "type": "string"
-            },
-            "temporalInformation": {
-              "type": "string"
-            },
-            "spatialInformation": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          "required": [
-            "product",
-            "hazard"
-          ]
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/modelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/modelMath"
-        }
-      }
-    },
-    "consumptionModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^ConsumptionModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "type": "object",
-          "properties": {
-            "product": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Product"
-              }
-            },
-            "populationGroup": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/PopulationGroup"
-              }
-            },
-            "generalComment": {
-              "type": "string"
-            },
-            "temporalInformation": {
-              "type": "string"
-            },
-            "spatialInformation": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          "required": [
-            "product",
-            "populationGroup"
-          ]
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/genericModelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/modelMath"
-        }
-      }
-    },
-    "healthModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^HealthModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/toxicologicalModelScope",
-          "required": [
-            "hazard",
-            "populationGroup"
-          ]
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/modelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/genericModelModelMath"
-        }
-      }
-    },
-    "riskModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^RiskModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/genericModelScope",
-          "required": [
-            "product",
-            "hazard",
-            "populationGroup"
-          ]
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/genericModelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/genericModelModelMath"
-        }
-      }
-    },
-    "qraModel": {
-      "type": "object",
-      "properties": {
-        "modelType": {
-          "type": "string",
-          "pattern": "^QraModel$"
-        },
-        "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
-        },
-        "scope": {
-          "$ref": "#/definitions/genericModelScope",
-          "required": [
-            "product",
-            "hazard",
-            "populationGroup"
-          ]
-        },
-        "dataBackground": {
-          "$ref": "#/definitions/genericModelDataBackground"
-        },
-        "modelMath": {
-          "$ref": "#/definitions/genericModelModelMath"
-        }
-      }
-    },
-    "parameter": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "An unambiguous ID given to each of the parameters - preferably autogenerated by a software tool and compatible with SBML ID requirements, only letters from A to Z, numbers and '_'"
-        },
-        "classification": {
-          "type": "string",
-          "description": "General classification of the parameter (e.g. Input, Constant, Output...)",
-          "enum": [
-            "CONSTANT",
-            "INPUT",
-            "OUTPUT"
-          ]
-        },
-        "name": {
-          "type": "string",
-          "description": "A name given to the parameter"
-        },
-        "description": {
-          "type": "string",
-          "description": "General description of the parameter"
-        },
-        "unit": {
-          "type": "string",
-          "description": "Unit of the parameter"
-        },
-        "unitCategory": {
-          "type": "string",
-          "description": "Empty"
-        },
-        "dataType": {
-          "type": "string",
-          "description": "Information on the data format of the parameter, e.g. if it the input parameter is a file location or a date or a number. This is important for software tools interpreting the metadata and generate user interfaces for parameter input.",
-          "enum": [
-            "INTEGER",
-            "DOUBLE",
-            "NUMBER",
-            "DATE",
-            "FILE",
-            "BOOLEAN",
-            "VECTOROFNUMBERS",
-            "VECTOROFSTRINGS",
-            "MATRIXOFNUMBERS",
-            "MATRIXOFSTRINGS",
-            "OBJECT",
-            "STRING"
-          ]
-        },
-        "source": {
-          "type": "string",
-          "description": "Information on the type of knowledge used to define the parameter value"
-        },
-        "subject": {
-          "type": "string",
-          "description": "Scope of the parameter, e.g. if it refers to an animal, a batch of animals, a batch of products, a carcass, a carcass skin etc"
-        },
-        "distribution": {
-          "type": "string",
-          "description": "Distribution describing the parameter variabilty. If no distribution selected this means the value provided in \"Parameter value\" is a point estimate. In case a distribution is selected the value provided in \"Parameter value\" is a string that the model code can parse in order to sample from the named distribution"
-        },
-        "value": {
-          "type": "string",
-          "description": "A default value for the parameter. This is mandatory (needs to be provided) for all parameters of type 'Input'"
-        },
-        "reference": {
-          "$ref": "#/definitions/reference",
-          "description": "Information on the source, where the value of the parameter has been extracted from - if available. The format should use that used in other \"Reference\" metadata. Preferably DOI."
-        },
-        "variabilitySubject": {
-          "type": "string",
-          "description": "Information 'per what' the variability is described. It can be variability between broiler in a flock,  variability between all meat packages sold, variability between days, etc."
-        },
-        "minValue": {
-          "type": "string",
-          "description": "Numerical value of the minimum limit of the parameter that determines the range of applicability for which the model applies"
-        },
-        "maxValue": {
-          "type": "string",
-          "description": "Numerical value of the maximum limit of the parameter that determines the range of applicability for which the model applies"
-        },
-        "error": {
-          "type": "string",
-          "description": "Error of the parameter value"
-        }
-      },
-      "required": [
-        "id",
-        "classification",
-        "name",
-        "unit",
-        "dataType"
-      ]
-    },
-    "modelEquation": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "A name given to the model equation"
-        },
-        "modelEquationClass": {
-          "type": "string",
-          "description": "Information on that helps to categorize model equations"
-        },
-        "reference": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Reference",
-            "description": "Information on the source, where the equation has been extracted from"
-          }
-        },
-        "modelEquation": {
-          "type": "string",
-          "description": "The pointer to the file that holds the software code (e.g. R-script)"
-        },
-        "modelHypothesis": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Description of the hypothesis of the model"
-          }
-        }
-      },
-      "required": [
-        "name",
-        "modelEquation"
-      ]
-    },
-    "exposure": {
-      "type": "object",
-      "properties": {
-        "treatment": {
-          "description": "Description of the mathematical method to replace left-censored data (recommandation of WHO (2013), distribution or others)",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "contamination": {
-          "description": "Description of the range of of the level of contamination after left censored data treatment",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "type": {
-          "description": "Description of the type of exposure",
-          "type": "string"
-        },
-        "scenario": {
-          "type": "array",
-          "description": "Description of the different scenarii used in exposure assessment",
-          "items": {
-            "type": "string"
-          }
-        },
-        "uncertaintyEstimation": {
-          "description": "Analysis to estimate uncertainty",
-          "type": "string"
-        }
-      },
-      "required": [
-        "type"
-      ]
-    },
-    "qualityMeasures": {
-      "type": "object",
-      "properties": {
-        "sse": {
-          "type": "number",
-          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
-        },
-        "mse": {
-          "type": "number",
-          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
-        },
-        "rmse": {
-          "type": "number",
-          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
-        },
-        "rsquared": {
-          "type": "number",
-          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
-        },
-        "aic": {
-          "type": "number",
-          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
-        },
-        "bic": {
-          "type": "number",
-          "description": "Statistical values calculated to describe the performance of the model fitting procedure"
-        },
-        "sensitivityAnalysis": {
-          "type": "string",
-          "description": "Description of the results of an sensitivity analysis, i.e. how independence assumptions are met or how variables will affect the output of model"
-        }
-      }
-    },
-    "contact": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "familyName": {
-          "type": "string"
-        },
-        "givenName": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string",
-          "format": "email"
-        },
-        "telephone": {
-          "type": "string"
-        },
-        "streetAddress": {
-          "type": "string"
-        },
-        "country": {
-          "type": "string"
-        },
-        "zipCode": {
-          "type": "string"
-        },
-        "region": {
-          "type": "string"
-        },
-        "timeZone": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "note": {
-          "type": "string"
-        },
-        "organization": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "email"
-      ]
-    },
-    "reference": {
-      "type": "object",
-      "properties": {
-        "isReferenceDescription": {
-          "type": "boolean",
-          "description": "Indicates whether this specific publication serves as the reference description for the model. There has to be at least one reference where this field is set to 'True'"
-        },
-        "publicationType": {
-          "description": "The type of publication, e.g. Report, Journal article, Book, Online database, ...",
-          "type": "string",
-          "enum": [
-            "ABST",
-            "ADVS",
-            "AGGR",
-            "ANCIENT",
-            "ART",
-            "BILL",
-            "BLOG",
-            "BOOK",
-            "CASE",
-            "CHAP",
-            "CHART",
-            "CLSWK",
-            "COMP",
-            "CONF",
-            "CPAPER",
-            "CTLG",
-            "DATA",
-            "DBASE",
-            "DICT",
-            "EBOOK",
-            "ECHAP",
-            "EDBOOK",
-            "EJOUR",
-            "ELECT",
-            "ENCYC",
-            "EQUA",
-            "FIGURE",
-            "GEN",
-            "GOVDOC",
-            "GRANT",
-            "HEAR",
-            "ICOMM",
-            "INPR",
-            "JOUR",
-            "JFULL",
-            "LEGAL",
-            "MANSCPT",
-            "MAP",
-            "MGZN",
-            "MPCT",
-            "MULTI",
-            "MUSIC",
-            "NEW",
-            "PAMP",
-            "PAT",
-            "PCOMM",
-            "RPRT",
-            "SER",
-            "SLIDE",
-            "SOUND",
-            "STAND",
-            "STAT",
-            "THES",
-            "UNPB",
-            "VIDEO"
-          ]
-        },
-        "date": {
-          "type": "string",
-          "format": "date",
-          "description": "Temporal information on the publication date"
-        },
-        "pmid": {
-          "type": "string",
-          "description": "The PubMed ID related to this publication"
-        },
-        "doi": {
-          "type": "string",
-          "description": "The DOI related to this publication"
-        },
-        "authorList": {
-          "type": "string",
-          "description": "Name and surname of the authors who contributed to this publication"
-        },
-        "title": {
-          "type": "string",
-          "description": "Title of the publication in which the model or the data has been described"
-        },
-        "abstract": {
-          "type": "string",
-          "description": "Abstract of the publication in which the model or the data has been described"
-        },
-        "journal": {
-          "type": "string",
-          "description": "Data on the details of the journal in which the model or the data has been described"
-        },
-        "volume": {
-          "type": "string",
-          "description": "Data on the details of the journal in which the model or the data has been described"
-        },
-        "issue": {
-          "type": "string",
-          "description": "Data on the details of the journal in which the model or the data has been described"
-        },
-        "status": {
-          "type": "string",
-          "description": "The status of this publication, e.g. Published, Submitted, etc."
-        },
-        "website": {
-          "type": "string",
-          "description": "A link to the publication website (different from DOI)"
-        },
-        "comment": {
-          "type": "string",
-          "description": "Further comments related to the reference description, e.g. which section in there describes the specific model or which figure in there can be reproduced with the visualization script"
-        }
-      },
-      "required": [
-        "isReferenceDescription",
-        "doi",
-        "title"
-      ]
-    },
-    "study": {
-      "type": "object",
-      "properties": {
-        "identifier": {
-          "type": "string",
-          "description": "A user defined identifier for the study"
-        },
-        "title": {
-          "type": "string",
-          "description": "A title for the Study"
-        },
-        "description": {
-          "type": "string",
-          "description": "A brief description of the study aims"
-        },
-        "designType": {
-          "type": "string",
-          "description": "The type of study design being employed"
-        },
-        "assayMeasurementType": {
-          "type": "string",
-          "description": "The measurement being observed in this assay"
-        },
-        "assayTechnologyType": {
-          "type": "string",
-          "description": "The technology being employed to observe this measurement"
-        },
-        "assayTechnologyPlatform": {
-          "type": "string",
-          "description": "The technology platform used"
-        },
-        "accreditationProcedureForTheAssayTechnology": {
-          "type": "string",
-          "description": "Accreditation procedure for the analytical method used"
-        },
-        "protocolName": {
-          "type": "string",
-          "description": "The name of the protocol, e.g.Extraction Protocol"
-        },
-        "protocolType": {
-          "type": "string",
-          "description": "The type of the protocol, preferably coming from an Ontology, e.g. Extraction Protocol"
-        },
-        "protocolDescription": {
-          "type": "string",
-          "description": "A description of the Protocol"
-        },
-        "protocolURI": {
-          "type": "string",
-          "description": "A URI to link out to a publication, web page, etc. describing the protocol."
-        },
-        "protocolVersion": {
-          "type": "string",
-          "description": "The version of the protocol used, where applicable"
-        },
-        "protocolParametersName": {
-          "type": "string",
-          "description": "The parameters used when executing this protocol"
-        },
-        "protocolComponentsName": {
-          "type": "string",
-          "description": "The components used when carrying out this protocol"
-        },
-        "protocolComponentsType": {
-          "type": "string",
-          "description": "Description"
-        }
-      },
-      "required": [
-        "title"
-      ]
-    },
-    "studySample": {
-      "type": "object",
-      "properties": {
-        "sampleName": {
-          "type": "string",
-          "description": "An unambiguous ID given to the samples used in the assay"
-        },
-        "protocolOfSampleCollection": {
-          "type": "string",
-          "description": "Additional protocol for sample and sample collection. Corresponds to the Protocol REF in ISA"
-        },
-        "samplingStrategy": {
-          "type": "string",
-          "description": "Sampling strategy (ref. EUROSTAT - Typology of sampling strategy, version of July 2009)"
-        },
-        "typeOfSamplingProgram": {
-          "type": "string",
-          "description": "Indicate the type of programm for which the samples have been collected"
-        },
-        "samplingMethod": {
-          "type": "string",
-          "description": "Sampling method used to take the sample"
-        },
-        "samplingPlan": {
-          "type": "string",
-          "description": "Description of data collection technique (stratified or complex sampling (several stages))"
-        },
-        "samplingWeight": {
-          "type": "string",
-          "description": "Description of the method employed to compute sampling weight (nonresponse-adjusted weight)"
-        },
-        "samplingSize": {
-          "type": "string",
-          "description": "Number of units, full participants, partial participants, eligibles, not eligible, unresolved (eligibility status not resolved)…"
-        },
-        "lotSizeUnit": {
-          "type": "string",
-          "description": "Unit in which the lot size is expressed"
-        },
-        "samplingPoint": {
-          "type": "string",
-          "description": "Point in the food chain where the sample was taken. (Doc. ESTAT/F5/ES/155 “Data dictionary of activities of the establishments”)"
-        }
-      },
-      "required": [
-        "sampleName",
-        "protocolOfSampleCollection",
-        "samplingPlan",
-        "samplingWeight",
-        "samplingSize"
-      ]
-    },
-    "dietaryAssessmentMethod": {
-      "type": "object",
-      "properties": {
-        "collectionTool": {
-          "type": "string",
-          "description": "Food diaries, interview, 24-hour recall interview, food propensy questionnaire, portion size measurement aids, eating outside questionnaire"
-        },
-        "numberOfNonConsecutiveOneDay": {
-          "type": "string",
-          "description": "Number of non-consecutive one-day recorded"
-        },
-        "softwareTool": {
-          "type": "string",
-          "description": "Name of the software used to collect the data"
-        },
-        "numberOfFoodItems": {
-          "type": "array",
-          "description": "Number of food items",
-          "items": {
-            "type": "string"
-          }
-        },
-        "recordTypes": {
-          "type": "array",
-          "description": "Consumption occasion, mean of consumption, quantified and described as eaten, recipes for self-made",
-          "items": {
-            "type": "string"
-          }
-        },
-        "foodDescriptors": {
-          "type": "array",
-          "description": "Description using FoodEx2 facet",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "required": [
-        "collectionTool",
-        "numberOfNonConsecutiveOneDay",
-        "numberOfFoodItems",
-        "recordTypes",
-        "foodDescriptors"
-      ]
-    },
-    "laboratory": {
-      "type": "object",
-      "properties": {
-        "accreditation": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "The laboratory accreditation to ISO/IEC 17025"
-          }
-        },
-        "name": {
-          "type": "string",
-          "description": "Laboratory code (National laboratory code if available) or Laboratory name"
-        },
-        "country": {
-          "type": "string",
-          "description": "Country where the laboratory is placed. (ISO 3166-1-alpha-2)"
-        }
-      },
-      "required": [
-        "accreditation"
-      ]
-    },
-    "assay": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "A name given to the assay"
-        },
-        "description": {
-          "type": "string",
-          "description": "General description of the assay. Corresponds to the Protocol REF in ISA"
-        },
-        "moisturePercentage": {
-          "type": "string",
-          "description": "Percentage of moisture in the original sample"
-        },
-        "fatPercentage": {
-          "type": "string",
-          "description": "Percentage of fat in the original sample"
-        },
-        "detectionLimit": {
-          "type": "string",
-          "description": "Limit of detection reported in the unit specified by the variable 'Hazard unit'"
-        },
-        "quantificationLimit": {
-          "type": "string",
-          "description": "Limit of quantification reported in the unit specified by the variable 'Hazard unit'"
-        },
-        "leftCensoredData": {
-          "type": "string",
-          "description": "Percentage of measures equal to LOQ and/or LOD"
-        },
-        "contaminationRange": {
-          "type": "string",
-          "description": "Range of result of the analytical measure reported in the unit specified by the variable 'Hazard unit' before censored data treatment"
-        },
-        "uncertaintyValue": {
-          "type": "string",
-          "description": "Indicate the expanded uncertainty (usually 95% confidence interval) value associated with the measurement expressed in the unit reported in the field 'Hazard unit'"
-        }
-      },
-      "required": [
-        "name"
-      ]
-    },
-    "product": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The product, matrix or environment (e.g food product, lab media, soil etc.) for which the model or data applies"
-        },
-        "description": {
-          "type": "string",
-          "description": "Detailed description of the product, matrix or environment for which the model or data applies"
-        },
-        "unit": {
-          "type": "string",
-          "description": "Unit of the product, matrix or environment for which the model or data applies"
-        },
-        "method": {
-          "type": "array",
-          "description": "Type of production for the product/ matrix",
-          "items": {
-            "type": "string"
-          }
-        },
-        "packaging": {
-          "type": "array",
-          "description": "Describe container or wrapper that holds the product/matrix. Common type of packaging (paper or plastic bags, boxes, tinplate or aluminium cans, plastic trays, plastic bottles, glass bottles or jars)",
-          "items": {
-            "type": "string"
-          }
-        },
-        "treatment": {
-          "type": "array",
-          "description": "Used to characterise a product/matrix based on the treatment or processes applied to the product or any indexed ingredient",
-          "items": {
-            "type": "string"
-          }
-        },
-        "originCountry": {
-          "type": "string",
-          "description": "Country of origin of the food/product (ISO 3166-1-alpha-2 country code)"
-        },
-        "originArea": {
-          "type": "string",
-          "description": "Area of origin of the food/product (Nomenclature of territorial units for statistics – NUTS – coding system valid only for EEA and Switzerland)"
-        },
-        "fisheriesArea": {
-          "type": "string",
-          "description": "Fisheries or aquaculture area specifying the origin of the sample (FAO Fisheries areas)"
-        },
-        "productionDate": {
-          "type": "string",
-          "description": "Date of production of food/product",
-          "format": "date"
-        },
-        "expiryDate": {
-          "type": "string",
-          "description": "Date of expiry of food/product",
-          "format": "date"
-        }
-      },
-      "required": [
-        "name",
-        "unit"
-      ]
-    },
-    "hazard": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "General classification of the hazard for which the model or data applies"
-        },
-        "name": {
-          "type": "string",
-          "description": "Name of the hazard (agent, contaminant, chemical) for which the data or model applies"
-        },
-        "description": {
-          "type": "string",
-          "description": "Description of the hazard for which the model or data applies"
-        },
-        "unit": {
-          "type": "string",
-          "description": "Unit of the hazard for which the model or data applies"
-        },
-        "adverseEffect": {
-          "type": "string",
-          "description": "Adverse effect induced by hazard about morbidity, mortality, and etcetera"
-        },
-        "sourceOfContamination": {
-          "type": "string",
-          "description": "Origin of the contamination, source"
-        },
-        "benchmarkDose": {
-          "type": "string",
-          "description": "A dose or concentration that produces a predetermined change in response rate of an adverse effect (called the benchmark response or BMR) compared to background"
-        },
-        "maximumResidueLimit": {
-          "type": "string",
-          "description": "International regulations and permissible maximum residue levels in food and drinking water"
-        },
-        "noObservedAdverseAffectLevel": {
-          "type": "string",
-          "description": "Level of exposure of an organism, found by experiment or observation, at which there is no biologically or statistically significant increase in the frequency or severity of any adverse effects in the exposed population when compared to its appropriate control"
-        },
-        "lowestObservedAdverseAffectLevel": {
-          "type": "string",
-          "description": "Lowest concentration or amount of a substance found by experiment or observation that causes an adverse alteration of morphology, function, capacity, growth, development, or lifespan of a target organism distinguished from normal organisms of the same species under defined conditions of exposure"
-        },
-        "acceptableOperatorsExposureLevel": {
-          "type": "string",
-          "description": "Maximum amount of active substance to which the operator may be exposed without any adverse health effects. The AOEL is expressed as milligrams of the chemical per kilogram body weight of the operator"
-        },
-        "acuteReferenceDose": {
-          "type": "string",
-          "description": "An estimate (with uncertainty spanning perhaps an order of magnitude) of a daily oral exposure for an acute duration (24 hours or less) to the human population (including sensitive subgroups) that is likely to be without an appreciable risk of deleterious effects during a lifetime"
-        },
-        "acceptableDailyIntake": {
-          "type": "string",
-          "description": "Measure of amount of a specific substance in food or in drinking water tahta can be ingested (orally) on a daily basis over a lifetime without an appreciable health risk"
-        },
-        "indSum": {
-          "type": "string",
-          "description": "Define if the parameter reported is an individual residue/analyte, a summed residue definition or part of a sum a summed residue definition"
-        }
-      },
-      "required": [
-        "name"
-      ]
-    },
-    "populationGroup": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of the population for which the model or data applies"
-        },
-        "targetPopulation": {
-          "type": "string",
-          "description": "Population of individual that we are interested in describing and making statistical inferences about"
-        },
-        "populationSpan": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Temporal information on the exposure duration"
-          }
-        },
-        "populationDescription": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Description of the population for which the model applies (demographic and socio-economic characteristics for example). Background information that are needed in the data analysis phase, size of household, education level, employment status, professional category, ethnicity, etc."
-          }
-        },
-        "populationAge": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Description of the range of age or group of age"
-          }
-        },
-        "populationGender": {
-          "type": "string",
-          "description": "Description of the percentage of gender"
-        },
-        "bmi": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Description of the range of BMI or class of BMI or BMI mean"
-          }
-        },
-        "specialDietGroups": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Description of sub-population with special diets (vegetarians, diabetics, group following special ethnic diets)"
-          }
-        },
-        "patternConsumption": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Description of the consumption of different food items, frequency, portion size"
-          }
-        },
-        "region": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Spatial information (area) on which the population group of the model or data applies"
-          }
-        },
-        "country": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Country on which the population group of the model or data applies"
-          }
-        },
-        "populationRiskFactor": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Population risk factor that may influence the outcomes of the study, confounder should be included"
-          }
-        },
-        "season": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Distribution of surveyed people according to the season (influence consumption pattern)"
-          }
-        }
-      },
-      "required": [
-        "name"
-      ]
-    },
-    "modelCategory": {
-      "type": "object",
-      "properties": {
-        "modelClass": {
-          "type": "string",
-          "description": "Type of model according to RAKIP classification"
-        },
-        "modelSubClass": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Sub-cassification of the model given the Model Class"
-          }
-        },
-        "modelClassComment": {
-          "type": "string",
-          "description": "Empty"
-        },
-        "basicProcess": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "description": "Defines the impact of the process on the hazard (so far only valid for process models and predictive models)"
-          }
-        }
-      },
-      "required": [
-        "modelClass"
-      ]
-    },
-    "generalInformation": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "source": {
-          "type": "string"
-        },
-        "identifier": {
-          "type": "string"
-        },
-        "author": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/contact"
-          }
-        },
-        "creator": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/contact"
-          }
-        },
-        "creationDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "modificationDate": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "date"
-          }
-        },
-        "rights": {
-          "type": "string"
-        },
-        "availability": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "format": {
-          "type": "string"
-        },
-        "reference": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/reference"
-          }
-        },
-        "language": {
-          "type": "string"
-        },
-        "status": {
-          "type": "string"
-        },
-        "objective": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        }
-      }
-    },
-    "genericModelGeneralInformation": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/generalInformation"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "software": {
-              "type": "string",
-              "description": "The program or software language in which the model has been implemented"
-            },
-            "languageWrittenIn": {
-              "type": "string",
-              "description": "Software language used to write the model, e.g. R or MatLab"
-            },
-            "modelCategory": {
-              "$ref": "#/definitions/modelCategory"
-            }
-          }
-        }
-      ]
-    },
-    "modelDataBackground": {
-      "type": "object",
-      "properties": {
-        "study": {
-          "$ref": "#/definitions/study"
-        },
-        "studySample": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/studySample"
-          }
-        },
-        "laboratory": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/laboratory"
-          }
-        },
-        "assay": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/assay"
-          }
-        }
-      },
-      "required": [
-        "study"
-      ]
-    },
-    "genericModelDataBackground": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/modelDataBackground"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "dietaryAssessmentMethod": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/dietaryAssessmentMethod"
-              }
-            }
-          }
-        }
-      ]
-    },
-    "scope": {
-      "type": "object",
-      "properties": {
-        "product": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/product"
-          }
-        },
-        "hazard": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/hazard"
-          }
-        },
-        "generalComment": {
-          "type": "string"
-        },
-        "temporalInformation": {
-          "type": "string"
-        },
-        "spatialInformation": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "genericModelScope": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/scope"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "populationGroup": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/populationGroup"
-              }
-            }
-          }
-        }
-      ]
-    },
-    "toxicologicalModelScope": {
-      "type": "object",
-      "properties": {
-        "hazard": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/hazard"
-          }
-        },
-        "populationGroup": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/populationGroup"
-          }
-        },
-        "generalComment": {
-          "type": "string"
-        },
-        "temporalInformation": {
-          "type": "string"
-        },
-        "spatialInformation": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "modelMath": {
-      "type": "object",
-      "properties": {
-        "parameter": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/parameter"
-          }
-        },
-        "qualityMeasures": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/qualityMeasures"
-          }
-        },
-        "modelEquation": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/modelEquation"
-          }
-        },
-        "fittingProcedure": {
-          "type": "string"
-        },
-        "event": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "required": [
-        "parameter"
-      ]
-    },
-    "genericModelModelMath": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/modelMath"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "exposure": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/exposure"
-              }
-            }
-          }
-        }
-      ]
     }
   }
 }
