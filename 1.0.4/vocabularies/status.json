@@ -1,0 +1,11 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//status.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "Curated",
+            "Uncurated",
+            "Other"
+        ]
+    }
+}

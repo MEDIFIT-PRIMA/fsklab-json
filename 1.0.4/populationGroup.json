@@ -1,0 +1,93 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/populationGroup.json",
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "populationRiskFactor": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Population risk factor that may influence the outcomes of the study, confounder should be included"
+                }
+            },
+            "country": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Country on which the population group of the model or data applies"
+                }
+            },
+            "populationSpan": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Temporal information on the exposure duration"
+                }
+            },
+            "populationGender": {
+                "type": "string",
+                "description": "Description of the percentage of gender"
+            },
+            "populationDescription": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Description of the population for which the model applies (demographic and socio-economic characteristics for example). Background information that are needed in the data analysis phase, size of household, education level, employment status, professional category, ethnicity, etc."
+                }
+            },
+            "populationAge": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Description of the range of age or group of age"
+                }
+            },
+            "patternConsumption": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Description of the consumption of different food items, frequency, portion size"
+                }
+            },
+            "name": {
+                "type": "string",
+                "description": "Name of the population for which the model or data applies"
+            },
+            "season": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Distribution of surveyed people according to the season (influence consumption pattern)"
+                }
+            },
+            "region": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Spatial information (area) on which the population group of the model or data applies"
+                }
+            },
+            "targetPopulation": {
+                "type": "string",
+                "description": "Population of individual that we are interested in describing and making statistical inferences about"
+            },
+            "bmi": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Description of the range of BMI or class of BMI or BMI mean"
+                }
+            },
+            "specialDietGroups": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "Description of sub-population with special diets (vegetarians, diabetics, group following special ethnic diets)"
+                }
+            }
+        },
+        "required": [
+            "name"
+        ]
+    }
+}

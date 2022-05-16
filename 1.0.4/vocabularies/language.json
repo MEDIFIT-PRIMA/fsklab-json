@@ -1,0 +1,33 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//language.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "Bulgarian",
+            "Czech",
+            "Danish",
+            "Dutch",
+            "English",
+            "Estonian",
+            "Finnish",
+            "French",
+            "German",
+            "Greek",
+            "Hungarian",
+            "Icelandic",
+            "Irish",
+            "Italian",
+            "Latvian",
+            "Lithuanian",
+            "Maltese",
+            "Norwegian",
+            "Polish",
+            "Portuguese",
+            "Romanian",
+            "Slovakian",
+            "Slovene",
+            "Spanish",
+            "Swedish"
+        ]
+    }
+}

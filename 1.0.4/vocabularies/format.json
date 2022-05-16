@@ -1,0 +1,11 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//format.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            ".pmfx",
+            ".fskx",
+            "Other"
+        ]
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/product.json",
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "expiryDate": {
+                "format": "date",
+                "type": "string",
+                "description": "Date of expiry of food/product"
+            },
+            "treatment": {
+                "type": "array",
+                "description": "Used to characterise a product/matrix based on the treatment or processes applied to the product or any indexed ingredient",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "unit": {
+                "type": "string",
+                "description": "Unit of the product, matrix or environment for which the model or data applies"
+            },
+            "productionDate": {
+                "format": "date",
+                "type": "string",
+                "description": "Date of production of food/product"
+            },
+            "method": {
+                "type": "array",
+                "description": "Type of production for the product/ matrix",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "name": {
+                "type": "string",
+                "description": "The product, matrix or environment (e.g food product, lab media, soil etc.) for which the model or data applies"
+            },
+            "originCountry": {
+                "type": "string",
+                "description": "Country of origin of the food/product (ISO 3166-1-alpha-2 country code)"
+            },
+            "description": {
+                "type": "string",
+                "description": "Detailed description of the product, matrix or environment for which the model or data applies"
+            },
+            "packaging": {
+                "type": "array",
+                "description": "Describe container or wrapper that holds the product/matrix. Common type of packaging (paper or plastic bags, boxes, tinplate or aluminium cans, plastic trays, plastic bottles, glass bottles or jars)",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "fisheriesArea": {
+                "type": "string",
+                "description": "Fisheries or aquaculture area specifying the origin of the sample (FAO Fisheries areas)"
+            },
+            "originArea": {
+                "type": "string",
+                "description": "Area of origin of the food/product (Nomenclature of territorial units for statistics \u2013 NUTS \u2013 coding system valid only for EEA and Switzerland)"
+            }
+        },
+        "required": [
+            "name",
+            "unit"
+        ]
+    }
+}

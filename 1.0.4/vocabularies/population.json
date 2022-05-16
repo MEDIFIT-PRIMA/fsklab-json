@@ -1,0 +1,28 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//population.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "children less than four years",
+            "human consumer, adult",
+            "human consumer, athletes",
+            "human consumer, bodybuilders",
+            "human consumer, four years and above",
+            "human consumer, men",
+            "human consumer, menopaused women",
+            "human consumer, no age specification",
+            "human consumer, pregnant or lactanting women",
+            "human consumer, seniors",
+            "human consumer, teenagers",
+            "human consumer, weight-reducers",
+            "human consumer, women",
+            "infant food",
+            "infant food, 0 - 3 months",
+            "infant food, 0 - 6 months",
+            "infant food, 3 - 6 months",
+            "infant food, 6 - 12 months",
+            "infant or toddler food",
+            "toddler food, from 12 months onwards"
+        ]
+    }
+}

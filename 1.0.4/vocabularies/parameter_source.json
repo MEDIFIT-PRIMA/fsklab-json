@@ -1,0 +1,16 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//parameter_source.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "Article",
+            "Assumption",
+            "Data",
+            "Estimate",
+            "Expert opinion",
+            "Model result",
+            "Not applicable ",
+            "Other"
+        ]
+    }
+}

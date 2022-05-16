@@ -1,0 +1,37 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/riskModel.json",
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "dataBackground": {
+                "$ref": "/1.0.4/genericModelDataBackground.json"
+            },
+            "modelType": {
+                "pattern": "^RiskModel$",
+                "type": "string"
+            },
+            "generalInformation": {
+                "$ref": "/1.0.4/genericModelGeneralInformation.json",
+                "required": [
+                    "name",
+                    "identifier",
+                    "creationDate",
+                    "rights",
+                    "reference",
+                    "languageWrittenIn"
+                ]
+            },
+            "modelMath": {
+                "$ref": "/1.0.4/genericModelModelMath.json"
+            },
+            "scope": {
+                "$ref": "/1.0.4/genericModelScope.json",
+                "required": [
+                    "product",
+                    "hazard",
+                    "populationGroup"
+                ]
+            }
+        }
+    }
+}

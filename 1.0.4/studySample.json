@@ -1,0 +1,55 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/studySample.json",
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "sampleName": {
+                "type": "string",
+                "description": "An unambiguous ID given to the samples used in the assay"
+            },
+            "samplingWeight": {
+                "type": "string",
+                "description": "Description of the method employed to compute sampling weight (nonresponse-adjusted weight)"
+            },
+            "protocolOfSampleCollection": {
+                "type": "string",
+                "description": "Additional protocol for sample and sample collection. Corresponds to the Protocol REF in ISA"
+            },
+            "samplingStrategy": {
+                "type": "string",
+                "description": "Sampling strategy (ref. EUROSTAT - Typology of sampling strategy, version of July 2009)"
+            },
+            "samplingSize": {
+                "type": "string",
+                "description": "Number of units, full participants, partial participants, eligibles, not eligible, unresolved (eligibility status not resolved)\u2026"
+            },
+            "lotSizeUnit": {
+                "type": "string",
+                "description": "Unit in which the lot size is expressed"
+            },
+            "samplingPoint": {
+                "type": "string",
+                "description": "Point in the food chain where the sample was taken. (Doc. ESTAT/F5/ES/155 \u201cData dictionary of activities of the establishments\u201d)"
+            },
+            "samplingMethod": {
+                "type": "string",
+                "description": "Sampling method used to take the sample"
+            },
+            "typeOfSamplingProgram": {
+                "type": "string",
+                "description": "Indicate the type of programm for which the samples have been collected"
+            },
+            "samplingPlan": {
+                "type": "string",
+                "description": "Description of data collection technique (stratified or complex sampling (several stages))"
+            }
+        },
+        "required": [
+            "sampleName",
+            "protocolOfSampleCollection",
+            "samplingPlan",
+            "samplingWeight",
+            "samplingSize"
+        ]
+    }
+}

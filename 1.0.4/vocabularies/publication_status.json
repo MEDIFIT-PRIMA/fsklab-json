@@ -1,0 +1,18 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//publication_status.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "Accepted",
+            "Draft",
+            "Forthcoming",
+            "Legal",
+            "Non peer reviewed",
+            "Peer reviewed",
+            "Published",
+            "Rejected",
+            "Unpublished",
+            "Other"
+        ]
+    }
+}

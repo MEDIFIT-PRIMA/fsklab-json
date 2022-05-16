@@ -1,0 +1,28 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/predictiveModel.json",
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "dataBackground": {
+                "$ref": "/1.0.4/modelDataBackground.json"
+            },
+            "modelType": {
+                "pattern": "^PredictiveModel$",
+                "type": "string"
+            },
+            "generalInformation": {
+                "$ref": "/1.0.4/genericModelGeneralInformation.json"
+            },
+            "modelMath": {
+                "$ref": "/1.0.4/modelMath.json"
+            },
+            "scope": {
+                "$ref": "/1.0.4/scope.json",
+                "required": [
+                    "product",
+                    "hazard"
+                ]
+            }
+        }
+    }
+}

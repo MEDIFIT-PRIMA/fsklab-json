@@ -1,0 +1,62 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/processModel.json",
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "dataBackground": {
+                "$ref": "/1.0.4/modelDataBackground.json"
+            },
+            "modelType": {
+                "pattern": "^ProcessModel$",
+                "type": "string"
+            },
+            "generalInformation": {
+                "$ref": "/1.0.4/genericModelGeneralInformation.json",
+                "required": [
+                    "name",
+                    "identifier",
+                    "creationDate",
+                    "rights",
+                    "reference",
+                    "languageWrittenIn"
+                ]
+            },
+            "modelMath": {
+                "$ref": "/1.0.4/modelMath.json"
+            },
+            "scope": {
+                "type": "object",
+                "properties": {
+                    "spatialInformation": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "product": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "/1.0.4/product.json"
+                        }
+                    },
+                    "generalComment": {
+                        "type": "string"
+                    },
+                    "hazard": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "/1.0.4/hazard.json"
+                        }
+                    },
+                    "temporalInformation": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "product",
+                    "hazard"
+                ]
+            }
+        }
+    }
+}

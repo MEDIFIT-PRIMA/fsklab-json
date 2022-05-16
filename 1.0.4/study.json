@@ -1,0 +1,75 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/study.json",
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "identifier": {
+                "type": "string",
+                "description": "A user defined identifier for the study"
+            },
+            "protocolComponentsName": {
+                "type": "string",
+                "description": "The components used when carrying out this protocol"
+            },
+            "designType": {
+                "type": "string",
+                "description": "The type of study design being employed"
+            },
+            "assayMeasurementType": {
+                "type": "string",
+                "description": "The measurement being observed in this assay"
+            },
+            "protocolComponentsType": {
+                "type": "string",
+                "description": "Description"
+            },
+            "description": {
+                "type": "string",
+                "description": "A brief description of the study aims"
+            },
+            "assayTechnologyPlatform": {
+                "type": "string",
+                "description": "The technology platform used"
+            },
+            "assayTechnologyType": {
+                "type": "string",
+                "description": "The technology being employed to observe this measurement"
+            },
+            "protocolType": {
+                "type": "string",
+                "description": "The type of the protocol, preferably coming from an Ontology, e.g. Extraction Protocol"
+            },
+            "title": {
+                "type": "string",
+                "description": "A title for the Study"
+            },
+            "protocolDescription": {
+                "type": "string",
+                "description": "A description of the Protocol"
+            },
+            "protocolParametersName": {
+                "type": "string",
+                "description": "The parameters used when executing this protocol"
+            },
+            "protocolName": {
+                "type": "string",
+                "description": "The name of the protocol, e.g.Extraction Protocol"
+            },
+            "protocolVersion": {
+                "type": "string",
+                "description": "The version of the protocol used, where applicable"
+            },
+            "protocolURI": {
+                "type": "string",
+                "description": "A URI to link out to a publication, web page, etc. describing the protocol."
+            },
+            "accreditationProcedureForTheAssayTechnology": {
+                "type": "string",
+                "description": "Accreditation procedure for the analytical method used"
+            }
+        },
+        "required": [
+            "title"
+        ]
+    }
+}

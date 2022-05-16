@@ -1,0 +1,36 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/qualityMeasures.json",
+    "definitions": {
+        "type": "object",
+        "properties": {
+            "rsquared": {
+                "type": "number",
+                "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+            },
+            "sse": {
+                "type": "number",
+                "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+            },
+            "rmse": {
+                "type": "number",
+                "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+            },
+            "aic": {
+                "type": "number",
+                "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+            },
+            "sensitivityAnalysis": {
+                "type": "string",
+                "description": "Description of the results of an sensitivity analysis, i.e. how independence assumptions are met or how variables will affect the output of model"
+            },
+            "bic": {
+                "type": "number",
+                "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+            },
+            "mse": {
+                "type": "number",
+                "description": "Statistical values calculated to describe the performance of the model fitting procedure"
+            }
+        }
+    }
+}

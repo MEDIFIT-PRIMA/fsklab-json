@@ -1,0 +1,15 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//sampling_strategy.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "Census",
+            "Convenient sampling",
+            "Not specified",
+            "Objective sampling",
+            "Other",
+            "Selective sampling",
+            "Suspect sampling"
+        ]
+    }
+}

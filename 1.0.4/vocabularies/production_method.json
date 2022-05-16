@@ -1,0 +1,22 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//production_method.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "Battery production",
+            "Farmed Domestic or cultivated",
+            "Free range production",
+            "Genetically modified",
+            "Integrated Pest Management",
+            "Intensive Industrial production",
+            "Non-organic production",
+            "Organic production",
+            "Other production method",
+            "Outdoor - Open-air growing condition",
+            "Production method unknown",
+            "Traditional production",
+            "Under glass - protected growing condition",
+            "Wild or gathered or hunted"
+        ]
+    }
+}

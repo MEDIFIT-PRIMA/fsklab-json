@@ -1,0 +1,33 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//unit_category.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "Number Content (count/mass)",
+            "Number Concentration (count/vol)",
+            "Number Aeric (number/area)",
+            "Mass Ratio",
+            "Mass Concentration",
+            "Arbitrary Fraction",
+            "Energy Content",
+            "Energy Content Rate",
+            "Unknown",
+            "Pressure",
+            "Mole Content",
+            "Length",
+            "Temperature",
+            "Number Difference",
+            "Number Content Difference",
+            "Number Fraction",
+            "Number Concentration Difference",
+            "Mass",
+            "Number",
+            "Time",
+            "Volume Ratio",
+            "Dimensionless Quantity",
+            "True/False Value",
+            "Volume Concentration",
+            "Other"
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//source.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "EVENTS (MEETING OR CONFERENCE)",
+            "PUBLISHED SCIENTIFIC STUDIES",
+            "PUBLISHED SCIENTIFIC STUDIES: Predictive microbial models and underlying data",
+            "PUBLISHED SCIENTIFIC STUDIES: Dose-response data and models",
+            "PUBLISHED SCIENTIFIC STUDIES: Toxicological data and models",
+            "PUBLISHED SCIENTIFIC STUDIES: Contamination data and exposure models",
+            "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS)",
+            "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS): Studies and surveys",
+            "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS):   Laboratory (private, research) databases",
+            "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food monitoring data",
+            "NATIONAL OR INTERNATIONAL OFFICIAL DATA:  Human health surveillance data",
+            "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food consumption survey or regional diet data",
+            "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food safety databases",
+            "OTHER SURVEYS AND QUESTIONNAIRES",
+            "RISK ASSESSMENTS",
+            "RISK ASSESSMENTS:  International risk assessment agencies data",
+            "RISK ASSESSMENTS: Risk assessments models",
+            "EXPERT KNOWLEDGE ELICITATION AND EXPERT OPINIONS"
+        ]
+    }
+}

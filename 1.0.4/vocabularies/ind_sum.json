@@ -1,0 +1,12 @@
+{
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//ind_sum.json",
+    "definitions": {
+        "type": "string",
+        "enum": [
+            "Individual",
+            "Part of a sum",
+            "Sum",
+            "Sum based on subset"
+        ]
+    }
+}
