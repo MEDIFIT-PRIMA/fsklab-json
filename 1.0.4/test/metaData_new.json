@@ -1,5 +1,5 @@
 {
-  "modelType": "DoseResponseModel",
+  "modelType": "genericModel",
   "generalInformation": {
     "name": "Cooking-A farm-to-fork model for the risk of human trichinellosis from pork and wild boar meat",
     "source": "PUBLISHED SCIENTIFIC STUDIES",

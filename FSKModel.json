@@ -97,7 +97,7 @@
           "$ref": "#/definitions/genericModelDataBackground"
         },
         "modelType": {
-          "pattern": "^GenericModel$",
+          "pattern": "^genericModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -118,7 +118,7 @@
           "$ref": "#/definitions/genericModelDataBackground"
         },
         "modelType": {
-          "pattern": "^DataModel$",
+          "pattern": "^dataModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -151,7 +151,7 @@
           "$ref": "#/definitions/genericModelDataBackground"
         },
         "modelType": {
-          "pattern": "^QraModel$",
+          "pattern": "^qraModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -355,7 +355,7 @@
           "$ref": "#/definitions/genericModelDataBackground"
         },
         "modelType": {
-          "pattern": "^RiskModel$",
+          "pattern": "^riskModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -636,7 +636,7 @@
           "$ref": "#/definitions/modelDataBackground"
         },
         "modelType": {
-          "pattern": "^OtherModel$",
+          "pattern": "^otherModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -717,7 +717,7 @@
           "$ref": "#/definitions/modelDataBackground"
         },
         "modelType": {
-          "pattern": "^PredictiveModel$",
+          "pattern": "^predictiveModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -835,7 +835,7 @@
           "$ref": "#/definitions/modelDataBackground"
         },
         "modelType": {
-          "pattern": "^HealthModel$",
+          "pattern": "^healthModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -962,7 +962,7 @@
           "$ref": "#/definitions/modelDataBackground"
         },
         "modelType": {
-          "pattern": "^ProcessModel$",
+          "pattern": "^processModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -1159,7 +1159,7 @@
           "$ref": "#/definitions/modelDataBackground"
         },
         "modelType": {
-          "pattern": "^DoseResponseModel$",
+          "pattern": "^doseResponseModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -1184,7 +1184,7 @@
           "$ref": "#/definitions/genericModelDataBackground"
         },
         "modelType": {
-          "pattern": "^ConsumptionModel$",
+          "pattern": "^consumptionModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -1464,7 +1464,7 @@
           "$ref": "#/definitions/genericModelDataBackground"
         },
         "modelType": {
-          "pattern": "^ExposureModel$",
+          "pattern": "^exposureModel$",
           "type": "string"
         },
         "generalInformation": {
@@ -1490,7 +1490,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "GenericModel"
+                "const": "genericModel"
               }
             }
           },
@@ -1502,7 +1502,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "DataModel"
+                "const": "dataModel"
               }
             }
           },
@@ -1514,7 +1514,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "PredictiveModel"
+                "const": "predictiveModel"
               }
             }
           },
@@ -1526,7 +1526,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "OtherModel"
+                "const": "otherModel"
               }
             }
           },
@@ -1538,7 +1538,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "ExposureModel"
+                "const": "exposureModel"
               }
             }
           },
@@ -1550,7 +1550,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "ToxicologicalModel"
+                "const": "toxicologicalModel"
               }
             }
           },
@@ -1562,7 +1562,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "DoseResponseModel"
+                "const": "doseResponseModel"
               }
             }
           },
@@ -1574,7 +1574,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "ProcessModel"
+                "const": "processModel"
               }
             }
           },
@@ -1586,7 +1586,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "ConsumptionModel"
+                "const": "consumptionModel"
               }
             }
           },
@@ -1598,7 +1598,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "HealthModel"
+                "const": "healthModel"
               }
             }
           },
@@ -1610,7 +1610,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "RiskModel"
+                "const": "riskModel"
               }
             }
           },
@@ -1622,7 +1622,7 @@
           "if": {
             "properties": {
               "modelType": {
-                "const": "QraModel"
+                "const": "qraModel"
               }
             }
           },
@@ -1638,18 +1638,18 @@
         "modelType": {
           "type": "string",
           "enum": [
-            "GenericModel",
-            "ProcessModel",
-            "RiskModel",
-            "QraModel",
-            "DataModel",
-            "ExposureModel",
-            "ToxicologicalModel",
-            "HealthModel",
-            "DoseResponseModel",
-            "PredictiveModel",
-            "OtherModel",
-            "ConsumptionModel"
+            "genericModel",
+            "processModel",
+            "riskModel",
+            "qraModel",
+            "dataModel",
+            "exposureModel",
+            "toxicologicalModel",
+            "healthModel",
+            "doseResponseModel",
+            "predictiveModel",
+            "otherModel",
+            "consumptionModel"
           ]
         }
       }

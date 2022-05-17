@@ -6,7 +6,7 @@
             "$ref": "modelDataBackground.json"
         },
         "modelType": {
-            "pattern": "^ProcessModel$",
+            "pattern": "^processModel$",
             "type": "string"
         },
         "generalInformation": {

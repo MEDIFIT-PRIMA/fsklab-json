@@ -6,7 +6,7 @@
             "$ref": "genericModelDataBackground.json"
         },
         "modelType": {
-            "pattern": "^GenericModel$",
+            "pattern": "^genericModel$",
             "type": "string"
         },
         "generalInformation": {

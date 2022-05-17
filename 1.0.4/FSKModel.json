@@ -4,8 +4,8 @@
         "modelType": {
             "type": "string",
             "enum": [
-                "GenericModel",
-                "ProcessModel",
+                "genericModel",
+                "processModel",
                 "RiskModel",
                 "QraModel",
                 "DataModel",
@@ -24,7 +24,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "GenericModel"
+                        "const": "genericModel"
                     }
                 }
             },
@@ -108,7 +108,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "ProcessModel"
+                        "const": "processModel"
                     }
                 }
             },
