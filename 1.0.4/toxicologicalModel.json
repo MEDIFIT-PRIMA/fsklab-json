@@ -1,28 +1,18 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/toxicologicalModel.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "dataBackground": {
-                "$ref": "/1.0.4/modelDataBackground.json"
-            },
-            "generalInformation": {
-                "$ref": "/1.0.4/genericModelGeneralInformation.json",
-                "required": [
-                    "name",
-                    "identifier",
-                    "creationDate",
-                    "rights",
-                    "reference",
-                    "languageWrittenIn"
-                ]
-            },
-            "modelMath": {
-                "$ref": "/1.0.4/genericModelModelMath.json"
-            },
-            "scope": {
-                "$ref": "/1.0.4/toxicologicalModelScope.json"
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/toxicologicalModel.json",
+    "type": "object",
+    "properties": {
+        "dataBackground": {
+            "$ref": "modelDataBackground.json"
+        },
+        "generalInformation": {
+            "$ref": "genericModelGeneralInformation.json"
+        },
+        "modelMath": {
+            "$ref": "genericModelModelMath.json"
+        },
+        "scope": {
+            "$ref": "toxicologicalModelScope.json"
         }
     }
 }

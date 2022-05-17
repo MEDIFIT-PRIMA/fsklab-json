@@ -1,67 +1,65 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/hazard.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "maximumResidueLimit": {
-                "type": "string",
-                "description": "International regulations and permissible maximum residue levels in food and drinking water"
-            },
-            "sourceOfContamination": {
-                "type": "string",
-                "description": "Origin of the contamination, source"
-            },
-            "indSum": {
-                "type": "string",
-                "description": "Define if the parameter reported is an individual residue/analyte, a summed residue definition or part of a sum a summed residue definition"
-            },
-            "acceptableOperatorsExposureLevel": {
-                "type": "string",
-                "description": "Maximum amount of active substance to which the operator may be exposed without any adverse health effects. The AOEL is expressed as milligrams of the chemical per kilogram body weight of the operator"
-            },
-            "description": {
-                "type": "string",
-                "description": "Description of the hazard for which the model or data applies"
-            },
-            "type": {
-                "type": "string",
-                "description": "General classification of the hazard for which the model or data applies"
-            },
-            "adverseEffect": {
-                "type": "string",
-                "description": "Adverse effect induced by hazard about morbidity, mortality, and etcetera"
-            },
-            "unit": {
-                "type": "string",
-                "description": "Unit of the hazard for which the model or data applies"
-            },
-            "noObservedAdverseAffectLevel": {
-                "type": "string",
-                "description": "Level of exposure of an organism, found by experiment or observation, at which there is no biologically or statistically significant increase in the frequency or severity of any adverse effects in the exposed population when compared to its appropriate control"
-            },
-            "acuteReferenceDose": {
-                "type": "string",
-                "description": "An estimate (with uncertainty spanning perhaps an order of magnitude) of a daily oral exposure for an acute duration (24 hours or less) to the human population (including sensitive subgroups) that is likely to be without an appreciable risk of deleterious effects during a lifetime"
-            },
-            "name": {
-                "type": "string",
-                "description": "Name of the hazard (agent, contaminant, chemical) for which the data or model applies"
-            },
-            "lowestObservedAdverseAffectLevel": {
-                "type": "string",
-                "description": "Lowest concentration or amount of a substance found by experiment or observation that causes an adverse alteration of morphology, function, capacity, growth, development, or lifespan of a target organism distinguished from normal organisms of the same species under defined conditions of exposure"
-            },
-            "benchmarkDose": {
-                "type": "string",
-                "description": "A dose or concentration that produces a predetermined change in response rate of an adverse effect (called the benchmark response or BMR) compared to background"
-            },
-            "acceptableDailyIntake": {
-                "type": "string",
-                "description": "Measure of amount of a specific substance in food or in drinking water tahta can be ingested (orally) on a daily basis over a lifetime without an appreciable health risk"
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/hazard.json",
+    "type": "object",
+    "properties": {
+        "maximumResidueLimit": {
+            "type": "string",
+            "description": "International regulations and permissible maximum residue levels in food and drinking water"
         },
-        "required": [
-            "name"
-        ]
-    }
+        "sourceOfContamination": {
+            "type": "string",
+            "description": "Origin of the contamination, source"
+        },
+        "indSum": {
+            "description": "Define if the parameter reported is an individual residue/analyte, a summed residue definition or part of a sum a summed residue definition",
+            "$ref": "vocabularies/ind_sum.json#/definitions/ind_sum"
+        },
+        "acceptableOperatorsExposureLevel": {
+            "type": "string",
+            "description": "Maximum amount of active substance to which the operator may be exposed without any adverse health effects. The AOEL is expressed as milligrams of the chemical per kilogram body weight of the operator"
+        },
+        "description": {
+            "type": "string",
+            "description": "Description of the hazard for which the model or data applies"
+        },
+        "type": {
+            "type": "string",
+            "description": "General classification of the hazard for which the model or data applies"
+        },
+        "adverseEffect": {
+            "type": "string",
+            "description": "Adverse effect induced by hazard about morbidity, mortality, and etcetera"
+        },
+        "unit": {
+            "type": "string",
+            "description": "Unit of the hazard for which the model or data applies"
+        },
+        "noObservedAdverseAffectLevel": {
+            "type": "string",
+            "description": "Level of exposure of an organism, found by experiment or observation, at which there is no biologically or statistically significant increase in the frequency or severity of any adverse effects in the exposed population when compared to its appropriate control"
+        },
+        "acuteReferenceDose": {
+            "type": "string",
+            "description": "An estimate (with uncertainty spanning perhaps an order of magnitude) of a daily oral exposure for an acute duration (24 hours or less) to the human population (including sensitive subgroups) that is likely to be without an appreciable risk of deleterious effects during a lifetime"
+        },
+        "name": {
+            "description": "Name of the hazard (agent, contaminant, chemical) for which the data or model applies",
+            "$ref": "vocabularies/hazard.json#/definitions/hazard"
+        },
+        "lowestObservedAdverseAffectLevel": {
+            "type": "string",
+            "description": "Lowest concentration or amount of a substance found by experiment or observation that causes an adverse alteration of morphology, function, capacity, growth, development, or lifespan of a target organism distinguished from normal organisms of the same species under defined conditions of exposure"
+        },
+        "benchmarkDose": {
+            "type": "string",
+            "description": "A dose or concentration that produces a predetermined change in response rate of an adverse effect (called the benchmark response or BMR) compared to background"
+        },
+        "acceptableDailyIntake": {
+            "type": "string",
+            "description": "Measure of amount of a specific substance in food or in drinking water tahta can be ingested (orally) on a daily basis over a lifetime without an appreciable health risk"
+        }
+    },
+    "required": [
+        "name"
+    ]
 }

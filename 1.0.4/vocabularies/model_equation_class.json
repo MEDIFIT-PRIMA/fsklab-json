@@ -1,31 +1,32 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//model_equation_class.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/model_equation_class.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "Chronic exposure : Lifetime Average Daily Dose",
-            "Acute exposure: acute dose calculation",
-            "Cumulative Lognormal (ED50, GSD)",
-            "Decreasing Log-logistic (Beta0, Beta1)",
-            "Decreasing Log10-Logistic (Beta0, Beta1)",
-            "Decreasing Logistic (Beta0, Beta1)",
-            "Decreasing Probit (Alpha, Beta)",
-            "Empirical",
-            "Gamma (Alpha, Beta)",
-            "Linear by Slope Factor (Slope)",
-            "Log-Logistic (Alpha, Beta)",
-            "Log-logistic with background (Alpha, Beta, Gamma)",
-            "Logistic (Alpha, Beta)",
-            "Multistage (Beta1, Beta2, Beta3)",
-            "Non-Threshold Linear (Reference point, Risk at Reference Point)",
-            "Non-Threshold Linear (Reference point, Risk at Reference Point)",
-            "Other",
-            "Probit (Alpha, Beta)",
-            "Restricted Log-Probit (Alpha, Beta, Gamma)",
-            "Restricted Weibull  (Alpha, Beta, Gamma)",
-            "Step Threshold (Threshold)",
-            "Threshold Linear (Reference point, Risk at Reference Point, Threshold)",
-            "Weibull (Alpha, Beta)"
-        ]
+        "model_equation_class": {
+            "type": "string",
+            "enum": [
+                "Gamma (Alpha, Beta)",
+                "Chronic exposure : Lifetime Average Daily Dose",
+                "Log-logistic with background (Alpha, Beta, Gamma)",
+                "Weibull (Alpha, Beta)",
+                "Decreasing Log10-Logistic (Beta0, Beta1)",
+                "Other",
+                "Cumulative Lognormal (ED50, GSD)",
+                "Probit (Alpha, Beta)",
+                "Linear by Slope Factor (Slope)",
+                "Log-Logistic (Alpha, Beta)",
+                "Decreasing Log-logistic (Beta0, Beta1)",
+                "Decreasing Logistic (Beta0, Beta1)",
+                "Step Threshold (Threshold)",
+                "Acute exposure: acute dose calculation",
+                "Logistic (Alpha, Beta)",
+                "Restricted Weibull  (Alpha, Beta, Gamma)",
+                "Decreasing Probit (Alpha, Beta)",
+                "Restricted Log-Probit (Alpha, Beta, Gamma)",
+                "Empirical",
+                "Threshold Linear (Reference point, Risk at Reference Point, Threshold)",
+                "Multistage (Beta1, Beta2, Beta3)",
+                "Non-Threshold Linear (Reference point, Risk at Reference Point)"
+            ]
+        }
     }
 }

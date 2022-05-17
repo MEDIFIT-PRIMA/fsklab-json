@@ -1,0 +1,14 @@
+{
+  "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/FSKModel.json",
+  "model": {
+    "type": "object",
+    "properties": {
+      "modelType": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "modelType"
+  ]
+}

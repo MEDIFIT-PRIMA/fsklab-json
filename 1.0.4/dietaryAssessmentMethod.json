@@ -1,48 +1,46 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/dietaryAssessmentMethod.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "numberOfFoodItems": {
-                "type": "array",
-                "description": "Number of food items",
-                "items": {
-                    "type": "string"
-                }
-            },
-            "numberOfNonConsecutiveOneDay": {
-                "type": "string",
-                "description": "Number of non-consecutive one-day recorded"
-            },
-            "softwareTool": {
-                "type": "string",
-                "description": "Name of the software used to collect the data"
-            },
-            "foodDescriptors": {
-                "type": "array",
-                "description": "Description using FoodEx2 facet",
-                "items": {
-                    "type": "string"
-                }
-            },
-            "recordTypes": {
-                "type": "array",
-                "description": "Consumption occasion, mean of consumption, quantified and described as eaten, recipes for self-made",
-                "items": {
-                    "type": "string"
-                }
-            },
-            "collectionTool": {
-                "type": "string",
-                "description": "Food diaries, interview, 24-hour recall interview, food propensy questionnaire, portion size measurement aids, eating outside questionnaire"
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/dietaryAssessmentMethod.json",
+    "type": "object",
+    "properties": {
+        "numberOfFoodItems": {
+            "type": "array",
+            "description": "Number of food items",
+            "items": {
+                "type": "string"
             }
         },
-        "required": [
-            "collectionTool",
-            "numberOfNonConsecutiveOneDay",
-            "numberOfFoodItems",
-            "recordTypes",
-            "foodDescriptors"
-        ]
-    }
+        "numberOfNonConsecutiveOneDay": {
+            "type": "string",
+            "description": "Number of non-consecutive one-day recorded"
+        },
+        "softwareTool": {
+            "type": "string",
+            "description": "Name of the software used to collect the data"
+        },
+        "foodDescriptors": {
+            "type": "array",
+            "description": "Description using FoodEx2 facet",
+            "items": {
+                "type": "string"
+            }
+        },
+        "recordTypes": {
+            "type": "array",
+            "description": "Consumption occasion, mean of consumption, quantified and described as eaten, recipes for self-made",
+            "items": {
+                "type": "string"
+            }
+        },
+        "collectionTool": {
+            "description": "Food diaries, interview, 24-hour recall interview, food propensy questionnaire, portion size measurement aids, eating outside questionnaire",
+            "$ref": "vocabularies/collection_tool.json#/definitions/collection_tool"
+        }
+    },
+    "required": [
+        "collectionTool",
+        "numberOfNonConsecutiveOneDay",
+        "numberOfFoodItems",
+        "recordTypes",
+        "foodDescriptors"
+    ]
 }

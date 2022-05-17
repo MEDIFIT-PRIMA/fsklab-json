@@ -1,0 +1,19 @@
+{
+  "modelType": "GenericModel",
+  "generalInformation": {
+    "name": "Cooking-A farm-to-fork model for the risk of human trichinellosis from pork and wild boar meat",
+    "source": "PUBLISHED SCIENTIFIC STUDIES",
+    "identifier": "02592227-3f31-4f75-ab4e-97ef91cd931c",
+    "creationDate" : [ 2022, 5, 17 ],
+    "rights" : "Adaptive Public License 1.0",
+    "reference" : [ ],
+    "modelCategory" : { }
+  },
+  "scope" : { },
+  "dataBackground" : {
+    "study" : { }
+  },
+  "modelMath" : {
+    "parameter" : [ ]
+  }
+}

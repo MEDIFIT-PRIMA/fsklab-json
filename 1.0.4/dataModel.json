@@ -1,42 +1,33 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/dataModel.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "dataBackground": {
-                "$ref": "/1.0.4/genericModelDataBackground.json"
-            },
-            "modelType": {
-                "pattern": "^DataModel$",
-                "type": "string"
-            },
-            "generalInformation": {
-                "$ref": "/1.0.4/generalInformation.json",
-                "required": [
-                    "name",
-                    "identifier",
-                    "creationDate",
-                    "rights",
-                    "reference"
-                ]
-            },
-            "modelMath": {
-                "type": "object",
-                "properties": {
-                    "parameter": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "/1.0.4/parameter.json"
-                        }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/dataModel.json",
+    "type": "object",
+    "properties": {
+        "dataBackground": {
+            "$ref": "genericModelDataBackground.json"
+        },
+        "modelType": {
+            "pattern": "^DataModel$",
+            "type": "string"
+        },
+        "generalInformation": {
+            "$ref": "generalInformation.json"
+        },
+        "modelMath": {
+            "type": "object",
+            "properties": {
+                "parameter": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "parameter.json"
                     }
-                },
-                "required": [
-                    "parameter"
-                ]
+                }
             },
-            "scope": {
-                "$ref": "/1.0.4/genericModelScope.json"
-            }
+            "required": [
+                "parameter"
+            ]
+        },
+        "scope": {
+            "$ref": "genericModelScope.json"
         }
     }
 }

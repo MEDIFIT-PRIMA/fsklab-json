@@ -1,18 +1,35 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//publication_status.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/publication_status.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "Accepted",
-            "Draft",
-            "Forthcoming",
-            "Legal",
-            "Non peer reviewed",
-            "Peer reviewed",
-            "Published",
-            "Rejected",
-            "Unpublished",
-            "Other"
-        ]
+        "publication_status": {
+            "type": "string",
+            "enum": [
+                "Legal",
+                "Draft",
+                "Non peer reviewed",
+                "Other",
+                "Peer reviewed",
+                "Rejected",
+                "Published",
+                "Unpublished",
+                "Forthcoming",
+                "Accepted"
+            ]
+        },
+        "comment": {
+            "type": "string",
+            "enum": [
+                "",
+                "Document to be published",
+                "Legal document",
+                "Accepted for publication after peer reviewing.",
+                "Document drafted",
+                "Rejected for publication after peer reviewing.",
+                "Unpublished document",
+                "The process by which articles are chosen to be included in a refereed journal. An editorial board consisting of experts in the same field as the author review the article and decide if it is authoritative enough for publication.",
+                "A document that is not peer reviewed",
+                "Published document"
+            ]
+        }
     }
 }

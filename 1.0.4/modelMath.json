@@ -1,38 +1,36 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/modelMath.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "fittingProcedure": {
-                "type": "string"
-            },
-            "qualityMeasures": {
-                "type": "array",
-                "items": {
-                    "$ref": "/1.0.4/qualityMeasures.json"
-                }
-            },
-            "modelEquation": {
-                "type": "array",
-                "items": {
-                    "$ref": "/1.0.4/modelEquation.json"
-                }
-            },
-            "event": {
-                "type": "array",
-                "items": {
-                    "type": "string"
-                }
-            },
-            "parameter": {
-                "type": "array",
-                "items": {
-                    "$ref": "/1.0.4/parameter.json"
-                }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/modelMath.json",
+    "type": "object",
+    "properties": {
+        "fittingProcedure": {
+            "type": "string"
+        },
+        "qualityMeasures": {
+            "type": "array",
+            "items": {
+                "$ref": "qualityMeasures.json"
             }
         },
-        "required": [
-            "parameter"
-        ]
-    }
+        "modelEquation": {
+            "type": "array",
+            "items": {
+                "$ref": "modelEquation.json"
+            }
+        },
+        "event": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "parameter": {
+            "type": "array",
+            "items": {
+                "$ref": "parameter.json"
+            }
+        }
+    },
+    "required": [
+        "parameter"
+    ]
 }

@@ -1,51 +1,22 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModel.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "dataBackground": {
-                "$ref": "/1.0.4/genericModelDataBackground.json"
-            },
-            "modelType": {
-                "pattern": "^GenericModel$",
-                "type": "string"
-            },
-            "generalInformation": {
-                "allOf": [
-                    {
-                        "$ref": "/1.0.4/genericModelGeneralInformation.json",
-                        "required": [
-                            "name",
-                            "identifier",
-                            "creationDate",
-                            "rights",
-                            "reference"
-                        ]
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "software": {
-                                "type": "string",
-                                "description": "The program or software language in which the model has been implemented"
-                            },
-                            "languageWrittenIn": {
-                                "type": "string",
-                                "description": "Software language used to write the model, e.g. R or MatLab"
-                            },
-                            "modelCategory": {
-                                "$ref": "/1.0.4/modelCategory.json"
-                            }
-                        }
-                    }
-                ]
-            },
-            "modelMath": {
-                "$ref": "/1.0.4/genericModelModelMath.json"
-            },
-            "scope": {
-                "$ref": "/1.0.4/genericModelScope.json"
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/genericModel.json",
+    "type": "object",
+    "properties": {
+        "dataBackground": {
+            "$ref": "genericModelDataBackground.json"
+        },
+        "modelType": {
+            "pattern": "^GenericModel$",
+            "type": "string"
+        },
+        "generalInformation": {
+            "$ref": "genericModelGeneralInformation.json"
+        },
+        "modelMath": {
+            "$ref": "genericModelModelMath.json"
+        },
+        "scope": {
+            "$ref": "genericModelScope.json"
         }
     }
 }

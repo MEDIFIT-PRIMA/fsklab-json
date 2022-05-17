@@ -1,40 +1,38 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/exposure.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "treatment": {
-                "type": "array",
-                "description": "Description of the mathematical method to replace left-censored data (recommandation of WHO (2013), distribution or others)",
-                "items": {
-                    "type": "string"
-                }
-            },
-            "type": {
-                "type": "string",
-                "description": "Description of the type of exposure"
-            },
-            "scenario": {
-                "type": "array",
-                "description": "Description of the different scenarii used in exposure assessment",
-                "items": {
-                    "type": "string"
-                }
-            },
-            "uncertaintyEstimation": {
-                "type": "string",
-                "description": "Analysis to estimate uncertainty"
-            },
-            "contamination": {
-                "type": "array",
-                "description": "Description of the range of of the level of contamination after left censored data treatment",
-                "items": {
-                    "type": "string"
-                }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/exposure.json",
+    "type": "object",
+    "properties": {
+        "treatment": {
+            "type": "array",
+            "description": "Description of the mathematical method to replace left-censored data (recommandation of WHO (2013), distribution or others)",
+            "items": {
+                "type": "string"
             }
         },
-        "required": [
-            "type"
-        ]
-    }
+        "type": {
+            "type": "string",
+            "description": "Description of the type of exposure"
+        },
+        "scenario": {
+            "type": "array",
+            "description": "Description of the different scenarii used in exposure assessment",
+            "items": {
+                "type": "string"
+            }
+        },
+        "uncertaintyEstimation": {
+            "type": "string",
+            "description": "Analysis to estimate uncertainty"
+        },
+        "contamination": {
+            "type": "array",
+            "description": "Description of the range of of the level of contamination after left censored data treatment",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "type"
+    ]
 }

@@ -1,37 +1,27 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/qraModel.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "dataBackground": {
-                "$ref": "/1.0.4/genericModelDataBackground.json"
-            },
-            "modelType": {
-                "pattern": "^QraModel$",
-                "type": "string"
-            },
-            "generalInformation": {
-                "$ref": "/1.0.4/genericModelGeneralInformation.json",
-                "required": [
-                    "name",
-                    "identifier",
-                    "creationDate",
-                    "rights",
-                    "reference",
-                    "languageWrittenIn"
-                ]
-            },
-            "modelMath": {
-                "$ref": "/1.0.4/genericModelModelMath.json"
-            },
-            "scope": {
-                "$ref": "/1.0.4/genericModelScope.json",
-                "required": [
-                    "product",
-                    "hazard",
-                    "populationGroup"
-                ]
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/qraModel.json",
+    "type": "object",
+    "properties": {
+        "dataBackground": {
+            "$ref": "genericModelDataBackground.json"
+        },
+        "modelType": {
+            "pattern": "^QraModel$",
+            "type": "string"
+        },
+        "generalInformation": {
+            "$ref": "genericModelGeneralInformation.json"
+        },
+        "modelMath": {
+            "$ref": "genericModelModelMath.json"
+        },
+        "scope": {
+            "$ref": "genericModelScope.json",
+            "required": [
+                "product",
+                "hazard",
+                "populationGroup"
+            ]
         }
     }
 }

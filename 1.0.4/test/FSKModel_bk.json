@@ -1,0 +1,41 @@
+{
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/FSKModel.json",
+    "required": [
+        "modelType"
+    ],
+    "properties": {
+
+        "modelType": {
+            "type": "string",
+            "enum": [
+                "GenericModel",
+                "ProcessModel",
+                "RiskModel",
+                "QraModel",
+                "DataModel",
+                "ExposureModel",
+                "ToxicologicalModel",
+                "HealthModel",
+                "DoseResponseModel",
+                "PredictiveModel",
+                "OtherModel",
+                "ConsumptionModel"
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "GenericModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "genericModel.json"
+            }
+        }
+    ]
+
+}

@@ -1,33 +1,31 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/modelCategory.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "modelClassComment": {
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/modelCategory.json",
+    "type": "object",
+    "properties": {
+        "modelClassComment": {
+            "type": "string",
+            "description": "Empty"
+        },
+        "basicProcess": {
+            "type": "array",
+            "items": {
                 "type": "string",
-                "description": "Empty"
-            },
-            "basicProcess": {
-                "type": "array",
-                "items": {
-                    "type": "string",
-                    "description": "Defines the impact of the process on the hazard (so far only valid for process models and predictive models)"
-                }
-            },
-            "modelClass": {
-                "type": "string",
-                "description": "Type of model according to RAKIP classification"
-            },
-            "modelSubClass": {
-                "type": "array",
-                "items": {
-                    "type": "string",
-                    "description": "Sub-cassification of the model given the Model Class"
-                }
+                "description": "Defines the impact of the process on the hazard (so far only valid for process models and predictive models)"
             }
         },
-        "required": [
-            "modelClass"
-        ]
-    }
+        "modelClass": {
+            "description": "Type of model according to RAKIP classification",
+            "$ref": "vocabularies/model_class.json#/definitions/model_class"
+        },
+        "modelSubClass": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "description": "Sub-cassification of the model given the Model Class"
+            }
+        }
+    },
+    "required": [
+        "modelClass"
+    ]
 }

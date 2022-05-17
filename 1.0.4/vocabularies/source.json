@@ -1,26 +1,37 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//source.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/source.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "EVENTS (MEETING OR CONFERENCE)",
-            "PUBLISHED SCIENTIFIC STUDIES",
-            "PUBLISHED SCIENTIFIC STUDIES: Predictive microbial models and underlying data",
-            "PUBLISHED SCIENTIFIC STUDIES: Dose-response data and models",
-            "PUBLISHED SCIENTIFIC STUDIES: Toxicological data and models",
-            "PUBLISHED SCIENTIFIC STUDIES: Contamination data and exposure models",
-            "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS)",
-            "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS): Studies and surveys",
-            "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS):   Laboratory (private, research) databases",
-            "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food monitoring data",
-            "NATIONAL OR INTERNATIONAL OFFICIAL DATA:  Human health surveillance data",
-            "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food consumption survey or regional diet data",
-            "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food safety databases",
-            "OTHER SURVEYS AND QUESTIONNAIRES",
-            "RISK ASSESSMENTS",
-            "RISK ASSESSMENTS:  International risk assessment agencies data",
-            "RISK ASSESSMENTS: Risk assessments models",
-            "EXPERT KNOWLEDGE ELICITATION AND EXPERT OPINIONS"
-        ]
+        "source": {
+            "type": "string",
+            "enum": [
+                "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food safety databases",
+                "PUBLISHED SCIENTIFIC STUDIES: Dose-response data and models",
+                "PUBLISHED SCIENTIFIC STUDIES: Predictive microbial models and underlying data",
+                "PUBLISHED SCIENTIFIC STUDIES: Contamination data and exposure models",
+                "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS): Studies and surveys",
+                "RISK ASSESSMENTS: Risk assessments models",
+                "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food monitoring data",
+                "EXPERT KNOWLEDGE ELICITATION AND EXPERT OPINIONS",
+                "OTHER SURVEYS AND QUESTIONNAIRES",
+                "NATIONAL OR INTERNATIONAL OFFICIAL DATA: Food consumption survey or regional diet data",
+                "PUBLISHED SCIENTIFIC STUDIES: Toxicological data and models",
+                "PUBLISHED SCIENTIFIC STUDIES",
+                "EVENTS (MEETING OR CONFERENCE)",
+                "RISK ASSESSMENTS",
+                "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS)",
+                "NATIONAL OR INTERNATIONAL OFFICIAL DATA:  Human health surveillance data",
+                "UNPUBLISHED STUDIES (EXPERIMENTS-OBSERVATIONS):   Laboratory (private, research) databases",
+                "RISK ASSESSMENTS:  International risk assessment agencies data"
+            ]
+        },
+        "comment": {
+            "type": "string",
+            "enum": [
+                "",
+                "Risk assessments carried out by national or international agencies and research institutes",
+                "Studies and surveys carried out by industry, association (society), etc.",
+                "e.g. laboratory diagnostic data, historical outbreaks investigations, biomonitoring survey"
+            ]
+        }
     }
 }

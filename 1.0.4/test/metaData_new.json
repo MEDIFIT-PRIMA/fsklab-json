@@ -1,0 +1,422 @@
+{
+  "modelType": "DoseResponseModel",
+  "generalInformation": {
+    "name": "Cooking-A farm-to-fork model for the risk of human trichinellosis from pork and wild boar meat",
+    "source": "PUBLISHED SCIENTIFIC STUDIES",
+    "identifier": "02592227-3f31-4f75-ab4e-97ef91cd931c",
+    "author": [
+      {
+        "familyName": "Franssen",
+        "givenName": "Frits",
+        "email": "frits.franssen@rivm.nl",
+        "country": "Netherlands",
+        "organization": "National Institute for Public Health and the Environment (RIVM)"
+      },
+      {
+        "familyName": "Swart",
+        "givenName": "Arno",
+        "email": "arno.swart@rivm.nl",
+        "country": "Netherlands",
+        "organization": "National Institute for Public Health and the Environment (RIVM)"
+      },
+      {
+        "familyName": "van der Giessen",
+        "givenName": "Joke",
+        "email": "joke.van.der.giessen@rivm.nl",
+        "country": "Netherlands",
+        "organization": "National Institute for Public Health and the Environment (RIVM)"
+      },
+      {
+        "familyName": "Havelaar",
+        "givenName": "Arie",
+        "email": "ariehavelaar@ufl.edu",
+        "country": "Netherlands",
+        "organization": "National Institute for Public Health and the Environment (RIVM)"
+      },
+      {
+        "familyName": "Takumi",
+        "givenName": "Katsuhisa",
+        "email": "katsuhisa.takumi@rivm.nl",
+        "country": "Netherlands",
+        "organization": "National Institute for Public Health and the Environment (RIVM)"
+      }
+    ],
+    "creator": [
+      {
+        "familyName": "Sundermann",
+        "givenName": "Esther",
+        "email": "esther-maria.sundermann@bfr.bund.de",
+        "country": "Germany",
+        "organization": "German Federal Institute for Risk Assessment"
+      },
+      {
+        "title": "-",
+        "familyName": "Ganas",
+        "givenName": "Petra",
+        "email": "petra.ganas@bfr.bund.de",
+        "telephone": "-",
+        "streetAddress": "-",
+        "country": "Germany",
+        "zipCode": "-",
+        "region": "-",
+        "timeZone": "-",
+        "gender": "-",
+        "note": "-",
+        "organization": "German Federal Institute for Risk Assessment"
+      }
+    ],
+    "creationDate": [
+      2021,
+      9,
+      3
+    ],
+    "modificationDate": [
+      [
+        2021,
+        10,
+        12
+      ],
+      [
+        2021,
+        10,
+        12
+      ],
+      [
+        2021,
+        10,
+        18
+      ],
+      [
+        2021,
+        10,
+        20
+      ],
+      [
+        2022,
+        2,
+        4
+      ]
+    ],
+    "rights": "Creative Commons Attribution 4.0",
+    "availability": "Open access",
+    "format": ".fskx",
+    "reference": [
+      {
+        "date": "2016",
+        "pmid": "27816842",
+        "doi": "10.1016/j.ijfoodmicro.2016.10.029 ",
+        "authorList": "Frits Franssen, Arno Swart, Joke van der Giessen, Arie Havelaar, Katsuhisa Takumi",
+        "title": "Parasite to patient: A quantitative risk model for Trichinella spp. in pork and wild boar meat",
+        "journal": "International Journal of Food Microbiology",
+        "volume": "241",
+        "issue": "-",
+        "status": "Published",
+        "website": "https://www.sciencedirect.com/science/article/pii/S0168160516305669?via%3Dihub",
+        "comment": "-",
+        "abstract": "Consumption of raw or inadequately cooked pork meat may result in trichinellosis, a human disease due to nematodes of the genus Trichinella. In many countries worldwide, individual control of pig carcasses at meat inspection is mandatory but incurs high costs in relation to absence of positive carcasses from pigs reared under controlled housing. EU regulation 2015/1375 implements an alternative risk-based approach, in view of absence of positive findings in pigs under controlled housing conditions. Moreover, Codex Alimentarius guidelines for the control of Trichinella spp. in meat of suidae have been published (CAC, 2015) and used in conjunction with the OIE terrestrial Animal health code, to provide guidance to governments and industry on risk based control measures to prevent human exposure to Trichinella spp. and to facilitate international pork trade. To further support such a risk-based approach, we model the risk of human trichinellosis due to consumption of meat from infected pigs, raised under non-controlled housing and wild boar, using Quantitative Microbial Risk Assessment (QMRA) methods. Our model quantifies the distribution of Trichinella muscle larve (ML) in swine, test sensitivity at carcass control, partitioning of edible pork parts, Trichinella ML distribution in edible muscle types, heat inactivation by cooking and portion sizes. The resulting exposure estimate is combined with a dose response model for Trichinella species to estimate the incidence of human illness after consumption of infected meat. Paramater estimation is based on experimental and observational datasets. In Poland, which served as example, we estimated an average incidence of 0.90 (95%CI: 0.00-3.68) trichinellosis cases per million persons per year (Mpy) due to consumption of pork from pigs that were reared under non-controlled housing, and 1.97 (95%CI: 0.82-4.00) cases per Mpy due to consumption of wild boar. The total estimated incidence of human trichinellosis attributed to pigs from non-controlled housing and wild boar in Poland, is similar to the incidence of human trichinellosis in that country reported by EFSA. Overall, in Europe, we estimated an upper incidence limit of 5.3×10-4 cases per Mpy, or less than one predicted case of trichinellosis in the European Union every 4years, due to consumption of pork from controlled housing. Therefore, Trichinella testing of pigs under controlled housing is not adding any value to protect human health. We suggest applying our farm-to-fork QMRA model to further support decision making on the global scale. "
+      },
+      {
+        "date": "2018",
+        "pmid": "32095597",
+        "doi": "10.1016/j.fawpar.2018.04.003 ",
+        "authorList": "\nFrits Franssen, Katsuhisa Takumi, Joke van der Giessen, Arno Swart\n",
+        "title": "Assessing the risk of human trichinellosis from pigs kept under controlled and non-controlled housing in Europe ",
+        "journal": "Food and Waterborne Parasitology",
+        "volume": "10",
+        "status": "Published",
+        "website": "https://www.sciencedirect.com/science/article/pii/S2405676618300039",
+        "abstract": "To support risk-based approach to prevent human trichinellosis, we estimated the human incidence for pigs originating from controlled and non-controlled housing, using a quantitative microbial risk assessment model for Trichinella (QMRA-T). Moreover, the effect of test sensitivity on human trichinellosis incidence from pigs from non-controlled housing was quantified. The estimated annual risk from pigs from non-controlled housing was 59,443 human trichinellosis cases without testing at meat inspection and 832 (95%CI 346-1410) cases with Trichinella testing, thus preventing 98.6% of trichinellosis cases per year by testing at meat inspection. Using the QMRA-T, a slight decrease in test sensitivity had a significant effect on the number of human trichinellosis cases from this housing type. The estimated annual risk for pigs from controlled housing was <0.002 (range 0.000-0.007) human cases with- and <0.010 (0.001-0.023) cases without Trichinella testing at meat inspection, which does not differ significantly (p = 0.2075). In practice, this means no cases per year irrespective of Trichinella testing. Thus controlled housing effectively prevents infection and Trichinella testing does not contribute to food safety for this housing type. Not testing for Trichinella requires evidence based full compliance with regulations for controlled housing. "
+      },
+      {
+        "date": "2021",
+        "pmid": "33713660",
+        "doi": "10.1016/j.exppara.2021.108099 ",
+        "authorList": "Frits Franssen, Huifang Deng, Arno Swart, Axel Bonačić Marinović, Xiaolei Liu, Mingyuan Liu, Joke van der Giessen",
+        "title": "Inactivation of Trichinella muscle larvae at different time-temperature heating profiles simulating home-cooking ",
+        "journal": "Experimental Parasitology",
+        "volume": "224",
+        "status": "Published",
+        "website": "https://www.sciencedirect.com/science/article/pii/S0014489421000369?via%3Dihub",
+        "abstract": "\n\nBackground: Trichinellosis is caused by consumption of raw or undercooked meat containing infective Trichinella muscle larvae (ML). Only few studies on heat-inactivation of Trichinella ML are available in literature and more validated data concerning heat inactivation is needed to improve the risk estimation.\n\nObjective and methods: The aim of the present study was to evaluate the two in vitro methods \"staining\" and \"morphological examination\" as proxies for Trichinella ML heat inactivation in comparison with the mouse bioassay method to get more insight in the relationship between heat, heating time and inactivation of Trichinella ML. The second aim was to evaluate whether these methods could replace the bioassay in the light of ongoing animal use reduction in lifescience research. Tubes containing quantified live Trichinella ML were exposed to heat profiles ranging from 40 to 80 °C. Subsequently, inactivation was evaluated using both methylene blue staining and morphological examination, which was validated by bioassay. Results were used to model Trichinella inactivation.\n\nResults: Trichinella muscle larvae exposed to 60 °C or higher for 12-12.5 min were not infective to mice. We found that morphological examination was more consistent with the bioassay than methylene blue staining. Modelled inactivation fitted experimental data consistently. Moreover, this study shows that larval Trichinella morphology may be used in situations where bioassays are not possible or prohibited.\n\nConclusions: The relationship between heat and inactivation of larvae obtained from this study could be used in Trichinella QMRA models to improve quantification of the risk of Trichinella infection."
+      }
+    ],
+    "language": "English",
+    "software": "FSK-Lab",
+    "languageWrittenIn": "R 3",
+    "modelCategory": {
+      "modelClass": "Exposure model",
+      "modelClassComment": "Farm-to-fork model"
+    },
+    "status": "Uncurated",
+    "objective": "A farm-to-fork model for the risk of human trichinellosis from pork and wild boar meat.",
+    "description": "The mathematical model simulates the risk of human trichinellosis due to consumption of meat from infected pigs, raised under non-controlled housing and wild boar, using Quantitative Microbial Risk Assessment (QMRA) methods. The model quantifies the distribution of Trichinella muscle larve (ML) in swine, test sensitivity at carcass control, partitioning of edible pork parts, Trichinella ML distribution in edible muscle types, heat inactivation by cooking and portion sizes. The resulting exposure estimate is combined with a dose response model for Trichinella species to estimate the incidence of human illness after consumption of infected meat. Parameter estimation is based on experimental and observational datasets."
+  },
+  "scope": {
+    "product": [
+      {
+        "name": "Swine",
+        "unit": "Animal",
+        "originCountry": "PL"
+      },
+      {
+        "name": "Swine",
+        "description": "shoulder, bally or lion",
+        "unit": "Portion",
+        "originCountry": "PL"
+      }
+    ],
+    "hazard": [
+      {
+        "type": "Nematode parasite",
+        "name": "Trichinella spp., unspecified",
+        "description": "Trichinella muscle larve (ML)"
+      }
+    ],
+    "populationGroup": [
+      {
+        "name": "human consumer, no age specification",
+        "country": [
+          "Poland"
+        ]
+      }
+    ],
+    "generalComment": "A farm-to-fork model for the risk of human trichinellosis from pork and wild boar meat that is based on experimental and observational datasets.",
+    "temporalInformation": "2007-2012",
+    "spatialInformation": [
+      "Poland"
+    ]
+  },
+  "dataBackground": {
+    "study": {
+      "identifier": "FranssenEtAl2017",
+      "title": "Parasite to patient: A quantitative risk model for Trichinella spp. in pork and wild boar meat",
+      "description": "A farm-to-fork model for the risk of human trichinellosis from pork and wild boar meat that is based on experimental and observational datasets. In order to parameterize the model, diverse datasets, e.g. from EFSA and ECDC, were used."
+    }
+  },
+  "modelMath": {
+    "parameter": [
+      {
+        "id": "df_larvae_in_portions_afterConsump_join",
+        "classification": "INPUT",
+        "name": "df_larvae_in_portions_afterConsump",
+        "description": "Outcomes of consumption model for joining",
+        "unit": "[]",
+        "unitCategory": "Dimensionless Quantity",
+        "dataType": "FILE",
+        "source": "Data",
+        "subject": "-",
+        "distribution": "-",
+        "value": "\" \"",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "df_zero_larvae_in_portions_afterConsump_join",
+        "classification": "INPUT",
+        "name": "df_zero_larvae_in_portions_afteConsump",
+        "description": "Outcomes of consumption model for joining",
+        "unit": "[]",
+        "unitCategory": "Dimensionless Quantity",
+        "dataType": "FILE",
+        "source": "Data",
+        "subject": "-",
+        "distribution": "-",
+        "value": "\" \"",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "inactivation_params_join",
+        "classification": "INPUT",
+        "name": "inactivation parameters",
+        "description": "Outcome of inactivation model for joining",
+        "unit": "[]",
+        "unitCategory": "-",
+        "dataType": "VECTOROFNUMBERS",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "c(k = 0.17, alpha_plus = 0.63, T_star = 59.3)",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "inactivation_join",
+        "classification": "INPUT",
+        "name": "inactivation function",
+        "description": "Outcome of inactivation model for joining",
+        "unit": "[]",
+        "unitCategory": "-",
+        "dataType": "STRING",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "\" \"",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "rare_start_temp",
+        "classification": "INPUT",
+        "name": "rare_start_temp",
+        "description": "Start temperature for cooking scenario larvae_rare",
+        "unit": "°C",
+        "unitCategory": "Temperature",
+        "dataType": "DOUBLE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "20",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "rare_end_temp",
+        "classification": "INPUT",
+        "name": "rare_end_temp",
+        "description": "End temperature for cooking scenario larvae_rare",
+        "unit": "°C",
+        "unitCategory": "Temperature",
+        "dataType": "DOUBLE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "54",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "rare_end_time",
+        "classification": "INPUT",
+        "name": "rare_end_time",
+        "description": "End of cooking time for scenario larvae_rare",
+        "unit": "min",
+        "unitCategory": "Time",
+        "dataType": "DOUBLE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "2.5",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "welldone_end_temp",
+        "classification": "INPUT",
+        "name": "welldone_end_temp",
+        "description": "End temperature for cooking scenario larvae_welldone",
+        "unit": "°C",
+        "unitCategory": "Temperature",
+        "dataType": "DOUBLE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "76.7",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "welldone_end_time",
+        "classification": "INPUT",
+        "name": "welldone_end_time",
+        "description": "End of cooking time for scenario larvae_welldone",
+        "unit": "min",
+        "unitCategory": "Time",
+        "dataType": "DOUBLE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "15",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "medium_end_temp",
+        "classification": "INPUT",
+        "name": "medium_end_temp",
+        "description": "End temperature for cooking scenario larvae_medium",
+        "unit": "°C",
+        "unitCategory": "Temperature",
+        "dataType": "DOUBLE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "63",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "medium_end_time",
+        "classification": "INPUT",
+        "name": "medium_end_time",
+        "description": "End of cooking time for scenario larvae_medium",
+        "unit": "min",
+        "unitCategory": "Time",
+        "dataType": "DOUBLE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "1.5",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "df_larvae_in_portions_afterCook_file",
+        "classification": "OUTPUT",
+        "name": "df_larvae_in_portions_afterCook",
+        "description": "Model outcomes",
+        "unit": "[]",
+        "unitCategory": "Dimensionless Quantity",
+        "dataType": "FILE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "-",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      },
+      {
+        "id": "df_zero_larvae_in_portions_afterCook_file",
+        "classification": "OUTPUT",
+        "name": "df_zero_larvae_in_portions_afterCook",
+        "description": "Model outcomes",
+        "unit": "[]",
+        "unitCategory": "Dimensionless Quantity",
+        "dataType": "FILE",
+        "source": "-",
+        "subject": "-",
+        "distribution": "-",
+        "value": "-",
+        "variabilitySubject": "-",
+        "minValue": "-",
+        "maxValue": "-",
+        "error": "-"
+      }
+    ],
+    "fittingProcedure": "Maximize the log-likelihood to calculate the maximum likelihood estimates for the parameters m and k as well as alpha and beta."
+  }
+}

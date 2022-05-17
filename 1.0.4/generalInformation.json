@@ -1,71 +1,80 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/generalInformation.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "identifier": {
-                "type": "string"
-            },
-            "creator": {
-                "type": "array",
-                "items": {
-                    "$ref": "/1.0.4/contact.json"
-                }
-            },
-            "author": {
-                "type": "array",
-                "items": {
-                    "$ref": "/1.0.4/contact.json"
-                }
-            },
-            "format": {
-                "type": "string"
-            },
-            "description": {
-                "type": "string"
-            },
-            "language": {
-                "type": "string"
-            },
-            "source": {
-                "type": "string"
-            },
-            "availability": {
-                "type": "string"
-            },
-            "creationDate": {
-                "format": "date",
-                "type": "string"
-            },
-            "url": {
-                "format": "uri",
-                "type": "string"
-            },
-            "objective": {
-                "type": "string"
-            },
-            "reference": {
-                "type": "array",
-                "items": {
-                    "$ref": "/1.0.4/reference.json"
-                }
-            },
-            "modificationDate": {
-                "type": "array",
-                "items": {
-                    "format": "date",
-                    "type": "string"
-                }
-            },
-            "rights": {
-                "type": "string"
-            },
-            "name": {
-                "type": "string"
-            },
-            "status": {
-                "type": "string"
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/generalInformation.json",
+    "type": "object",
+    "properties": {
+        "identifier": {
+            "type": "string"
+        },
+        "creator": {
+            "type": "array",
+            "items": {
+                "$ref": "contact.json"
             }
+        },
+        "author": {
+            "type": "array",
+            "items": {
+                "$ref": "contact.json"
+            }
+        },
+        "format": {
+            "$ref": "vocabularies/format.json#/definitions/format"
+        },
+        "description": {
+            "type": "string"
+        },
+        "language": {
+            "$ref": "vocabularies/language.json#/definitions/language"
+        },
+        "source": {
+            "type": "string"
+        },
+        "availability": {
+            "$ref": "vocabularies/availability.json#/definitions/availability"
+        },
+        "creationDate": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            }
+        },
+        "url": {
+            "format": "uri",
+            "type": "string"
+        },
+        "objective": {
+            "type": "string"
+        },
+        "reference": {
+            "type": "array",
+            "items": {
+                "$ref": "reference.json"
+            }
+        },
+        "modificationDate": {
+            "type": "array",
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "integer"
+                }
+            }
+        },
+        "rights": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
         }
-    }
+    },
+    "required": [
+        "name",
+        "identifier",
+        "creationDate",
+        "rights",
+        "reference"
+    ]
 }

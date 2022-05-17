@@ -1,12 +1,23 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//ind_sum.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/ind_sum.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "Individual",
-            "Part of a sum",
-            "Sum",
-            "Sum based on subset"
-        ]
+        "ind_sum": {
+            "type": "string",
+            "enum": [
+                "Individual",
+                "Sum",
+                "Sum based on subset",
+                "Part of a sum"
+            ]
+        },
+        "ssd": {
+            "type": "string",
+            "enum": [
+                "P004A",
+                "P002A",
+                "P001A",
+                "P003A"
+            ]
+        }
     }
 }

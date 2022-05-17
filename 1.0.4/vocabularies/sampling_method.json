@@ -1,25 +1,40 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//sampling_method.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/sampling_method.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "According to 97/747/EC",
-            "According to Dir. 2002/63/EC",
-            "According to Reg 152/2009",
-            "According to Reg 1882/2006",
-            "According to Reg 1883/2006",
-            "According to Reg 333/2007",
-            "According to Reg 401/2006",
-            "HACCP and owns check",
-            "Individual",
-            "Individual/single",
-            "Industry sampling",
-            "Not applicable",
-            "Official and industry sampling",
-            "Official sampling",
-            "Pooled",
-            "Pooled/batch",
-            "Unknown"
-        ]
+        "sampling_method": {
+            "type": "string",
+            "enum": [
+                "Individual",
+                "Individual/single",
+                "According to Reg 1882/2006",
+                "According to Dir. 2002/63/EC",
+                "According to Reg 152/2009",
+                "Unknown",
+                "Official and industry sampling",
+                "According to Reg 333/2007",
+                "According to Reg 1883/2006",
+                "Industry sampling",
+                "Pooled/batch",
+                "Pooled",
+                "According to 97/747/EC",
+                "Official sampling",
+                "Not applicable",
+                "HACCP and owns check",
+                "According to Reg 401/2006"
+            ]
+        },
+        "comment": {
+            "type": "string",
+            "enum": [
+                "",
+                "Directive 2002/63/EC - Community methods of sampling for the official control of pesticide residues",
+                "Commission Regulation (EC) No 401/2006 of 23 February 2006 laying down the methods of sampling and analysis for the official control of the levels of mycotoxins in foodstuffs.",
+                "\"Commission Regulation (EC) (EC) No 1882/2006 of 19 December 2006, laying down methods of sampling and analysis for the official control of the levels of nitrates in certain foodstuffs\"",
+                "Commission Regulation (EC) No 1883/2006 of 19 December 2006 laying down methods of sampling and analysis for the official control of levels of dioxins and dioxin-like PCBs in certain foodstuffs",
+                "Commission Regulation (EC) No 152/2009 of 27 January 2009 laying down the methods of sampling and analysis for the official control of feed.",
+                "Directive 97/747/EC - Fixing the levels and frequencies of sampling provided for by Council Directive 96/23/EC for the monitoring of certain substances and residues thereof in certain animal products",
+                "Commission Regulation (EC) No 333/2007 laying down the methods of sampling and analysis for the official control of the levels of lead, cadmium, mercury, inorganic tin, 3-MCPD and benzo(a)pyrene in foodstuffs"
+            ]
+        }
     }
 }

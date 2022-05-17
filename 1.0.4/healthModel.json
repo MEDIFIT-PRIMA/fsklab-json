@@ -1,36 +1,26 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/healthModel.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "dataBackground": {
-                "$ref": "/1.0.4/modelDataBackground.json"
-            },
-            "modelType": {
-                "pattern": "^HealthModel$",
-                "type": "string"
-            },
-            "generalInformation": {
-                "$ref": "/1.0.4/genericModelGeneralInformation.json",
-                "required": [
-                    "name",
-                    "identifier",
-                    "creationDate",
-                    "rights",
-                    "reference",
-                    "languageWrittenIn"
-                ]
-            },
-            "modelMath": {
-                "$ref": "/1.0.4/genericModelModelMath.json"
-            },
-            "scope": {
-                "$ref": "/1.0.4/toxicologicalModelScope.json",
-                "required": [
-                    "hazard",
-                    "populationGroup"
-                ]
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/healthModel.json",
+    "type": "object",
+    "properties": {
+        "dataBackground": {
+            "$ref": "modelDataBackground.json"
+        },
+        "modelType": {
+            "pattern": "^HealthModel$",
+            "type": "string"
+        },
+        "generalInformation": {
+            "$ref": "genericModelGeneralInformation.json"
+        },
+        "modelMath": {
+            "$ref": "genericModelModelMath.json"
+        },
+        "scope": {
+            "$ref": "toxicologicalModelScope.json",
+            "required": [
+                "hazard",
+                "populationGroup"
+            ]
         }
     }
 }

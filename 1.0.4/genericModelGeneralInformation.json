@@ -1,26 +1,24 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelGeneralInformation.json",
-    "definitions": {
-        "allOf": [
-            {
-                "$ref": "/1.0.4/generalInformation.json"
-            },
-            {
-                "type": "object",
-                "properties": {
-                    "software": {
-                        "type": "string",
-                        "description": "The program or software language in which the model has been implemented"
-                    },
-                    "languageWrittenIn": {
-                        "type": "string",
-                        "description": "Software language used to write the model, e.g. R or MatLab"
-                    },
-                    "modelCategory": {
-                        "$ref": "/1.0.4/modelCategory.json"
-                    }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/genericModelGeneralInformation.json",
+    "allOf": [
+        {
+            "$ref": "generalInformation.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "software": {
+                    "type": "string",
+                    "description": "The program or software language in which the model has been implemented"
+                },
+                "languageWrittenIn": {
+                    "type": "string",
+                    "description": "Software language used to write the model, e.g. R or MatLab"
+                },
+                "modelCategory": {
+                    "$ref": "modelCategory.json"
                 }
             }
-        ]
-    }
+        }
+    ]
 }

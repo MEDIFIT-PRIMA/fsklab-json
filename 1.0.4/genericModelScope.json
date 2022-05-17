@@ -1,21 +1,19 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelScope.json",
-    "definitions": {
-        "allOf": [
-            {
-                "$ref": "/1.0.4/scope.json"
-            },
-            {
-                "type": "object",
-                "properties": {
-                    "populationGroup": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "/1.0.4/populationGroup.json"
-                        }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/genericModelScope.json",
+    "allOf": [
+        {
+            "$ref": "scope.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "populationGroup": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "populationGroup.json"
                     }
                 }
             }
-        ]
-    }
+        }
+    ]
 }

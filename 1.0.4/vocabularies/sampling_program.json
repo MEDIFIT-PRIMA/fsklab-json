@@ -1,28 +1,55 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//sampling_program.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/sampling_program.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "Clinical investigations",
-            "Control and eradication programmes",
-            "Diet study",
-            "EU increased control programme on imported food",
-            "Industry - private programme",
-            "Monitoring",
-            "Monitoring - active",
-            "Monitoring - EFSA specifications",
-            "Monitoring - passive",
-            "Official (EU) programme",
-            "Official (National and EU) programme",
-            "Official (National) programme",
-            "Other - Combination of several programmes",
-            "Surveillance",
-            "Surveillance active",
-            "Surveillance passive",
-            "Survey",
-            "Survey - EU baseline survey",
-            "Survey - national survey",
-            "Unspecified"
-        ]
+        "sampling_program": {
+            "type": "string",
+            "enum": [
+                "Other - Combination of several programmes",
+                "Official (EU) programme",
+                "Survey",
+                "Surveillance active",
+                "Survey - EU baseline survey",
+                "Control and eradication programmes",
+                "Official (National) programme",
+                "Monitoring - active",
+                "Survey - national survey",
+                "Monitoring - passive",
+                "Official (National and EU) programme",
+                "Monitoring",
+                "EU increased control programme on imported food",
+                "Surveillance",
+                "Clinical investigations",
+                "Industry - private programme",
+                "Unspecified",
+                "Surveillance passive",
+                "Diet study",
+                "Monitoring - EFSA specifications"
+            ]
+        },
+        "progType": {
+            "type": "string",
+            "enum": [
+                "K013A",
+                "K025A",
+                "K020A",
+                "K023A",
+                "K005A",
+                "K009A",
+                "K024A",
+                "K010A",
+                "K014A",
+                "K030A",
+                "K012A",
+                "K031A",
+                "K028A",
+                "K027A",
+                "K021A",
+                "K022A",
+                "K019A",
+                "K029A",
+                "K026A",
+                "K018A"
+            ]
+        }
     }
 }

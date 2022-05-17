@@ -1,47 +1,45 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/assay.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "contaminationRange": {
-                "type": "string",
-                "description": "Range of result of the analytical measure reported in the unit specified by the variable 'Hazard unit' before censored data treatment"
-            },
-            "uncertaintyValue": {
-                "type": "string",
-                "description": "Indicate the expanded uncertainty (usually 95% confidence interval) value associated with the measurement expressed in the unit reported in the field 'Hazard unit'"
-            },
-            "fatPercentage": {
-                "type": "string",
-                "description": "Percentage of fat in the original sample"
-            },
-            "name": {
-                "type": "string",
-                "description": "A name given to the assay"
-            },
-            "description": {
-                "type": "string",
-                "description": "General description of the assay. Corresponds to the Protocol REF in ISA"
-            },
-            "moisturePercentage": {
-                "type": "string",
-                "description": "Percentage of moisture in the original sample"
-            },
-            "leftCensoredData": {
-                "type": "string",
-                "description": "Percentage of measures equal to LOQ and/or LOD"
-            },
-            "detectionLimit": {
-                "type": "string",
-                "description": "Limit of detection reported in the unit specified by the variable 'Hazard unit'"
-            },
-            "quantificationLimit": {
-                "type": "string",
-                "description": "Limit of quantification reported in the unit specified by the variable 'Hazard unit'"
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/assay.json",
+    "type": "object",
+    "properties": {
+        "contaminationRange": {
+            "type": "string",
+            "description": "Range of result of the analytical measure reported in the unit specified by the variable 'Hazard unit' before censored data treatment"
         },
-        "required": [
-            "name"
-        ]
-    }
+        "uncertaintyValue": {
+            "type": "string",
+            "description": "Indicate the expanded uncertainty (usually 95% confidence interval) value associated with the measurement expressed in the unit reported in the field 'Hazard unit'"
+        },
+        "fatPercentage": {
+            "type": "string",
+            "description": "Percentage of fat in the original sample"
+        },
+        "name": {
+            "type": "string",
+            "description": "A name given to the assay"
+        },
+        "description": {
+            "type": "string",
+            "description": "General description of the assay. Corresponds to the Protocol REF in ISA"
+        },
+        "moisturePercentage": {
+            "type": "string",
+            "description": "Percentage of moisture in the original sample"
+        },
+        "leftCensoredData": {
+            "type": "string",
+            "description": "Percentage of measures equal to LOQ and/or LOD"
+        },
+        "detectionLimit": {
+            "type": "string",
+            "description": "Limit of detection reported in the unit specified by the variable 'Hazard unit'"
+        },
+        "quantificationLimit": {
+            "type": "string",
+            "description": "Limit of quantification reported in the unit specified by the variable 'Hazard unit'"
+        }
+    },
+    "required": [
+        "name"
+    ]
 }

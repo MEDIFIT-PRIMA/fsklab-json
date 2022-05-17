@@ -1,127 +1,122 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/reference.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "date": {
-                "format": "date",
-                "type": "string",
-                "description": "Temporal information on the publication date"
-            },
-            "website": {
-                "type": "string",
-                "description": "A link to the publication website (different from DOI)"
-            },
-            "issue": {
-                "type": "string",
-                "description": "Data on the details of the journal in which the model or the data has been described"
-            },
-            "publicationType": {
-                "type": "string",
-                "description": "The type of publication, e.g. Report, Journal article, Book, Online database, ...",
-                "enum": [
-                    "ABST",
-                    "ADVS",
-                    "AGGR",
-                    "ANCIENT",
-                    "ART",
-                    "BILL",
-                    "BLOG",
-                    "BOOK",
-                    "CASE",
-                    "CHAP",
-                    "CHART",
-                    "CLSWK",
-                    "COMP",
-                    "CONF",
-                    "CPAPER",
-                    "CTLG",
-                    "DATA",
-                    "DBASE",
-                    "DICT",
-                    "EBOOK",
-                    "ECHAP",
-                    "EDBOOK",
-                    "EJOUR",
-                    "ELECT",
-                    "ENCYC",
-                    "EQUA",
-                    "FIGURE",
-                    "GEN",
-                    "GOVDOC",
-                    "GRANT",
-                    "HEAR",
-                    "ICOMM",
-                    "INPR",
-                    "JOUR",
-                    "JFULL",
-                    "LEGAL",
-                    "MANSCPT",
-                    "MAP",
-                    "MGZN",
-                    "MPCT",
-                    "MULTI",
-                    "MUSIC",
-                    "NEW",
-                    "PAMP",
-                    "PAT",
-                    "PCOMM",
-                    "RPRT",
-                    "SER",
-                    "SLIDE",
-                    "SOUND",
-                    "STAND",
-                    "STAT",
-                    "THES",
-                    "UNPB",
-                    "VIDEO"
-                ]
-            },
-            "abstract": {
-                "type": "string",
-                "description": "Abstract of the publication in which the model or the data has been described"
-            },
-            "isReferenceDescription": {
-                "type": "boolean",
-                "description": "Indicates whether this specific publication serves as the reference description for the model. There has to be at least one reference where this field is set to 'True'"
-            },
-            "pmid": {
-                "type": "string",
-                "description": "The PubMed ID related to this publication"
-            },
-            "title": {
-                "type": "string",
-                "description": "Title of the publication in which the model or the data has been described"
-            },
-            "volume": {
-                "type": "string",
-                "description": "Data on the details of the journal in which the model or the data has been described"
-            },
-            "journal": {
-                "type": "string",
-                "description": "Data on the details of the journal in which the model or the data has been described"
-            },
-            "authorList": {
-                "type": "string",
-                "description": "Name and surname of the authors who contributed to this publication"
-            },
-            "comment": {
-                "type": "string",
-                "description": "Further comments related to the reference description, e.g. which section in there describes the specific model or which figure in there can be reproduced with the visualization script"
-            },
-            "doi": {
-                "type": "string",
-                "description": "The DOI related to this publication"
-            },
-            "status": {
-                "type": "string",
-                "description": "The status of this publication, e.g. Published, Submitted, etc."
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/reference.json",
+    "type": "object",
+    "properties": {
+        "date": {
+            "type": "string",
+            "description": "Temporal information on the publication date"
         },
-        "required": [
-            "isReferenceDescription",
-            "doi",
-            "title"
-        ]
-    }
+        "website": {
+            "type": "string",
+            "description": "A link to the publication website (different from DOI)"
+        },
+        "issue": {
+            "type": "string",
+            "description": "Data on the details of the journal in which the model or the data has been described"
+        },
+        "publicationType": {
+            "type": "string",
+            "description": "The type of publication, e.g. Report, Journal article, Book, Online database, ...",
+            "enum": [
+                "ABST",
+                "ADVS",
+                "AGGR",
+                "ANCIENT",
+                "ART",
+                "BILL",
+                "BLOG",
+                "BOOK",
+                "CASE",
+                "CHAP",
+                "CHART",
+                "CLSWK",
+                "COMP",
+                "CONF",
+                "CPAPER",
+                "CTLG",
+                "DATA",
+                "DBASE",
+                "DICT",
+                "EBOOK",
+                "ECHAP",
+                "EDBOOK",
+                "EJOUR",
+                "ELECT",
+                "ENCYC",
+                "EQUA",
+                "FIGURE",
+                "GEN",
+                "GOVDOC",
+                "GRANT",
+                "HEAR",
+                "ICOMM",
+                "INPR",
+                "JOUR",
+                "JFULL",
+                "LEGAL",
+                "MANSCPT",
+                "MAP",
+                "MGZN",
+                "MPCT",
+                "MULTI",
+                "MUSIC",
+                "NEW",
+                "PAMP",
+                "PAT",
+                "PCOMM",
+                "RPRT",
+                "SER",
+                "SLIDE",
+                "SOUND",
+                "STAND",
+                "STAT",
+                "THES",
+                "UNPB",
+                "VIDEO"
+            ]
+        },
+        "abstract": {
+            "type": "string",
+            "description": "Abstract of the publication in which the model or the data has been described"
+        },
+        "isReferenceDescription": {
+            "type": "boolean",
+            "description": "Indicates whether this specific publication serves as the reference description for the model. There has to be at least one reference where this field is set to 'True'"
+        },
+        "pmid": {
+            "type": "string",
+            "description": "The PubMed ID related to this publication"
+        },
+        "title": {
+            "type": "string",
+            "description": "Title of the publication in which the model or the data has been described"
+        },
+        "volume": {
+            "type": "string",
+            "description": "Data on the details of the journal in which the model or the data has been described"
+        },
+        "journal": {
+            "type": "string",
+            "description": "Data on the details of the journal in which the model or the data has been described"
+        },
+        "authorList": {
+            "type": "string",
+            "description": "Name and surname of the authors who contributed to this publication"
+        },
+        "comment": {
+            "type": "string",
+            "description": "Further comments related to the reference description, e.g. which section in there describes the specific model or which figure in there can be reproduced with the visualization script"
+        },
+        "doi": {
+            "type": "string",
+            "description": "The DOI related to this publication"
+        },
+        "status": {
+            "type": "string",
+            "description": "The status of this publication, e.g. Published, Submitted, etc."
+        }
+    },
+    "required": [
+        "title"
+    ]
 }

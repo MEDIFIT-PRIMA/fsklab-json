@@ -1,51 +1,49 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/contact.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "country": {
-                "type": "string"
-            },
-            "zipCode": {
-                "type": "string"
-            },
-            "note": {
-                "type": "string"
-            },
-            "gender": {
-                "type": "string"
-            },
-            "givenName": {
-                "type": "string"
-            },
-            "timeZone": {
-                "type": "string"
-            },
-            "telephone": {
-                "type": "string"
-            },
-            "title": {
-                "type": "string"
-            },
-            "streetAddress": {
-                "type": "string"
-            },
-            "familyName": {
-                "type": "string"
-            },
-            "organization": {
-                "type": "string"
-            },
-            "region": {
-                "type": "string"
-            },
-            "email": {
-                "format": "email",
-                "type": "string"
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/contact.json",
+    "type": "object",
+    "properties": {
+        "country": {
+            "$ref": "vocabularies/country.json#/definitions/country"
         },
-        "required": [
-            "email"
-        ]
-    }
+        "zipCode": {
+            "type": "string"
+        },
+        "note": {
+            "type": "string"
+        },
+        "gender": {
+            "type": "string"
+        },
+        "givenName": {
+            "type": "string"
+        },
+        "timeZone": {
+            "type": "string"
+        },
+        "telephone": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "streetAddress": {
+            "type": "string"
+        },
+        "familyName": {
+            "type": "string"
+        },
+        "organization": {
+            "type": "string"
+        },
+        "region": {
+            "type": "string"
+        },
+        "email": {
+            "format": "email",
+            "type": "string"
+        }
+    },
+    "required": [
+        "email"
+    ]
 }

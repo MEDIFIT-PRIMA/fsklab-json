@@ -1,0 +1,82 @@
+{
+  "$id": "https://medifit-prima.github.io/json-schema/masterdata/product-instance-schema.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "definitions": {
+    "ProductInstance": {
+      "type": "object",
+      "anyOf": [
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "ProductInstance"
+              ]
+            },
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "lot": {
+              "type": "string"
+            },
+            "use_by_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "production_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "remarks": {
+              "type": "string"
+            },
+            "external_identifier": {
+              "type": "string"
+            },
+            "year_of_harvest": {
+              "type": "number"
+            },
+            "year_of_production": {
+              "type": "number"
+            },
+            "date_of_minimum_durability": {
+              "type": "string",
+              "format": "date"
+            },
+            "product": {
+              "$ref": "product-masterdata-schema.json#/definitions/ProductMasterdata"
+            },
+            "product_url": {
+              "type": "string",
+              "format": "url"
+            }
+          }
+        }
+      ],
+      "oneOf": [
+        {
+          "required": [
+            "type",
+            "id",
+            "lot",
+            "product"
+          ]
+        },
+        {
+          "required": [
+            "type",
+            "id",
+            "lot",
+            "product_url"
+          ]
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/ProductInstance"
+    }
+  ]
+}

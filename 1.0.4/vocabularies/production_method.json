@@ -1,22 +1,43 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//production_method.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/production_method.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "Battery production",
-            "Farmed Domestic or cultivated",
-            "Free range production",
-            "Genetically modified",
-            "Integrated Pest Management",
-            "Intensive Industrial production",
-            "Non-organic production",
-            "Organic production",
-            "Other production method",
-            "Outdoor - Open-air growing condition",
-            "Production method unknown",
-            "Traditional production",
-            "Under glass - protected growing condition",
-            "Wild or gathered or hunted"
-        ]
+        "production_method": {
+            "type": "string",
+            "enum": [
+                "Under glass - protected growing condition",
+                "Other production method",
+                "Outdoor - Open-air growing condition",
+                "Wild or gathered or hunted",
+                "Production method unknown",
+                "Organic production",
+                "Farmed Domestic or cultivated",
+                "Traditional production",
+                "Integrated Pest Management",
+                "Free range production",
+                "Non-organic production",
+                "Intensive Industrial production",
+                "Battery production",
+                "Genetically modified"
+            ]
+        },
+        "ssd": {
+            "type": "string",
+            "enum": [
+                "PD04A",
+                "Z0215",
+                "Z0154",
+                "PD07A",
+                "Z0216",
+                "PD05A",
+                "PD06A",
+                "Z0214",
+                "PD09A",
+                "PD12A",
+                "Z0153",
+                "Z0211",
+                "Z0208",
+                "PD08A"
+            ]
+        }
     }
 }

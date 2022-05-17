@@ -1,26 +1,24 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/laboratory.json",
-    "definitions": {
-        "type": "object",
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "Laboratory code (National laboratory code if available) or Laboratory name"
-            },
-            "country": {
-                "type": "string",
-                "description": "Country where the laboratory is placed. (ISO 3166-1-alpha-2)"
-            },
-            "accreditation": {
-                "type": "array",
-                "items": {
-                    "type": "string",
-                    "description": "The laboratory accreditation to ISO/IEC 17025"
-                }
-            }
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/laboratory.json",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Laboratory code (National laboratory code if available) or Laboratory name"
         },
-        "required": [
-            "accreditation"
-        ]
-    }
+        "country": {
+            "description": "Country where the laboratory is placed. (ISO 3166-1-alpha-2)",
+            "$ref": "vocabularies/country.json#/definitions/iso"
+        },
+        "accreditation": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "description": "The laboratory accreditation to ISO/IEC 17025"
+            }
+        }
+    },
+    "required": [
+        "accreditation"
+    ]
 }

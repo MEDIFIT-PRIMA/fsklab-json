@@ -80,15 +80,7 @@
           "$ref": "#/definitions/modelDataBackground"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
         },
         "modelMath": {
           "$ref": "#/definitions/genericModelModelMath"
@@ -109,35 +101,8 @@
           "type": "string"
         },
         "generalInformation": {
-          "allOf": [
-            {
-              "$ref": "#/definitions/genericModelGeneralInformation",
-              "required": [
-                "name",
-                "identifier",
-                "creationDate",
-                "rights",
-                "reference"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "software": {
-                  "type": "string",
-                  "description": "The program or software language in which the model has been implemented"
-                },
-                "languageWrittenIn": {
-                  "type": "string",
-                  "description": "Software language used to write the model, e.g. R or MatLab"
-                },
-                "modelCategory": {
-                  "$ref": "#/definitions/modelCategory"
-                }
-              }
-            }
-          ]
-        },
+                 "$ref": "#/definitions/genericModelGeneralInformation"
+          },
         "modelMath": {
           "$ref": "#/definitions/genericModelModelMath"
         },
@@ -157,14 +122,8 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/generalInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference"
-          ]
+          "$ref": "#/definitions/generalInformation"
+
         },
         "modelMath": {
           "type": "object",
@@ -196,15 +155,8 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
+
         },
         "modelMath": {
           "$ref": "#/definitions/genericModelModelMath"
@@ -407,15 +359,8 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
+
         },
         "modelMath": {
           "$ref": "#/definitions/genericModelModelMath"
@@ -695,15 +640,8 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
+
         },
         "modelMath": {
           "$ref": "#/definitions/genericModelModelMath"
@@ -901,15 +839,8 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
+
         },
         "modelMath": {
           "$ref": "#/definitions/genericModelModelMath"
@@ -1035,15 +966,8 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
+
         },
         "modelMath": {
           "$ref": "#/definitions/modelMath"
@@ -1149,7 +1073,14 @@
         "status": {
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "name",
+        "identifier",
+        "creationDate",
+        "rights",
+        "reference"
+      ]
     },
     "studySample": {
       "type": "object",
@@ -1232,16 +1163,7 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "modelName",
-            "identifier",
-            "creator",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
         },
         "modelMath": {
           "$ref": "#/definitions/genericModelModelMath"
@@ -1266,15 +1188,7 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
         },
         "modelMath": {
           "$ref": "#/definitions/modelMath"
@@ -1554,15 +1468,7 @@
           "type": "string"
         },
         "generalInformation": {
-          "$ref": "#/definitions/genericModelGeneralInformation",
-          "required": [
-            "name",
-            "identifier",
-            "creationDate",
-            "rights",
-            "reference",
-            "languageWrittenIn"
-          ]
+          "$ref": "#/definitions/genericModelGeneralInformation"
         },
         "modelMath": {
           "$ref": "#/definitions/genericModelModelMath"
@@ -1578,8 +1484,7 @@
       }
     }
   },
-  "properties": {
-    "model": {
+
       "allOf": [
         {
           "if": {
@@ -1748,6 +1653,5 @@
           ]
         }
       }
-    }
-  }
+
 }

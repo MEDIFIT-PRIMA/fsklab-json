@@ -1,173 +1,171 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/FSKModel.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/FSKModel.json",
     "properties": {
-        "allOf": [
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "GenericModel"
-                        }
+        "modelType": {
+            "type": "string",
+            "enum": [
+                "GenericModel",
+                "ProcessModel",
+                "RiskModel",
+                "QraModel",
+                "DataModel",
+                "ExposureModel",
+                "ToxicologicalModel",
+                "HealthModel",
+                "DoseResponseModel",
+                "PredictiveModel",
+                "OtherModel",
+                "ConsumptionModel"
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "GenericModel"
                     }
-                },
-                "then": {
-                    "$ref": "/1.0.4/genericModel.json"
                 }
             },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "DataModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/dataModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "PredictiveModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/predictiveModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "OtherModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/otherModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "ExposureModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/exposureModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "ToxicologicalModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/toxicologicalModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "DoseResponseModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/doseResponseModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "ProcessModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/processModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "ConsumptionModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/consumptionModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "HealthModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/healthModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "RiskModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/riskModel.json"
-                }
-            },
-            {
-                "if": {
-                    "properties": {
-                        "modelType": {
-                            "const": "QraModel"
-                        }
-                    }
-                },
-                "then": {
-                    "$ref": "/1.0.4/qraModel.json"
-                }
+            "then": {
+                "$ref": "genericModel.json"
             }
-        ],
-        "required": [
-            "modelType"
-        ],
-        "properties": {
-            "modelType": {
-                "type": "string",
-                "enum": [
-                    "GenericModel",
-                    "ProcessModel",
-                    "RiskModel",
-                    "QraModel",
-                    "DataModel",
-                    "ExposureModel",
-                    "ToxicologicalModel",
-                    "HealthModel",
-                    "DoseResponseModel",
-                    "PredictiveModel",
-                    "OtherModel",
-                    "ConsumptionModel"
-                ]
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "DataModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "dataModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "PredictiveModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "predictiveModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "OtherModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "otherModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "ExposureModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "exposureModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "ToxicologicalModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "toxicologicalModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "DoseResponseModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "doseResponseModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "ProcessModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "processModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "ConsumptionModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "consumptionModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "HealthModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "healthModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "RiskModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "riskModel.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "modelType": {
+                        "const": "QraModel"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "qraModel.json"
             }
         }
-    }
+    ],
+    "required": [
+        "modelType"
+    ]
 }

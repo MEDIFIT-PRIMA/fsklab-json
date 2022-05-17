@@ -1,33 +1,35 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//unit_category.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/unit_category.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "Number Content (count/mass)",
-            "Number Concentration (count/vol)",
-            "Number Aeric (number/area)",
-            "Mass Ratio",
-            "Mass Concentration",
-            "Arbitrary Fraction",
-            "Energy Content",
-            "Energy Content Rate",
-            "Unknown",
-            "Pressure",
-            "Mole Content",
-            "Length",
-            "Temperature",
-            "Number Difference",
-            "Number Content Difference",
-            "Number Fraction",
-            "Number Concentration Difference",
-            "Mass",
-            "Number",
-            "Time",
-            "Volume Ratio",
-            "Dimensionless Quantity",
-            "True/False Value",
-            "Volume Concentration",
-            "Other"
-        ]
+        "unit_category": {
+            "type": "string",
+            "enum": [
+                "Number",
+                "Length",
+                "Volume Ratio",
+                "Volume Concentration",
+                "Number Difference",
+                "True/False Value",
+                "Energy Content Rate",
+                "Number Concentration Difference",
+                "Temperature",
+                "Other",
+                "Unknown",
+                "Arbitrary Fraction",
+                "Mole Content",
+                "Mass Concentration",
+                "Number Fraction",
+                "Mass",
+                "Number Aeric (number/area)",
+                "Mass Ratio",
+                "Time",
+                "Number Concentration (count/vol)",
+                "Pressure",
+                "Number Content (count/mass)",
+                "Energy Content",
+                "Number Content Difference",
+                "Dimensionless Quantity"
+            ]
+        }
     }
 }

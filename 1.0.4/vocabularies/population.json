@@ -1,28 +1,55 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies//population.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/population.json",
     "definitions": {
-        "type": "string",
-        "enum": [
-            "children less than four years",
-            "human consumer, adult",
-            "human consumer, athletes",
-            "human consumer, bodybuilders",
-            "human consumer, four years and above",
-            "human consumer, men",
-            "human consumer, menopaused women",
-            "human consumer, no age specification",
-            "human consumer, pregnant or lactanting women",
-            "human consumer, seniors",
-            "human consumer, teenagers",
-            "human consumer, weight-reducers",
-            "human consumer, women",
-            "infant food",
-            "infant food, 0 - 3 months",
-            "infant food, 0 - 6 months",
-            "infant food, 3 - 6 months",
-            "infant food, 6 - 12 months",
-            "infant or toddler food",
-            "toddler food, from 12 months onwards"
-        ]
+        "population": {
+            "type": "string",
+            "enum": [
+                "infant food",
+                "human consumer, teenagers",
+                "infant food, 0 - 6 months",
+                "infant food, 3 - 6 months",
+                "human consumer, women",
+                "human consumer, seniors",
+                "infant food, 0 - 3 months",
+                "human consumer, menopaused women",
+                "infant food, 6 - 12 months",
+                "human consumer, four years and above",
+                "human consumer, pregnant or lactanting women",
+                "human consumer, athletes",
+                "human consumer, adult",
+                "human consumer, no age specification",
+                "children less than four years",
+                "human consumer, bodybuilders",
+                "human consumer, men",
+                "toddler food, from 12 months onwards",
+                "infant or toddler food",
+                "human consumer, weight-reducers"
+            ]
+        },
+        "foodon": {
+            "type": "string",
+            "enum": [
+                "03510024",
+                "03510020",
+                "03510256",
+                "03510262",
+                "03510260",
+                "03510259",
+                "03510252",
+                "3510189",
+                "3510263",
+                "3510191",
+                "3510250",
+                "3510192",
+                "03510251",
+                "03510261",
+                "3510266",
+                "03510254",
+                "3510190",
+                "03510255",
+                "3510188",
+                "03510253"
+            ]
+        }
     }
 }
