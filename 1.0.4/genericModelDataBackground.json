@@ -1,5 +1,5 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/genericModelDataBackground.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelDataBackground.json",
     "allOf": [
         {
             "$ref": "modelDataBackground.json"

@@ -1,12 +1,12 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/doseResponseModel.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/doseResponseModel.json",
     "type": "object",
     "properties": {
         "dataBackground": {
             "$ref": "modelDataBackground.json"
         },
         "modelType": {
-            "pattern": "^DoseResponseModel$",
+            "pattern": "^doseResponseModel$",
             "type": "string"
         },
         "generalInformation": {

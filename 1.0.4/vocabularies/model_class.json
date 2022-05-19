@@ -1,20 +1,20 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/model_class.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/model_class.json",
     "definitions": {
         "model_class": {
             "type": "string",
             "enum": [
-                "Predictive model",
-                "Dose-response model",
-                "Health metrics model",
                 "Other Empirical models",
-                "(Data)",
-                "Process model",
-                "QRA model",
+                "Health metrics model",
                 "Risk characterization model",
-                "Toxicological reference value model",
+                "Dose-response model",
+                "Exposure model",
+                "QRA model",
                 "Consumption model",
-                "Exposure model"
+                "Predictive model",
+                "Process model",
+                "(Data)",
+                "Toxicological reference value model"
             ]
         }
     }

@@ -1,21 +1,21 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/FSKModel.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/FSKModel.json",
     "properties": {
         "modelType": {
             "type": "string",
             "enum": [
                 "genericModel",
                 "processModel",
-                "RiskModel",
-                "QraModel",
-                "DataModel",
-                "ExposureModel",
-                "ToxicologicalModel",
-                "HealthModel",
-                "DoseResponseModel",
-                "PredictiveModel",
-                "OtherModel",
-                "ConsumptionModel"
+                "riskModel",
+                "qraModel",
+                "dataModel",
+                "exposureModel",
+                "toxicologicalModel",
+                "healthModel",
+                "doseResponseModel",
+                "predictiveModel",
+                "otherModel",
+                "consumptionModel"
             ]
         }
     },
@@ -36,7 +36,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "DataModel"
+                        "const": "dataModel"
                     }
                 }
             },
@@ -48,7 +48,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "PredictiveModel"
+                        "const": "predictiveModel"
                     }
                 }
             },
@@ -60,7 +60,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "OtherModel"
+                        "const": "otherModel"
                     }
                 }
             },
@@ -72,7 +72,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "ExposureModel"
+                        "const": "exposureModel"
                     }
                 }
             },
@@ -84,7 +84,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "ToxicologicalModel"
+                        "const": "toxicologicalModel"
                     }
                 }
             },
@@ -96,7 +96,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "DoseResponseModel"
+                        "const": "doseResponseModel"
                     }
                 }
             },
@@ -120,7 +120,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "ConsumptionModel"
+                        "const": "consumptionModel"
                     }
                 }
             },
@@ -132,7 +132,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "HealthModel"
+                        "const": "healthModel"
                     }
                 }
             },
@@ -144,7 +144,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "RiskModel"
+                        "const": "riskModel"
                     }
                 }
             },
@@ -156,7 +156,7 @@
             "if": {
                 "properties": {
                     "modelType": {
-                        "const": "QraModel"
+                        "const": "qraModel"
                     }
                 }
             },

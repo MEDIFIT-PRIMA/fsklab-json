@@ -1,12 +1,12 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/consumptionModel.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/consumptionModel.json",
     "type": "object",
     "properties": {
         "dataBackground": {
             "$ref": "genericModelDataBackground.json"
         },
         "modelType": {
-            "pattern": "^ConsumptionModel$",
+            "pattern": "^consumptionModel$",
             "type": "string"
         },
         "generalInformation": {

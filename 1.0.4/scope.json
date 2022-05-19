@@ -1,5 +1,5 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/scope.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/scope.json",
     "type": "object",
     "properties": {
         "spatialInformation": {

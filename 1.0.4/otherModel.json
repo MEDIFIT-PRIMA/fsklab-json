@@ -1,12 +1,12 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/otherModel.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/otherModel.json",
     "type": "object",
     "properties": {
         "dataBackground": {
             "$ref": "modelDataBackground.json"
         },
         "modelType": {
-            "pattern": "^OtherModel$",
+            "pattern": "^otherModel$",
             "type": "string"
         },
         "generalInformation": {

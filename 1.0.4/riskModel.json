@@ -1,12 +1,12 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/riskModel.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/riskModel.json",
     "type": "object",
     "properties": {
         "dataBackground": {
             "$ref": "genericModelDataBackground.json"
         },
         "modelType": {
-            "pattern": "^RiskModel$",
+            "pattern": "^riskModel$",
             "type": "string"
         },
         "generalInformation": {

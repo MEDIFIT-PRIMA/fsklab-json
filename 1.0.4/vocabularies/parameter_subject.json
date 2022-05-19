@@ -1,19 +1,19 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/parameter_subject.json",
+    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/parameter_subject.json",
     "definitions": {
         "parameter_subject": {
             "type": "string",
             "enum": [
-                "Batch of products",
-                "Carcass skin",
-                "Product",
-                "Other",
                 "Feces",
-                "Animal",
-                "Batch of animals",
-                "Belly",
+                "Product",
+                "Batch of products",
+                "Other",
+                "Package",
                 "Carcass",
-                "Package"
+                "Batch of animals",
+                "Animal",
+                "Belly",
+                "Carcass skin"
             ]
         }
     }
