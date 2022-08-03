@@ -30,7 +30,5 @@
             }
         }
     },
-    "required": [
-        "parameter"
-    ]
+    "required": []
 }

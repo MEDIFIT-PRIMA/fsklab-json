@@ -1,22 +1,22 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/laboratory_accreditation.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/laboratory_accreditation.json",
     "definitions": {
         "laboratory_accreditation": {
             "type": "string",
             "enum": [
-                "Other",
                 "Third party assessment",
-                "None",
-                "Accredited"
+                "Accredited",
+                "Other",
+                "None"
             ]
         },
         "ssd": {
             "type": "string",
             "enum": [
-                "L003A",
                 "L001A",
+                "Other",
                 "L002A",
-                "Other"
+                "L003A"
             ]
         }
     }

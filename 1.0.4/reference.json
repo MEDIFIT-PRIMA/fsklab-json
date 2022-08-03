@@ -116,7 +116,5 @@
             "description": "The status of this publication, e.g. Published, Submitted, etc."
         }
     },
-    "required": [
-        "title"
-    ]
+    "required": []
 }

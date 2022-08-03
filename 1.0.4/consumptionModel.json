@@ -43,10 +43,7 @@
                     "type": "string"
                 }
             },
-            "required": [
-                "product",
-                "populationGroup"
-            ]
+            "required": []
         }
     }
 }

@@ -43,10 +43,7 @@
                     "type": "string"
                 }
             },
-            "required": [
-                "product",
-                "hazard"
-            ]
+            "required": []
         }
     }
 }

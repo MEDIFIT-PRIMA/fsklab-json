@@ -17,10 +17,7 @@
         },
         "scope": {
             "$ref": "scope.json",
-            "required": [
-                "product",
-                "hazard"
-            ]
+            "required": []
         }
     }
 }

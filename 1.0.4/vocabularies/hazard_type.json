@@ -1,22 +1,22 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/hazard_type.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/hazard_type.json",
     "definitions": {
         "hazard_type": {
             "type": "string",
             "enum": [
-                "Pesticide residues",
-                "Veterinary medicinal products",
-                "Microorganisms",
-                "Residue definition",
-                "Nutrients",
-                "Radioactivity and isotopes",
-                "Organic contaminants",
+                "Biogenic amines",
                 "Not in list",
-                "Food additives",
-                "Other",
+                "Organic contaminants",
+                "Residue definition",
                 "Chemical elements",
                 "Toxins",
-                "Biogenic amines"
+                "Radioactivity and isotopes",
+                "Nutrients",
+                "Veterinary medicinal products",
+                "Other",
+                "Microorganisms",
+                "Pesticide residues",
+                "Food additives"
             ]
         }
     }

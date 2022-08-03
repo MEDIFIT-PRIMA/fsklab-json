@@ -11,8 +11,8 @@
             "description": "Origin of the contamination, source"
         },
         "indSum": {
-            "description": "Define if the parameter reported is an individual residue/analyte, a summed residue definition or part of a sum a summed residue definition",
-            "$ref": "vocabularies/ind_sum.json#/definitions/ind_sum"
+            "type": "string",
+            "description": "Define if the parameter reported is an individual residue/analyte, a summed residue definition or part of a sum a summed residue definition"
         },
         "acceptableOperatorsExposureLevel": {
             "type": "string",
@@ -43,8 +43,8 @@
             "description": "An estimate (with uncertainty spanning perhaps an order of magnitude) of a daily oral exposure for an acute duration (24 hours or less) to the human population (including sensitive subgroups) that is likely to be without an appreciable risk of deleterious effects during a lifetime"
         },
         "name": {
-            "description": "Name of the hazard (agent, contaminant, chemical) for which the data or model applies",
-            "$ref": "vocabularies/hazard.json#/definitions/hazard"
+            "type": "string",
+            "description": "Name of the hazard (agent, contaminant, chemical) for which the data or model applies"
         },
         "lowestObservedAdverseAffectLevel": {
             "type": "string",
@@ -59,7 +59,5 @@
             "description": "Measure of amount of a specific substance in food or in drinking water tahta can be ingested (orally) on a daily basis over a lifetime without an appreciable health risk"
         }
     },
-    "required": [
-        "name"
-    ]
+    "required": []
 }

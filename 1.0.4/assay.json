@@ -39,7 +39,5 @@
             "description": "Limit of quantification reported in the unit specified by the variable 'Hazard unit'"
         }
     },
-    "required": [
-        "name"
-    ]
+    "required": []
 }

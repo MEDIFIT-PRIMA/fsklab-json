@@ -18,19 +18,19 @@
             }
         },
         "format": {
-            "$ref": "vocabularies/format.json#/definitions/format"
+            "type": "string"
         },
         "description": {
             "type": "string"
         },
         "language": {
-            "$ref": "vocabularies/language.json#/definitions/language"
+            "type": "string"
         },
         "source": {
             "type": "string"
         },
         "availability": {
-            "$ref": "vocabularies/availability.json#/definitions/availability"
+            "type": "string"
         },
         "creationDate": {
             "type": "array",
@@ -70,11 +70,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "name",
-        "identifier",
-        "creationDate",
-        "rights",
-        "reference"
-    ]
+    "required": []
 }

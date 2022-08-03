@@ -17,10 +17,7 @@
         },
         "scope": {
             "$ref": "toxicologicalModelScope.json",
-            "required": [
-                "hazard",
-                "populationGroup"
-            ]
+            "required": []
         }
     }
 }

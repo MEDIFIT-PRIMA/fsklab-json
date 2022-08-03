@@ -1,14 +1,14 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/availability.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/availability.json",
     "definitions": {
         "availability": {
             "type": "string",
             "enum": [
-                "Open access",
-                "Closed access",
-                "Embargoed access",
                 "Restricted access",
-                "Other"
+                "Open access",
+                "Other",
+                "Closed access",
+                "Embargoed access"
             ]
         },
         "comment": {

@@ -29,8 +29,5 @@
             "description": "Information on that helps to categorize model equations"
         }
     },
-    "required": [
-        "name",
-        "modelEquation"
-    ]
+    "required": []
 }

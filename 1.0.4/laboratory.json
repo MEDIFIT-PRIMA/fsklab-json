@@ -7,8 +7,8 @@
             "description": "Laboratory code (National laboratory code if available) or Laboratory name"
         },
         "country": {
-            "description": "Country where the laboratory is placed. (ISO 3166-1-alpha-2)",
-            "$ref": "vocabularies/country.json#/definitions/iso"
+            "type": "string",
+            "description": "Country where the laboratory is placed. (ISO 3166-1-alpha-2)"
         },
         "accreditation": {
             "type": "array",
@@ -18,7 +18,5 @@
             }
         }
     },
-    "required": [
-        "accreditation"
-    ]
+    "required": []
 }

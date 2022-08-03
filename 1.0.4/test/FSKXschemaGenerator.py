@@ -34,6 +34,8 @@ schema_version = "1.0.4"
 
 def resolve_references(data, schema_version):
     for key,value in data.items():
+        if 'required' in value:
+            value['required'] = []
         if key=='$ref':
             data[key] = os.path.basename(value) + ".json" #"/" + os.path.basename(value) + ".json"
         if type(value) == type(dict()):
@@ -109,25 +111,26 @@ for endpoint in endpoints:
 
     
 
-r = requests.get(vocBaseUrl + "hazard")
-r.json()[10:20]
-voc_items['name']
-x = {'enum':[]}
-for value in voc_items:
-    x['enum'].append(value['name']);
-    print(json.dumps(value['name']))
+#r = requests.get(vocBaseUrl + "hazard")
+#r.json()[10:20]
+#voc_items['name']
+#x = {'enum':[]}
+#for value in voc_items:
+#    x['enum'].append(value['name']);
+#    print(json.dumps(value['name']))
     
-dfObj = pd.DataFrame(r.json())
-duplicate = dfObj[dfObj['name'].duplicated()]
-duplicate['name']
+#dfObj = pd.DataFrame(r.json())
+#duplicate = dfObj[dfObj['name'].duplicated()]
+#duplicate['name']
+
 ###### CHANGE JSON schema to restore parity with FSK-Lab metadata  ################
-# Reference: change required to only contain "title"
+# Reference: change required to contain nothing
 # also: remove format for "date"
 file_name = "reference.json"
 with open( schema_version + "/" + file_name, "r", encoding='utf8') as outfile:
     metadata = json.load(outfile)
 with open( schema_version + "/" + file_name, "w", encoding='utf8') as outfile:    
-    metadata['required'] = ['title']
+    metadata['required'] = []#['title']
     if 'format' in metadata['properties']['date']:
         del(metadata['properties']['date']['format'])
     json.dump(metadata,outfile, indent = 4, ensure_ascii=False)
@@ -181,9 +184,9 @@ def resolve_vocabularyRef(metadata_class, referenceProperty,vocabularyClass,targ
   }
 }
 
-https://github.com/openepcis/postman-collections
-https://raw.githubusercontent.com/openepcis/postman-collections/main/OpenEPCIS%20quarkus.postman_collection.json
-Environment - URL : https://epcis.medifit-prima.net/
+#https://github.com/openepcis/postman-collections
+#https://raw.githubusercontent.com/openepcis/postman-collections/main/OpenEPCIS%20quarkus.postman_collection.json
+#Environment - URL : https://epcis.medifit-prima.net/
 
 # availability
 metadata_class = "generalInformation"

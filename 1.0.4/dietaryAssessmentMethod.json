@@ -32,15 +32,9 @@
             }
         },
         "collectionTool": {
-            "description": "Food diaries, interview, 24-hour recall interview, food propensy questionnaire, portion size measurement aids, eating outside questionnaire",
-            "$ref": "vocabularies/collection_tool.json#/definitions/collection_tool"
+            "type": "string",
+            "description": "Food diaries, interview, 24-hour recall interview, food propensy questionnaire, portion size measurement aids, eating outside questionnaire"
         }
     },
-    "required": [
-        "collectionTool",
-        "numberOfNonConsecutiveOneDay",
-        "numberOfFoodItems",
-        "recordTypes",
-        "foodDescriptors"
-    ]
+    "required": []
 }

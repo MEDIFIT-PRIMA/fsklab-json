@@ -1,34 +1,34 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/publication_status.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/publication_status.json",
     "definitions": {
         "publication_status": {
             "type": "string",
             "enum": [
+                "Draft",
                 "Legal",
                 "Unpublished",
-                "Accepted",
                 "Forthcoming",
-                "Published",
-                "Peer reviewed",
+                "Accepted",
                 "Rejected",
-                "Draft",
                 "Other",
-                "Non peer reviewed"
+                "Peer reviewed",
+                "Non peer reviewed",
+                "Published"
             ]
         },
         "comment": {
             "type": "string",
             "enum": [
-                "The process by which articles are chosen to be included in a refereed journal. An editorial board consisting of experts in the same field as the author review the article and decide if it is authoritative enough for publication.",
                 "",
-                "Document drafted",
-                "Document to be published",
-                "Accepted for publication after peer reviewing.",
-                "Legal document",
-                "Unpublished document",
-                "A document that is not peer reviewed",
                 "Rejected for publication after peer reviewing.",
-                "Published document"
+                "Document drafted",
+                "Unpublished document",
+                "Document to be published",
+                "Published document",
+                "The process by which articles are chosen to be included in a refereed journal. An editorial board consisting of experts in the same field as the author review the article and decide if it is authoritative enough for publication.",
+                "Legal document",
+                "A document that is not peer reviewed",
+                "Accepted for publication after peer reviewing."
             ]
         }
     }

@@ -43,11 +43,5 @@
             "description": "Description of data collection technique (stratified or complex sampling (several stages))"
         }
     },
-    "required": [
-        "sampleName",
-        "protocolOfSampleCollection",
-        "samplingPlan",
-        "samplingWeight",
-        "samplingSize"
-    ]
+    "required": []
 }

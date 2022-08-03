@@ -1,17 +1,17 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/collection_tool.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/collection_tool.json",
     "definitions": {
         "collection_tool": {
             "type": "string",
             "enum": [
-                "interview",
-                "24-hour recall interview",
                 "Other observational studies",
+                "portion size measurement aids",
+                "interview",
                 "food propensy questionnaire",
-                "Other experimental studies",
-                "eating outside questionnaire",
                 "food diaries",
-                "portion size measurement aids"
+                "24-hour recall interview",
+                "Other experimental studies",
+                "eating outside questionnaire"
             ]
         }
     }

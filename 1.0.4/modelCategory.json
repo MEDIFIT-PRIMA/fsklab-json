@@ -14,8 +14,8 @@
             }
         },
         "modelClass": {
-            "description": "Type of model according to RAKIP classification",
-            "$ref": "vocabularies/model_class.json#/definitions/model_class"
+            "type": "string",
+            "description": "Type of model according to RAKIP classification"
         },
         "modelSubClass": {
             "type": "array",
@@ -25,7 +25,5 @@
             }
         }
     },
-    "required": [
-        "modelClass"
-    ]
+    "required": []
 }

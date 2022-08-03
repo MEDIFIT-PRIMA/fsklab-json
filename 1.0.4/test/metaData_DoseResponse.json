@@ -1,0 +1,297 @@
+{
+  "generalInformation": {
+    "rights": "by-nc-sa",
+    "status": "Curated",
+    "identifier": "7c58d7c9-d1ad-438b-9b78-d0148a3a6fa3",
+    "name": "Dose Response model of gQMRA model for Listeria monocytogenes in ready-to-eat foods",
+    "reference": [
+      {
+        "status": "Published",
+        "website": "www.efsa.europa.eu/efsajournal",
+        "doi": "10.2903/j.efsa.2018.5134",
+        "title": "Listeria monocytogenes contamination of ready-to-eat foods and the risk for human health in the EU",
+        "journal": "EFSA Journal",
+        "volume": "16",
+        "authorList": "Antonia Ricci, Ana Allende, Declan Bolton, Marianne Chemaly, Robert Davies, Pablo Salvador Fern andez Esc amez, Rosina Girones, Lieve Herman, Konstantinos Koutsoumanis, Birgit N\u00f8rrung, Lucy Robertson, Giuseppe Ru, Moez Sanaa, Marion Simmons, Panagiotis Skandamis, Emma Snary, Niko Speybroeck, Benno Ter Kuile, John Threlfall, Helene Wahlstr\u20acom, Johanna Takkinen, Martin Wagner, Davide Arcella, Maria Teresa Da Silva Felicio, Marios Georgiadis, Winy Messens and Roland Lindqvist",
+        "date": "2017",
+        "issue": "1",
+        "abstract": "Food safety criteria for Listeria monocytogenes in ready-to-eat (RTE) foods have been applied from 2006 onwards (Commission Regulation (EC) 2073/2005). Still, human invasive listeriosis was reported to increase over the period 2009\u20132013 in the European Union and European Economic Area (EU/EEA). Time series analysis for the 2008\u20132015 period in the EU/EEA indicated an increasing trend of the monthly notified incidence rate of confirmed human invasive listeriosis of the over 75 age groups and female age group between 25 and 44 years old (probably related to pregnancies). A conceptual model was used to identify factors in the food chain as potential drivers for L. monocytogenes contamination of RTE foods and listeriosis. Factors were related to the host (i. population size of the elderly and/or susceptible people; ii. underlying condition rate), the food (iii. L. monocytogenes prevalence in RTE food at retail; iv. L. monocytogenes concentration in RTE food at retail; v. storage conditions after retail; vi. consumption), the national surveillance systems (vii. improved surveillance), and/or the bacterium (viii. virulence). Factors considered likely to be responsible for the increasing trend in cases are the increased population size of the elderly and susceptible population except for the 25\u201344 female age group. For the increased incidence rates and cases, the likely factor is the increased proportion of susceptible persons in the age groups over 45 years old for both genders. Quantitative modelling suggests that more than 90% of invasive listeriosis is caused by ingestion of RTE food containing > 2,000 colony forming units (CFU)/g, and that one-third of cases are due to growth in the consumer phase. Awareness should be increased among stakeholders, especially in relation to susceptible risk groups. Innovative methodologies including whole genome sequencing (WGS) for strain identification and monitoring of trends are recommended."
+      },
+      {
+        "website": "https://foodrisklabs.bfr.bund.de/",
+        "doi": "10.5281/zenodo.6646274",
+        "isReferenceDescription": false
+      }
+    ],
+    "creator": [
+      {
+        "country": "Germany",
+        "region": "Berlin",
+        "familyName": "Mesa Varona",
+        "zipCode": "12277",
+        "streetAddress": "Alt-Marienfelde 17-21",
+        "organization": "BfR",
+        "givenName": "Octavio",
+        "email": "octavio.mesa-varona@bfr.bund.de"
+      },
+      {
+        "country": "Germany",
+        "region": "Berlin",
+        "familyName": "Lopez de Abechuco",
+        "zipCode": "12277",
+        "streetAddress": "Alt-Marienfelde 17-21",
+        "organization": "BfR",
+        "givenName": "Estibaliz",
+        "email": "Estibaliz.Lopez-de-Abechuco-Garrido@bfr.bund.de"
+      },
+      {
+        "country": "Germany",
+        "region": "Berlin",
+        "familyName": "Ganas",
+        "zipCode": "12277",
+        "streetAddress": "Alt Marienfelde 17-21",
+        "organization": "BfR",
+        "givenName": "Petra",
+        "email": "petra.ganas@bfr.bund.de"
+      }
+    ],
+    "language": "English",
+    "format": ".fskx",
+    "author": [
+      {
+        "country": "European Union",
+        "familyName": "European Commission",
+        "email": "biohaz@efsa.europe.eu",
+        "organization": "EFSA"
+      }
+    ],
+    "modelCategory": {
+      "modelClassComment": "This model can be joined with the Risk Characterization model derived from the gQMRA model for Listeria monocytogenes. Therefore, the Dose Response model can be used as the first model for joining with the Risk Characterization model. Otherwise, the Dose Response model can be joined together with the Exposure model derived from the gQMRA for Listeria monocytogenes to the Risk Characterization model. Therefore, the Exposure model should be used as the first model for joining with the Dose Response model. Afterwards, the Dose Response model should be used as the first model for joining with the Risk Characterization model.",
+      "modelClass": "Dose-response model"
+    },
+    "source": "PUBLISHED SCIENTIFIC STUDIES",
+    "objective": "This Dose Response model derives from the full gQMRA model for Listeria monocytogenes developed by P\u00e9rez-Rodr\u00edguez et al. (2017). This model quantifies the risk of becoming ill given a certain dose of Listeria monocytogenes across 14 population subgroups. ",
+    "languageWrittenIn": "R 3",
+    "description": "DOSE RESPONSE MODEL: The DR model used in the gQMRA was assessed using the approach described in Pouillot et al. (2015b). This model is a log-normal exponential model; given an expected dose \u03bb (number of Listeria monocytogenes CFU per serving) the probability of illness is derived as follows: P_ill(\u03bb) = 1 \u2013 exp(-r * \u03bb) with log_10(r) ~ Normal(\u00b5, \u03c3). The r parameter, which represents the probability that one single CFU will survive the different barriers and multiply in a favourable site of infection depends on the characteristics of the host and the strain of Listeria monocytogenes. By its definition, r is variable. To capture this variability, r was assumed to be log-normally distributed. The log-normal distribution is described by two parameters; \u00b5 and \u03c3 (mean and standard deviation). As epidemiological data show significant differences in incidence rate of human invasive listeriosis between categories of age and gender, it was decided to estimate the mean of the log-normal distribution of r for each of the 14 subpopulations. With parsimony, the standard deviation was assumed to be the same for each subpopulation: in this way, it characterises the intrasubpopulation variability of r. To estimate the 14 means of r, the output of the exposure model, the average of the annual observed cases of human invasive listeriosis per subpopulation between 2008 and 2011 and the TEO per subpopulation were used. This reference period is used because it corresponds to the period of data consumption collection and covers the period of the BLS. Estimating r consists in solving the following equation which has a single unknown value (mean of r): Cases = TEO * (1 - \u222b_\u03bb=0^\u221e \u222b_r=0^1 exp(-r * \u03bb) f(\u03bb) g(r) d\u03bb dr), where f(\u03bb) and g(r) are two probability distribution functions describing the variability of the expected doses (output of the gQMRA model) and the r parameter of the exponential model respectively. The standard deviation of g(r) is considered constant and equal to 1.62 as in Pouillot et al. (2015b). The equation is solved for each of the 14 subpopulations. ",
+    "modificationDate": [
+      [
+        2020,
+        10,
+        1
+      ],
+      [
+        2021,
+        9,
+        7
+      ],
+      [
+        2021,
+        11,
+        3
+      ],
+      [
+        2022,
+        6,
+        15
+      ]
+    ],
+    "creationDate": [
+      2018,
+      3,
+      29
+    ],
+    "availability": "Other",
+    "software": "R"
+  },
+  "scope": {
+    "spatialInformation": [
+      "EU/EEA"
+    ],
+    "generalComment": "Dose Response model of gQMRA model for Listeria monocytogenes in ready-to-eat foods",
+    "temporalInformation": "2008-2015",
+    "populationGroup": [
+      {
+        "targetPopulation": "Female 1-4 yo (years old)",
+        "populationGender": "female",
+        "name": "subpopulation_1",
+        "populationAge": [
+          "1-4"
+        ]
+      },
+      {
+        "targetPopulation": "Male 1-4 yo",
+        "populationGender": "male",
+        "name": "subpopulation_2",
+        "populationAge": [
+          "1-4"
+        ]
+      },
+      {
+        "targetPopulation": "Female 5-14 yo",
+        "populationGender": "female",
+        "name": "subpopulation_3",
+        "populationAge": [
+          "5-14"
+        ]
+      },
+      {
+        "targetPopulation": "Male 5-14 yo",
+        "populationGender": "male",
+        "name": "subpopulation_4",
+        "populationAge": [
+          "5-14"
+        ]
+      },
+      {
+        "targetPopulation": "Female 15-24 yo",
+        "populationGender": "female",
+        "name": "subpopulation_5",
+        "populationAge": [
+          "15-24"
+        ]
+      },
+      {
+        "targetPopulation": "Male 15-24 yo",
+        "populationGender": "male",
+        "name": "subpopulation_6",
+        "populationAge": [
+          "15-24"
+        ]
+      },
+      {
+        "targetPopulation": "Female 25-44 yo",
+        "populationGender": "female",
+        "name": "subpopulation_7",
+        "populationAge": [
+          "25-44"
+        ]
+      },
+      {
+        "targetPopulation": "Male 25-44 yo",
+        "populationGender": "male",
+        "name": "subpopulation_8",
+        "populationAge": [
+          "25-44"
+        ]
+      },
+      {
+        "targetPopulation": "Female 45-64 yo",
+        "populationGender": "female",
+        "name": "subpopulation_9",
+        "populationAge": [
+          "45-64"
+        ]
+      },
+      {
+        "targetPopulation": "Male 45-64 yo",
+        "populationGender": "male",
+        "name": "subpopulation_10",
+        "populationAge": [
+          "45-64"
+        ]
+      },
+      {
+        "targetPopulation": "Female 65-74 yo",
+        "populationGender": "female",
+        "name": "subpopulation_11",
+        "populationAge": [
+          "65-74"
+        ]
+      },
+      {
+        "targetPopulation": "Male 65-74 yo",
+        "populationGender": "male",
+        "name": "subpopulation_12",
+        "populationAge": [
+          "65-74"
+        ]
+      },
+      {
+        "targetPopulation": "Female >=75 yo",
+        "populationGender": "female",
+        "name": "subpopulation_13",
+        "populationAge": [
+          ">=75"
+        ]
+      },
+      {
+        "targetPopulation": "Male >=75 yo",
+        "populationGender": "male",
+        "name": "subpopulation_14",
+        "populationAge": [
+          ">=75"
+        ]
+      }
+    ],
+    "hazard": [
+      {
+        "sourceOfContamination": "ready-to-eat (RTE) food products",
+        "type": "Microorganisms",
+        "name": "Listeria monocytogenes",
+        "description": "causative agent of human invasive listeriosis"
+      }
+    ]
+  },
+  "dataBackground": {
+    "study": {
+
+    }
+  },
+  "modelMath": {
+    "modelEquation": [
+      {
+        "modelEquation": "P_ill(\u03bb) = 1 \u2013 exp(-r * \u03bb)",
+        "name": "Probability of illness",
+        "modelHypothesis": [
+          "log_10(r) ~ Normal[\u00b5, \u03c3]"
+        ]
+      }
+    ],
+    "parameter": [
+      {
+        "description": "Table with data for dose response model for the subpopulation groups (RR - relative risk, RefSdLog - standard deviation of log-normal distribution of r of the exponential model, Mean - mean of log-normal distribution of r of the exponential model); parameter is defined for 3 options: DR_inputs.csv (EU-wide baseline survey (BLS) data), DR_inputs2.csv (US data), DR_inputs3.csv (BLS data for fish and US data for meat and cheese)",
+        "classification": "INPUT",
+        "dataType": "STRING",
+        "unitCategory": "Bacterial count log-transformed",
+        "source": "Data",
+        "value": "\"DR_inputs3.csv\"",
+        "id": "Input_DR",
+        "unit": "log_10(CFU)",
+        "name": "Input_DR"
+      },
+      {
+        "description": "Factor for splitting the range of dose values of DoseCont parameter",
+        "classification": "INPUT",
+        "dataType": "DOUBLE",
+        "unitCategory": "Default for bacterial count log-transformed",
+        "source": "Data",
+        "value": "0.1",
+        "id": "Step",
+        "unit": "[]",
+        "name": "Step"
+      },
+      {
+        "description": "Range of dose values from 0 to 12 (log_10 transformed) splitted by step parameter ",
+        "classification": "INPUT",
+        "dataType": "VECTOROFNUMBERS",
+        "unitCategory": "Default for bacterial count log-transformed",
+        "source": "Data",
+        "value": "seq(0,12, Step)",
+        "id": "DoseCont",
+        "unit": "log_10(CFU)",
+        "name": "Dose content"
+      },
+      {
+        "description": "Table with data for marginal probability of human invasive listeriosis per subpopulation group",
+        "classification": "OUTPUT",
+        "dataType": "MATRIXOFNUMBERS",
+        "unitCategory": "Other",
+        "source": "Model result",
+        "id": "df_DR",
+        "unit": "Others",
+        "name": "df_DR"
+      }
+    ]
+  },
+  "modelType": "genericModel"
+}

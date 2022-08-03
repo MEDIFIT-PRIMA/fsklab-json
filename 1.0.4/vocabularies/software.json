@@ -1,20 +1,20 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/software.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/software.json",
     "definitions": {
         "software": {
             "type": "string",
             "enum": [
+                "MicroHibro",
                 "Matlab",
                 "FSSP",
-                "@Risk",
-                "FSK-Lab",
                 "SAS",
-                "PMM-Lab",
-                "Other Software",
-                "ICRA",
                 "Stata",
+                "Other Software",
+                "PMM-Lab",
                 "R",
-                "MicroHibro"
+                "ICRA",
+                "FSK-Lab",
+                "@Risk"
             ]
         }
     }

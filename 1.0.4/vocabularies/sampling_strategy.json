@@ -1,27 +1,27 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/sampling_strategy.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/sampling_strategy.json",
     "definitions": {
         "sampling_strategy": {
             "type": "string",
             "enum": [
-                "Objective sampling",
-                "Not specified",
                 "Selective sampling",
-                "Suspect sampling",
-                "Other",
                 "Convenient sampling",
+                "Not specified",
+                "Objective sampling",
+                "Other",
+                "Suspect sampling",
                 "Census"
             ]
         },
         "comment": {
             "type": "string",
             "enum": [
-                "Selection of an individual sample in order to confirm or reject a suspicion of non-conformity. It's not a random sampling, therefore there is no sample extracted from the population.",
+                "Planned strategy based on the selection of a sample from a subpopulation (or more frequently from subpopulations) of a population on which the data are reported. The sampling is deliberately biased and is directed at the particular products or manufacturers. The subpopulations may or may not be determined on a risk basis. The specification of the ‘high - risk’ population comes from either scientific studies or previous analysis and information of other regions or countries.  The sampling procedure can be random or not. The sampling from each subpopulation may not be proportional: the sample size is proportionally bigger for instance in subpopulations considered at high risk.",
                 "\"Special instance of selective sampling where no randomisation is performed in extracting the sample but units are selected only on the basis of feasibility or ease of data collection. Sampling used in exploratory research where the researcher is interested in getting an inexpensive approximation of the truth. The subpopulations may or may not be determined on a risk basis.  The sampling from each subpopulation may not be proportional: the sample size is proportionally bigger for instance in subpopulations considered at high risk. This methodology is potentially subject to serious bias.\"",
-                null,
                 "When the totality of a population or sub-population, on which the data are reported, is controlled.",
+                null,
                 "Planned strategy based on the selection of a random sample from a population on which the data are reported. Random sample is a sample which is taken under statistical consideration to provide representative data of population to be analysed.",
-                "Planned strategy based on the selection of a sample from a subpopulation (or more frequently from subpopulations) of a population on which the data are reported. The sampling is deliberately biased and is directed at the particular products or manufacturers. The subpopulations may or may not be determined on a risk basis. The specification of the ‘high - risk’ population comes from either scientific studies or previous analysis and information of other regions or countries.  The sampling procedure can be random or not. The sampling from each subpopulation may not be proportional: the sample size is proportionally bigger for instance in subpopulations considered at high risk."
+                "Selection of an individual sample in order to confirm or reject a suspicion of non-conformity. It's not a random sampling, therefore there is no sample extracted from the population."
             ]
         }
     }

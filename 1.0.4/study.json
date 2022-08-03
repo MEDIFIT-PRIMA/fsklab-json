@@ -67,7 +67,5 @@
             "description": "Accreditation procedure for the analytical method used"
         }
     },
-    "required": [
-        "title"
-    ]
+    "required": []
 }

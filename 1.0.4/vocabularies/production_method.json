@@ -1,42 +1,42 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/vocabularies/production_method.json",
+    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/production_method.json",
     "definitions": {
         "production_method": {
             "type": "string",
             "enum": [
-                "Farmed Domestic or cultivated",
-                "Non-organic production",
-                "Battery production",
-                "Free range production",
-                "Other production method",
-                "Genetically modified",
-                "Production method unknown",
-                "Organic production",
-                "Outdoor - Open-air growing condition",
                 "Intensive Industrial production",
-                "Traditional production",
-                "Under glass - protected growing condition",
+                "Other production method",
                 "Integrated Pest Management",
-                "Wild or gathered or hunted"
+                "Traditional production",
+                "Farmed Domestic or cultivated",
+                "Wild or gathered or hunted",
+                "Production method unknown",
+                "Outdoor - Open-air growing condition",
+                "Under glass - protected growing condition",
+                "Organic production",
+                "Battery production",
+                "Genetically modified",
+                "Non-organic production",
+                "Free range production"
             ]
         },
         "ssd": {
             "type": "string",
             "enum": [
-                "PD04A",
-                "Z0216",
-                "PD08A",
-                "PD09A",
-                "Z0211",
-                "Z0153",
-                "PD07A",
-                "Z0154",
-                "PD05A",
+                "Z0215",
                 "Z0214",
+                "Z0216",
+                "Z0211",
                 "PD12A",
+                "Z0154",
                 "Z0208",
+                "PD09A",
                 "PD06A",
-                "Z0215"
+                "PD05A",
+                "PD04A",
+                "PD07A",
+                "Z0153",
+                "PD08A"
             ]
         }
     }

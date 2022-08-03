@@ -17,11 +17,7 @@
         },
         "scope": {
             "$ref": "genericModelScope.json",
-            "required": [
-                "product",
-                "hazard",
-                "populationGroup"
-            ]
+            "required": []
         }
     }
 }

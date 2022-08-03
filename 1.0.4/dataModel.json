@@ -22,9 +22,7 @@
                     }
                 }
             },
-            "required": [
-                "parameter"
-            ]
+            "required": []
         },
         "scope": {
             "$ref": "genericModelScope.json"
