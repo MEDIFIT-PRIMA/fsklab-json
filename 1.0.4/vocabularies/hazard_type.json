@@ -1,22 +1,22 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/hazard_type.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/hazard_type.json",
     "definitions": {
         "hazard_type": {
             "type": "string",
             "enum": [
-                "Biogenic amines",
-                "Not in list",
-                "Organic contaminants",
-                "Residue definition",
-                "Chemical elements",
-                "Toxins",
-                "Radioactivity and isotopes",
-                "Nutrients",
-                "Veterinary medicinal products",
-                "Other",
                 "Microorganisms",
-                "Pesticide residues",
-                "Food additives"
+                "Radioactivity and isotopes",
+                "Residue definition",
+                "Toxins",
+                "Not in list",
+                "Other",
+                "Chemical elements",
+                "Food additives",
+                "Organic contaminants",
+                "Veterinary medicinal products",
+                "Nutrients",
+                "Biogenic amines",
+                "Pesticide residues"
             ]
         }
     }

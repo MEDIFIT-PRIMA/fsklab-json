@@ -1,8 +1,9 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/reference.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/reference.json",
     "type": "object",
     "properties": {
         "date": {
+            "format": "date",
             "type": "string",
             "description": "Temporal information on the publication date"
         },

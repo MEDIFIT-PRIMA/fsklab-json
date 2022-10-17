@@ -1,20 +1,20 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/software.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/software.json",
     "definitions": {
         "software": {
             "type": "string",
             "enum": [
-                "MicroHibro",
+                "@Risk",
                 "Matlab",
-                "FSSP",
-                "SAS",
                 "Stata",
-                "Other Software",
-                "PMM-Lab",
-                "R",
                 "ICRA",
+                "FSSP",
+                "PMM-Lab",
+                "MicroHibro",
+                "Other Software",
+                "SAS",
                 "FSK-Lab",
-                "@Risk"
+                "R"
             ]
         }
     }

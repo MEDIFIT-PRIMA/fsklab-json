@@ -1,5 +1,5 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/study.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/study.json",
     "type": "object",
     "properties": {
         "identifier": {

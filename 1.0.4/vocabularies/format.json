@@ -1,12 +1,12 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/format.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/format.json",
     "definitions": {
         "format": {
             "type": "string",
             "enum": [
                 ".pmfx",
-                "Other",
-                ".fskx"
+                ".fskx",
+                "Other"
             ]
         },
         "comment": {

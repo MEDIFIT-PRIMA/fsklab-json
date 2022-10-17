@@ -1,5 +1,5 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/product.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/product.json",
     "type": "object",
     "properties": {
         "expiryDate": {

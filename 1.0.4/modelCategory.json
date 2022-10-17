@@ -1,5 +1,5 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/modelCategory.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/modelCategory.json",
     "type": "object",
     "properties": {
         "modelClassComment": {

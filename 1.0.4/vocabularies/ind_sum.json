@@ -1,5 +1,5 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/ind_sum.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/ind_sum.json",
     "definitions": {
         "ind_sum": {
             "type": "string",
@@ -13,10 +13,10 @@
         "ssd": {
             "type": "string",
             "enum": [
+                "P003A",
                 "P004A",
-                "P001A",
                 "P002A",
-                "P003A"
+                "P001A"
             ]
         }
     }

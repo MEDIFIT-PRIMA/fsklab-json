@@ -1,5 +1,5 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/scope.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/scope.json",
     "type": "object",
     "properties": {
         "spatialInformation": {
@@ -11,7 +11,7 @@
         "product": {
             "type": "array",
             "items": {
-                "$ref": "product.json"
+                "$ref": "product.json.json"
             }
         },
         "generalComment": {
@@ -20,7 +20,7 @@
         "hazard": {
             "type": "array",
             "items": {
-                "$ref": "hazard.json"
+                "$ref": "hazard.json.json"
             }
         },
         "temporalInformation": {

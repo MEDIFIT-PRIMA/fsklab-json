@@ -1,41 +1,41 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/production_method.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/production_method.json",
     "definitions": {
         "production_method": {
             "type": "string",
             "enum": [
+                "Non-organic production",
+                "Traditional production",
+                "Genetically modified",
+                "Free range production",
+                "Integrated Pest Management",
+                "Battery production",
+                "Organic production",
+                "Under glass - protected growing condition",
+                "Production method unknown",
+                "Farmed Domestic or cultivated",
                 "Intensive Industrial production",
                 "Other production method",
-                "Integrated Pest Management",
-                "Traditional production",
-                "Farmed Domestic or cultivated",
                 "Wild or gathered or hunted",
-                "Production method unknown",
-                "Outdoor - Open-air growing condition",
-                "Under glass - protected growing condition",
-                "Organic production",
-                "Battery production",
-                "Genetically modified",
-                "Non-organic production",
-                "Free range production"
+                "Outdoor - Open-air growing condition"
             ]
         },
         "ssd": {
             "type": "string",
             "enum": [
-                "Z0215",
-                "Z0214",
-                "Z0216",
-                "Z0211",
-                "PD12A",
-                "Z0154",
-                "Z0208",
-                "PD09A",
-                "PD06A",
                 "PD05A",
-                "PD04A",
-                "PD07A",
+                "Z0216",
+                "Z0214",
+                "PD09A",
+                "Z0154",
+                "PD06A",
                 "Z0153",
+                "Z0215",
+                "Z0208",
+                "PD12A",
+                "PD07A",
+                "Z0211",
+                "PD04A",
                 "PD08A"
             ]
         }

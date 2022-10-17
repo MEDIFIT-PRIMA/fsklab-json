@@ -1,8 +1,8 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelScope.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelScope.json",
     "allOf": [
         {
-            "$ref": "scope.json"
+            "$ref": "scope.json.json"
         },
         {
             "type": "object",
@@ -10,7 +10,7 @@
                 "populationGroup": {
                     "type": "array",
                     "items": {
-                        "$ref": "populationGroup.json"
+                        "$ref": "populationGroup.json.json"
                     }
                 }
             }

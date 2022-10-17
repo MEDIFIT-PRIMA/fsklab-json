@@ -1,19 +1,19 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/parameter_subject.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/parameter_subject.json",
     "definitions": {
         "parameter_subject": {
             "type": "string",
             "enum": [
-                "Belly",
                 "Product",
+                "Batch of animals",
                 "Package",
                 "Animal",
-                "Carcass",
-                "Feces",
+                "Carcass skin",
                 "Batch of products",
                 "Other",
-                "Batch of animals",
-                "Carcass skin"
+                "Belly",
+                "Feces",
+                "Carcass"
             ]
         }
     }

@@ -1,5 +1,5 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/FSKModel.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/FSKModel.json",
     "properties": {
         "modelType": {
             "type": "string",
@@ -29,7 +29,7 @@
                 }
             },
             "then": {
-                "$ref": "genericModel.json"
+                "$ref": "genericModel.json.json"
             }
         },
         {
@@ -41,7 +41,7 @@
                 }
             },
             "then": {
-                "$ref": "dataModel.json"
+                "$ref": "dataModel.json.json"
             }
         },
         {
@@ -53,7 +53,7 @@
                 }
             },
             "then": {
-                "$ref": "predictiveModel.json"
+                "$ref": "predictiveModel.json.json"
             }
         },
         {
@@ -65,7 +65,7 @@
                 }
             },
             "then": {
-                "$ref": "otherModel.json"
+                "$ref": "otherModel.json.json"
             }
         },
         {
@@ -77,7 +77,7 @@
                 }
             },
             "then": {
-                "$ref": "exposureModel.json"
+                "$ref": "exposureModel.json.json"
             }
         },
         {
@@ -89,7 +89,7 @@
                 }
             },
             "then": {
-                "$ref": "toxicologicalModel.json"
+                "$ref": "toxicologicalModel.json.json"
             }
         },
         {
@@ -101,7 +101,7 @@
                 }
             },
             "then": {
-                "$ref": "doseResponseModel.json"
+                "$ref": "doseResponseModel.json.json"
             }
         },
         {
@@ -113,7 +113,7 @@
                 }
             },
             "then": {
-                "$ref": "processModel.json"
+                "$ref": "processModel.json.json"
             }
         },
         {
@@ -125,7 +125,7 @@
                 }
             },
             "then": {
-                "$ref": "consumptionModel.json"
+                "$ref": "consumptionModel.json.json"
             }
         },
         {
@@ -137,7 +137,7 @@
                 }
             },
             "then": {
-                "$ref": "healthModel.json"
+                "$ref": "healthModel.json.json"
             }
         },
         {
@@ -149,7 +149,7 @@
                 }
             },
             "then": {
-                "$ref": "riskModel.json"
+                "$ref": "riskModel.json.json"
             }
         },
         {
@@ -161,7 +161,7 @@
                 }
             },
             "then": {
-                "$ref": "qraModel.json"
+                "$ref": "qraModel.json.json"
             }
         }
     ],

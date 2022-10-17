@@ -1,20 +1,20 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/model_class.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/model_class.json",
     "definitions": {
         "model_class": {
             "type": "string",
             "enum": [
+                "Exposure model",
+                "Health metrics model",
+                "Predictive model",
                 "Toxicological reference value model",
+                "Dose-response model",
+                "Consumption model",
                 "(Data)",
                 "Risk characterization model",
-                "Consumption model",
-                "QRA model",
                 "Other Empirical models",
-                "Predictive model",
-                "Process model",
-                "Health metrics model",
-                "Exposure model",
-                "Dose-response model"
+                "QRA model",
+                "Process model"
             ]
         }
     }

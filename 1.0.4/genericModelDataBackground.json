@@ -1,8 +1,8 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelDataBackground.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelDataBackground.json",
     "allOf": [
         {
-            "$ref": "modelDataBackground.json"
+            "$ref": "modelDataBackground.json.json"
         },
         {
             "type": "object",
@@ -10,7 +10,7 @@
                 "dietaryAssessmentMethod": {
                     "type": "array",
                     "items": {
-                        "$ref": "dietaryAssessmentMethod.json"
+                        "$ref": "dietaryAssessmentMethod.json.json"
                     }
                 }
             }

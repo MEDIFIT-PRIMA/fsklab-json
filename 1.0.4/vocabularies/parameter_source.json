@@ -1,17 +1,17 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/parameter_source.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/parameter_source.json",
     "definitions": {
         "parameter_source": {
             "type": "string",
             "enum": [
-                "Estimate",
-                "Model result",
                 "Not applicable ",
-                "Assumption",
                 "Expert opinion",
+                "Model result",
                 "Other",
+                "Assumption",
                 "Data",
-                "Article"
+                "Article",
+                "Estimate"
             ]
         }
     }

@@ -1,12 +1,12 @@
 {
-    "$id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/status.json",
+    "id": "file://C:/Users/thsch/IdeaProjects/fsklab-json/1.0.4/vocabularies/status.json",
     "definitions": {
         "status": {
             "type": "string",
             "enum": [
+                "Uncurated",
                 "Curated",
-                "Other",
-                "Uncurated"
+                "Other"
             ]
         }
     }

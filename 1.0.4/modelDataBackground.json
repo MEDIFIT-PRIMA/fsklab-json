@@ -1,26 +1,26 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/modelDataBackground.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/modelDataBackground.json",
     "type": "object",
     "properties": {
         "study": {
-            "$ref": "study.json"
+            "$ref": "study.json.json"
         },
         "laboratory": {
             "type": "array",
             "items": {
-                "$ref": "laboratory.json"
+                "$ref": "laboratory.json.json"
             }
         },
         "assay": {
             "type": "array",
             "items": {
-                "$ref": "assay.json"
+                "$ref": "assay.json.json"
             }
         },
         "studySample": {
             "type": "array",
             "items": {
-                "$ref": "studySample.json"
+                "$ref": "studySample.json.json"
             }
         }
     },

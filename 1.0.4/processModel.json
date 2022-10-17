@@ -1,19 +1,19 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/processModel.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/processModel.json",
     "type": "object",
     "properties": {
         "dataBackground": {
-            "$ref": "modelDataBackground.json"
+            "$ref": "modelDataBackground.json.json"
         },
         "modelType": {
             "pattern": "^processModel$",
             "type": "string"
         },
         "generalInformation": {
-            "$ref": "genericModelGeneralInformation.json"
+            "$ref": "genericModelGeneralInformation.json.json"
         },
         "modelMath": {
-            "$ref": "modelMath.json"
+            "$ref": "modelMath.json.json"
         },
         "scope": {
             "type": "object",
@@ -27,7 +27,7 @@
                 "product": {
                     "type": "array",
                     "items": {
-                        "$ref": "product.json"
+                        "$ref": "product.json.json"
                     }
                 },
                 "generalComment": {
@@ -36,7 +36,7 @@
                 "hazard": {
                     "type": "array",
                     "items": {
-                        "$ref": "hazard.json"
+                        "$ref": "hazard.json.json"
                     }
                 },
                 "temporalInformation": {

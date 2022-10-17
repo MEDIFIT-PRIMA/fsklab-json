@@ -1,22 +1,22 @@
 {
-    "$id": "https://medifit-prima.github.io/fsklab-json/1.0.4/riskModel.json",
+    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/riskModel.json",
     "type": "object",
     "properties": {
         "dataBackground": {
-            "$ref": "genericModelDataBackground.json"
+            "$ref": "genericModelDataBackground.json.json"
         },
         "modelType": {
             "pattern": "^riskModel$",
             "type": "string"
         },
         "generalInformation": {
-            "$ref": "genericModelGeneralInformation.json"
+            "$ref": "genericModelGeneralInformation.json.json"
         },
         "modelMath": {
-            "$ref": "genericModelModelMath.json"
+            "$ref": "genericModelModelMath.json.json"
         },
         "scope": {
-            "$ref": "genericModelScope.json",
+            "$ref": "genericModelScope.json.json",
             "required": []
         }
     }
