@@ -1,8 +1,8 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelGeneralInformation.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/genericModelGeneralInformation.json",
     "allOf": [
         {
-            "$ref": "generalInformation.json.json"
+            "$ref": "generalInformation.json"
         },
         {
             "type": "object",
@@ -16,7 +16,7 @@
                     "description": "Software language used to write the model, e.g. R or MatLab"
                 },
                 "modelCategory": {
-                    "$ref": "modelCategory.json.json"
+                    "$ref": "modelCategory.json"
                 }
             }
         }

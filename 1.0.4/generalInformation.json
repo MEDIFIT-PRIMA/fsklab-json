@@ -1,5 +1,5 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/generalInformation.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/generalInformation.json",
     "type": "object",
     "properties": {
         "identifier": {
@@ -8,13 +8,13 @@
         "creator": {
             "type": "array",
             "items": {
-                "$ref": "contact.json.json"
+                "$ref": "contact.json"
             }
         },
         "author": {
             "type": "array",
             "items": {
-                "$ref": "contact.json.json"
+                "$ref": "contact.json"
             }
         },
         "format": {
@@ -46,7 +46,7 @@
         "reference": {
             "type": "array",
             "items": {
-                "$ref": "reference.json.json"
+                "$ref": "reference.json"
             }
         },
         "modificationDate": {

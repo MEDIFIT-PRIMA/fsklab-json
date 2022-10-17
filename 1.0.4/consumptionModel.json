@@ -1,19 +1,19 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/consumptionModel.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/consumptionModel.json",
     "type": "object",
     "properties": {
         "dataBackground": {
-            "$ref": "genericModelDataBackground.json.json"
+            "$ref": "genericModelDataBackground.json"
         },
         "modelType": {
             "pattern": "^consumptionModel$",
             "type": "string"
         },
         "generalInformation": {
-            "$ref": "genericModelGeneralInformation.json.json"
+            "$ref": "genericModelGeneralInformation.json"
         },
         "modelMath": {
-            "$ref": "modelMath.json.json"
+            "$ref": "modelMath.json"
         },
         "scope": {
             "type": "object",
@@ -27,13 +27,13 @@
                 "product": {
                     "type": "array",
                     "items": {
-                        "$ref": "product.json.json"
+                        "$ref": "product.json"
                     }
                 },
                 "populationGroup": {
                     "type": "array",
                     "items": {
-                        "$ref": "populationGroup.json.json"
+                        "$ref": "populationGroup.json"
                     }
                 },
                 "generalComment": {

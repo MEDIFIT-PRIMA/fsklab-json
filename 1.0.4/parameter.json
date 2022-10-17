@@ -1,5 +1,5 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/parameter.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/parameter.json",
     "type": "object",
     "properties": {
         "subject": {
@@ -59,7 +59,7 @@
         },
         "reference": {
             "description": "Information on the source, where the value of the parameter has been extracted from - if available. The format should use that used in other \"Reference\" metadata. Preferably DOI.",
-            "$ref": "reference.json.json"
+            "$ref": "reference.json"
         },
         "unit": {
             "type": "string",

@@ -1,5 +1,5 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/modelMath.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/modelMath.json",
     "type": "object",
     "properties": {
         "fittingProcedure": {
@@ -8,13 +8,13 @@
         "qualityMeasures": {
             "type": "array",
             "items": {
-                "$ref": "qualityMeasures.json.json"
+                "$ref": "qualityMeasures.json"
             }
         },
         "modelEquation": {
             "type": "array",
             "items": {
-                "$ref": "modelEquation.json.json"
+                "$ref": "modelEquation.json"
             }
         },
         "event": {
@@ -26,7 +26,7 @@
         "parameter": {
             "type": "array",
             "items": {
-                "$ref": "parameter.json.json"
+                "$ref": "parameter.json"
             }
         }
     },

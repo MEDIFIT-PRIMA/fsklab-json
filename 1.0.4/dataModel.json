@@ -1,16 +1,16 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/dataModel.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/dataModel.json",
     "type": "object",
     "properties": {
         "dataBackground": {
-            "$ref": "genericModelDataBackground.json.json"
+            "$ref": "genericModelDataBackground.json"
         },
         "modelType": {
             "pattern": "^dataModel$",
             "type": "string"
         },
         "generalInformation": {
-            "$ref": "generalInformation.json.json"
+            "$ref": "generalInformation.json"
         },
         "modelMath": {
             "type": "object",
@@ -18,14 +18,14 @@
                 "parameter": {
                     "type": "array",
                     "items": {
-                        "$ref": "parameter.json.json"
+                        "$ref": "parameter.json"
                     }
                 }
             },
             "required": []
         },
         "scope": {
-            "$ref": "genericModelScope.json.json"
+            "$ref": "genericModelScope.json"
         }
     }
 }

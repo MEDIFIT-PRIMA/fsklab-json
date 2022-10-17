@@ -1,8 +1,8 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/genericModelModelMath.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/genericModelModelMath.json",
     "allOf": [
         {
-            "$ref": "modelMath.json.json"
+            "$ref": "modelMath.json"
         },
         {
             "type": "object",
@@ -10,7 +10,7 @@
                 "exposure": {
                     "type": "array",
                     "items": {
-                        "$ref": "exposure.json.json"
+                        "$ref": "exposure.json"
                     }
                 }
             }

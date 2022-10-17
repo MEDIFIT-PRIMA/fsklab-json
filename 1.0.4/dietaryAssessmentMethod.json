@@ -1,5 +1,5 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/dietaryAssessmentMethod.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/dietaryAssessmentMethod.json",
     "type": "object",
     "properties": {
         "numberOfFoodItems": {

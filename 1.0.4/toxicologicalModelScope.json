@@ -1,5 +1,5 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/toxicologicalModelScope.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/toxicologicalModelScope.json",
     "type": "object",
     "properties": {
         "spatialInformation": {
@@ -11,7 +11,7 @@
         "populationGroup": {
             "type": "array",
             "items": {
-                "$ref": "populationGroup.json.json"
+                "$ref": "populationGroup.json"
             }
         },
         "generalComment": {
@@ -20,7 +20,7 @@
         "hazard": {
             "type": "array",
             "items": {
-                "$ref": "hazard.json.json"
+                "$ref": "hazard.json"
             }
         },
         "temporalInformation": {

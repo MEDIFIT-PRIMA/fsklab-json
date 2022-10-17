@@ -1,12 +1,12 @@
 {
-    "id": "https://medifit-prima.github.io/fsklab-json/1.0.4/modelEquation.json",
+    "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/schema_view/1.0.4/modelEquation.json",
     "type": "object",
     "properties": {
         "reference": {
             "type": "array",
             "items": {
                 "description": "Information on the source, where the equation has been extracted from",
-                "$ref": "reference.json.json"
+                "$ref": "reference.json"
             }
         },
         "name": {
