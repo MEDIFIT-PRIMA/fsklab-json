@@ -1,5 +1,5 @@
 {
-  "id": "https://foodrisklabs.bfr.bund.de/fsk-lab-schema.json",
+  "id": "https://raw.githubusercontent.com/MEDIFIT-PRIMA/fsklab-json/refactored_fskx_schema/FSKModel.json",
   "definitions": {
     "study": {
       "type": "object",
